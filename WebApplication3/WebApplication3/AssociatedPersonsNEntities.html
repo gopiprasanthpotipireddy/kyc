@@ -1,0 +1,435 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Example of Bootstrap 3 Accordion with Plus/Minus Icon</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Jumper</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <style type="text/css">
+        .bs-example {
+            margin: 20px;
+        }
+
+        .panel-title .glyphicon {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-5 col1">
+                    <h5>ww.opsramp.com</h5>
+                </div>
+                <div class="col-sm-6 col-7 col2">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-vimeo" aria-hidden="true"></i></a>
+                            <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav id="myHeader" class="header navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href=""><img src="" alt=""><h2 style="color:yellow;font-style:italic">OpsRamp-Markit</h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="home.html">
+                            Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Login.html">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Admin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="banner">
+        <div class="gradient"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 heading">
+                    <h1 data-aos="fade-right" data-aos-delay="300">Hello and welcome to jumper</h1>
+                    <h2 data-aos="fade-left" data-aos-delay="300">kickass wordpress agency theme</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            // Add minus icon for collapse element which is open by default
+            $(".collapse.in").each(function () {
+                $(this).siblings(".panel-heading").find(".glyphicon").addClass("glyphicon-minus").removeClass("glyphicon-plus");
+            });
+
+            // Toggle plus minus icon on show hide of collapse element
+            $(".collapse").on('show.bs.collapse', function () {
+                $(this).parent().find(".glyphicon").removeClass("glyphicon-plus").addClass("glyphicon-minus");
+            }).on('hide.bs.collapse', function () {
+                $(this).parent().find(".glyphicon").removeClass("glyphicon-minus").addClass("glyphicon-plus");
+            });
+        });
+    </script>
+    
+    
+        <button><a href="ClientStaticData.html">ClientStaticData</a></button>
+
+        <button><a href="AssociatedPersonsNEntities.html">AssociatePersonsData</a></button>
+
+        <button><a href="CheckList.html">CheckList</a></button>
+        <div class="bs-example">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span>Associated Persons and Entities (Owners, Key Senior Mgmt, Directors, Signatories)</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">ClientName</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">HTML</a></li>
+                                                    <li><a href="#">CSS</a></li>
+                                                    <li><a href="#">JavaScript</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">Client CI ID </a></button>
+                                        </td>
+                                        <td>
+                                            <input type="textbox"></input>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Written internal Places, procedures and controls</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">A risk Assessment</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Designation Of Compliance Officer</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Periodic independency testing of AML Program</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">Periodic training of employees</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-plus"></span>Ownership Details / Roles INformation</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">ClientName</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                    <span class="caret"></span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">HTML</a></li>
+                                                    <li><a href="#">CSS</a></li>
+                                                    <li><a href="#">JavaScript</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">Client CI ID </a></button>
+                                        </td>
+                                        <td>
+                                            <input type="textbox"></input>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Written internal Places, procedures and controls</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">A risk Assessment</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Designation Of Compliance Officer</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <button><a href="#">Periodic independency testing of AML Program</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <button><a href="#">Periodic training of employees</a></button>
+                                        </td>
+                                        <td>
+                                            <div class="radio">
+                                                <label><input type="radio" name="optradio">Yes</label>
+
+                                                <label><input type="radio" name="optradio">No</label>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="gradient"></div>
+            <!-- Footer Links -->
+            <div class="container text-center text-md-left">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-lg-5 col-md-12 col-12 content">
+                        <!-- Content -->
+                        <a href=""><img src="" alt=""><h2 style="color:yellow;font-style:italic">OpsRamp-Markit</h2></a>
+                        <p>Every day, people in business, finance and government make decisions with wide-ranging implications. These leaders need to see the interconnected factors that impact their organizations. This knowledge allows them to make the best choices and achieve their business goals. We call this the New Intelligence.</p>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-lg-2 col-md-4 mx-auto">
+                        <!-- Links -->
+                        <h5 class="mt-3 mb-3">Site Navigation</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="index.html">go to home</a>
+                            </li>
+                            <li>
+                                <a href="services.html">services</a>
+                            </li>
+                            <li>
+                                <a href="portfolio.html">portfolio</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">read blog</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">contact us</a>
+                            </li>
+                            <li>
+                                <a href="#!">product support</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-lg-2 col-md-4 mx-auto">
+                        <!-- Links -->
+                        <h5 class="mt-3 mb-3">information</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">user login</a>
+                            </li>
+                            <li>
+                                <a href="#!">creat new account</a>
+                            </li>
+                            <li>
+                                <a href="#!">checkout</a>
+                            </li>
+                            <li>
+                                <a href="#!">my cart</a>
+                            </li>
+                            <li>
+                                <a href="#!">other information</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                    <!-- Grid column -->
+                    <div class="col-lg-2 col-md-4 mx-auto">
+
+                        <!-- Links -->
+                        <h5 class="mt-3 mb-3">policies & Info</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Terms Conditions</a>
+                            </li>
+                            <li>
+                                <a href="#!">website polocy</a>
+                            </li>
+                            <li>
+                                <a href="#!">Policy for Sellers  </a>
+                            </li>
+                            <li>
+                                <a href="#!">Policy for Buyers</a>
+                            </li>
+                            <li>
+                                <a href="#!">Shipping & Refund </a>
+                            </li>
+                            <li>
+                                <a href="#!">Wholesale Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Links -->
+            <br />
+            <!-- Copyright
+            <div class="footer-copyright text-center">
+                <p>© 2017, All Rights Reserved. <a href="https://www.template.net/editable/websites/html5">JumperTheme</a> , Designed by <a href="https://www.template.net/editable/websites/html5">Template.net</a></p>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        
+        
+    </body>
+</html>
