@@ -1,0 +1,184 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication4.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Ops Ramp </title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+    <link rel="stylesheet" href= "../../CSS/animate.css" />
+    <link rel="stylesheet" href= "../../CSS/main.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+      <div>
+             <!-- Navigation -->
+    <nav id="myHeader" class="header navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="">
+                <h3 style="color: yellow; font-style: italic">OpsRamp-Markit</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href= "../Home/Home.aspx">Home
+                            
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href= "../Login/Login.aspx">Maker Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href= "../Admin/Admin.aspx">Checker Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+            </div>
+        <div  style="margin-bottom:300px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+        <div>
+         <footer class="page-footer">
+        <div class="gradient"></div>
+        <!-- Footer Links -->
+        <div class="container text-center text-md-left">
+            <!-- Grid row -->
+            <div class="row">
+                <!-- Grid column -->
+                <div class="col-lg-5 col-md-12 col-12 content">
+                    <!-- Content -->
+                    <a href="">
+                        <img src="" alt=""/><h3 style="color: yellow; font-style: italic">OpsRamp-Markit</h3>
+                    </a>
+                    <p>Every day, people in business, finance and government make decisions with wide-ranging implications.</p>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-2 col-md-4 mx-auto">
+                    <!-- Links -->
+                    <h5 class="mt-3 mb-3">Site Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="Home.aspx">go to home</a>
+                        </li>
+                        <li>
+                            <a href="Home.aspx">services</a>
+                        </li>
+                        <li>
+                            <a href="Home.aspx">portfolio</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-2 col-md-4 mx-auto">
+                    <!-- Links -->
+                    <h5 class="mt-3 mb-3">information</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">user login</a>
+                        </li>
+                        <li>
+                            <a href="#!">creat new account</a>
+                        </li>
+                        <li>
+                            <a href="#!">checkout</a>
+                        </li>
+                      
+                    </ul>
+                </div>
+                <!-- Grid column -->
+                <!-- Grid column -->
+                <div class="col-lg-2 col-md-4 mx-auto">
+
+                    <!-- Links -->
+                    <h5 class="mt-3 mb-3">policies & Info</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#!">Terms Conditions</a>
+                        </li>
+                        <li>
+                            <a href="#!">website polocy</a>
+                        </li>
+                        <li>
+                            <a href="#!">Policy for Sellers  </a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+        <!-- Footer Links -->
+        <br />
+        <!-- Copyright -->
+      
+    </footer>
+            </div>
+      
+    </form>
+   
+   
+   
+    <!-- Footer -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+    <!-- Custom JavaScript -->
+    <script src= "../../scripts/animate.js" ></script>
+    <script src= "../../scripts/custom.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script>
+        $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+            event.preventDefault();
+            $(this).ekkoLightbox();
+        });
+    </script>
+</body>
+</html>
