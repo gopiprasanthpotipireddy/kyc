@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\keerthik\Desktop</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="ApplicationInsights.config">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/ApplicationInsights.config">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
+      <publishTime>12/21/2018 18:53:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.DependencyCollector.dll">
+      <publishTime>12/21/2018 18:53:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.Web.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AI.WindowsServer.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.ApplicationInsights.dll">
+      <publishTime>12/21/2018 18:53:24</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>12/21/2018 18:53:25</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="bin/WebApplication3.dll">
+      <publishTime>12/26/2018 14:01:43</publishTime>
+    </File>
+    <File Include="checker.aspx">
+      <publishTime>12/26/2018 11:51:26</publishTime>
+    </File>
+    <File Include="css/animate.css">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="css/main.css">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="img/image.jpg">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="json.json">
+      <publishTime>12/26/2018 10:49:36</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>12/26/2018 10:34:50</publishTime>
+    </File>
+    <File Include="options.aspx">
+      <publishTime>12/26/2018 12:20:52</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>12/21/2018 18:53:26</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.js">
+      <publishTime>12/21/2018 18:53:27</publishTime>
+    </File>
+    <File Include="scripts/ai.0.22.9-build00167.min.js">
+      <publishTime>12/21/2018 18:53:27</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/26/2018 14:01:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
