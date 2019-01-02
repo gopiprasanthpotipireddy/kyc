@@ -23,7 +23,8 @@ body {
     overflow-x: hidden;
     background-color:white;
     font-family: 'Montserrat', sans-serif;
-    color:white;
+    color:black;
+    text-align:inherit;
 }
 
 body,
@@ -84,7 +85,7 @@ textarea {
 }
 
 :-ms-input-placeholder { /* IE 10+ */
-    color: #fff;
+    color:black;
     font-weight: 300;
     font-size: 13px;
     text-transform: uppercase;
