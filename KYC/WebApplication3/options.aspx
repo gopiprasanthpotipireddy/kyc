@@ -166,7 +166,7 @@
         <a href="#">Menu</a>
         <a href="#">New Case</a>
         <a href="#">Draft</a>
-        <a href="Submits.html">Submits</a>
+            <a href="Submits.aspx">Submits</a>
         <a href="Login.aspx">LogOut</a>
     </div>
     <div class="main">
@@ -177,7 +177,7 @@
             <asp:button class="tablinks" id="tab6" onclick="openCity(event, 'content3')"  style="color: black;">CheckList</asp:button>
             <%--<asp:Button ID="Button2" runat="server" Text="Button" Height="50px" OnClick="Button2_Click" Width="124px" />--%>
             <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:white;height:50px; width:120px;" value="submit" />
-              <input id="Button2" runat="server" type="button" onserverclick="View_OnClick" style="background-color:white;height:50px; width:120px;" value="View_submit" />
+             
         </div>
         <div id="content1" class="tabcontent">
 

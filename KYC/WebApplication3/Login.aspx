@@ -1,13 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication3.WebForm3" %>
-
-
-
-
 <!DOCTYPE html>
-
-
-
-
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Login</title>
@@ -21,17 +13,6 @@
                 <div class="container">
                     <div class="row" data-aos="fade-up" data-aos-duration="800">
                         <div class="col-md-12">
-
-
-
-
-
-
-
-
-
-
-
                             <style>
                                 body {
                                     background-image: url(../../img/image.jpg);
@@ -40,21 +21,11 @@
                                     background-size: cover;
                                 }
                             </style>
-
-
-
-
-
                             <br>
-
-                            <h2 style="color: white; text-align: center;">Admin Login</h2>
+                            <h2 style="color: white; text-align: center;color:black:">Admin Login</h2>
                             <br>
                             <br>
                             <div style="text-align: center">
-
-
-
-
                                 <span style="color: white; text-align: center;">User Name</span><br>
                                 <%--<input type="text" name="username" id="TextBox1" />--%><asp:TextBox ID="TextBox1" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox>
                                 <br>
@@ -65,27 +36,9 @@
                                 <!--input type="button" value="Login" id="submit" onclick="validate()" /-->
                                 <%--<asp: button type="submit" onclick="Button1_Click" id="submit" class="btn btn-primary px-4">Login</asp:>--%>
                                 <%--<asp: Button type= "submit" id="submit" runat="server"  OnClick="Button1_Click"/>--%>
-
-
-
-
-
-
-
-
-
-
-
                                 <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Admin_Button" Style="background-color: orange; height: 40px; width: 200px;" />
 
-
-
-
                             </div>
-
-
-
-
                         </div>
                     </div>
                 </div>
@@ -94,6 +47,26 @@
     </form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

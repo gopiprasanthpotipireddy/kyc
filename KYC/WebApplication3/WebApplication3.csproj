@@ -126,6 +126,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="json.json" />
+    <Content Include="data\Maker.csv" />
     <None Include="Properties\PublishProfiles\KYC.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -140,6 +141,7 @@
     <Content Include="img\image.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Submits.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -164,6 +166,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Submits.aspx.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Submits.aspx.designer.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
     </Compile>
     <Compile Include="try.cs" />
   </ItemGroup>
