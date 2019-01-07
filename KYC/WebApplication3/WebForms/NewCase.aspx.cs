@@ -8,7 +8,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace KYC
+<<<<<<< HEAD
 {
+=======
+{ 
+>>>>>>> c6905643c94461f9be76c0177e9ff2dfec76a0b8
     public partial class NewCase : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
