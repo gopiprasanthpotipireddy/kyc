@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KYC {
+namespace WebApplication3 {
     
     
     public partial class WebForm3 {
