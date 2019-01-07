@@ -7,8 +7,8 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
-{
+namespace KYC
+{ 
     public partial class NewCase : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

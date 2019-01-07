@@ -7,7 +7,7 @@ using System.Web.UI;
 
 
 using System.Text;
-namespace WebApplication3
+namespace KYC
 {
     public partial class WebForm2 : System.Web.UI.Page
     {

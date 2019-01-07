@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 //using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace KYC
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
@@ -23,7 +23,7 @@ namespace WebApplication3
                 string username, password;
                 username = TextBox1.Text;
                 password = TextBox2.Text;
-                bool result = hello.isValidUser(username, password);
+                bool result = Hello.CheckUser(username, password);
 
                 if (username == null || username == "")
                 {
