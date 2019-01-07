@@ -15,9 +15,10 @@
     </style>
 </head>
 <body>
+   <%-- <form id="form1"  runat="server" >--%>
     <form id="form1" runat="server" onload="View_OnClick">
     <div>
-    
+   
     </div>
     </form>
 </body>
