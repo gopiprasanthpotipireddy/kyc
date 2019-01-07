@@ -12,6 +12,7 @@ namespace WebApplication3
         protected void Page_Load(object sender, EventArgs e)
         {
             //Response.AddHeader("Refresh", Convert.ToString((Session.Timeout * 60) + 5));
+            Session["username"] = TextBox1.Text;
             
         }
         static int _attempts = 3;
@@ -22,7 +23,7 @@ namespace WebApplication3
                 string username, password;
                 username = TextBox1.Text;
                 password = TextBox2.Text;
-
+                bool result = hello.isValidUser(username, password);
 
                 if (username == null || username == "")
                 {

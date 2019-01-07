@@ -76,6 +76,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -94,18 +98,29 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="checker.aspx" />
-    <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="json.json" />
-    <None Include="Properties\PublishProfiles\KYC.pubxml" />
-    <None Include="Web.Debug.config">
+    <Content Include="WebForms\checker.aspx" />
+    <Content Include="WebForms\Login.aspx" />
+    <Content Include="WebForms\NewCase.aspx" />
+    <Content Include="WebForms\options.aspx" />
+    <Content Include="WebForms\Submits.aspx" />
+    <Content Include="config\ApplicationInsights.config" />
+    <Content Include="config\packages.config" />
+    <Content Include="config\Web.config" />
+    <None Include="config\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="Web.Release.config">
+    <None Include="config\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\KYC.pubxml" />
+    <Content Include="web.config" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -114,34 +129,46 @@
     <Content Include="img\image.jpg" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="options.aspx" />
-    <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="checker.aspx.cs">
-      <DependentUpon>checker.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="checker.aspx.designer.cs">
-      <DependentUpon>checker.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="hello.cs" />
+    <Compile Include="ModelClasses\clsJSONTest.cs" />
+    <Compile Include="ModelClasses\clsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="options.aspx.cs">
-      <DependentUpon>options.aspx</DependentUpon>
+    <Compile Include="WebForms\checker.aspx.cs">
+      <DependentUpon>checker.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="options.aspx.designer.cs">
-      <DependentUpon>options.aspx</DependentUpon>
+    <Compile Include="WebForms\checker.aspx.designer.cs">
+      <DependentUpon>checker.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
+    <Compile Include="WebForms\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
+    <Compile Include="WebForms\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\NewCase.aspx.cs">
+      <DependentUpon>NewCase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\NewCase.aspx.designer.cs">
+      <DependentUpon>NewCase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\options.aspx.cs">
+      <DependentUpon>options.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\options.aspx.designer.cs">
+      <DependentUpon>options.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Submits.aspx.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Submits.aspx.designer.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>

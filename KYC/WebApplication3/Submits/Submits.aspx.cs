@@ -19,7 +19,8 @@ namespace WebApplication3
         {
             try
             {
-                var reader = new StreamReader(File.OpenRead(@"C:\Users\keerthik\Desktop\Maker.csv"));
+                string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\Maker.csv";
+                var reader = new StreamReader(File.OpenRead(FilePath));
 
 
                 Response.Write("<html>");

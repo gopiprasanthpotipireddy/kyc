@@ -32,5 +32,4 @@ C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplicati
 C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
 C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplication3\obj\Debug\KYC.csprojResolveAssemblyReference.cache
-C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplication3\bin\config\ApplicationInsights.config
 C:\Users\keerthik\Documents\non-linear-office-a\KYC\WebApplication3\WebApplication3\bin\WebApplication3.dll.config
