@@ -20,7 +20,7 @@ namespace KYC
             string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\Maker.csv";
             var reader = new StreamReader(File.OpenRead(FilePath));
             Response.Write("<html>");
-            Response.Write("<body style ='height:160px;width:1200px;Z-INDEX: 10200; LEFT: 288px; POSITION: absolute; TOP: 290px ; color : white; font-size: 40px;'>");
+            Response.Write("<body style ='height:160px;width:1200px;Z-INDEX: 10200; LEFT: 288px; POSITION: absolute; TOP: 290px ; color : black; font-size: 40px;'>");
             Response.Write("<center>");
             Response.Write("<table border = 1 style = 'border-width: 20px; width: 100%; height: 100px;' >");
             Response.Write("<tr>");
