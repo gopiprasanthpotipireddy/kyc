@@ -7,7 +7,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace KYC
 {
     public partial class NewCase : System.Web.UI.Page
     {
@@ -64,9 +64,9 @@ namespace WebApplication3
                 bool isDesignation = rd5.Checked;
                 bool isDesignation1 = rd6.Checked;
                 bool isTesting = rd7.Checked;
-                bool isTesting1 = rd7.Checked;
+                bool isTesting1 = rd8.Checked;
                 bool isTraining = rd9.Checked;
-                bool isTraining1 = rd9.Checked;
+                bool isTraining1 = rd10.Checked;
                 if (isProcedure)
                 {
                     obj.Procedure = rd1.Value;

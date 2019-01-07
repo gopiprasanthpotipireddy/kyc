@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewCase.aspx.cs" Inherits="WebApplication3.NewCase" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewCase.aspx.cs" Inherits="KYC.NewCase" %>
 
 <!DOCTYPE html>
 
@@ -133,7 +133,7 @@
                 <asp:Button class="tablinks" ID="tab6" OnClick="openCity(event, 'content3')" Style="color: black;">CheckList</asp:Button>
                 <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:orange; height: 50px; width: 120px; position:absolute; top:65px; right:300px;" value="submit" />
                 <%--<asp:Button ID="Button2" runat="server" Text="Button" Height="50px" OnClick="Button2_Click" Width="124px" />--%>
-                <%-- <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:white;height:50px; width:120px;" value="submit" />--%>
+<%--                 <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:white;height:50px; width:120px;position:absolute;top:65px;right:300px;" value="submit" />--%>
                 <%--<input id="Button2" runat="server" type="button" onserverclick="View_OnClick" style="background-color:white;height:50px; width:120px;" value="View_submit" />--%>
             </div>
             <div id="content1" class="tabcontent">

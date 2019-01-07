@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 //using System.Web.UI.WebControls;
 
-namespace WebApplication3
+namespace KYC
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
@@ -23,16 +23,16 @@ namespace WebApplication3
                 string username, password;
                 username = TextBox1.Text;
                 password = TextBox2.Text;
-                bool result = hello.isValidUser(username, password);
+                bool result = Hello.CheckUser(username, password);
 
                 if (username == null || username == "")
                 {
-                    Response.Write("<script>alert('Username cannot be empty');</script>");
+                    Response.Write("<script>alert('Please Check your Credentials');</script>");
                     return;
                 }
                 if (password == null || password == "")
                 {
-                    Response.Write("<script>alert('Password cannot be empty');</script>");
+                    Response.Write("<script>alert('Please Check your Credentials');</script>");
                     return;
                 }
                 if (username == "welcome" && password == "welcome")

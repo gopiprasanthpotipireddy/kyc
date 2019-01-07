@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="WebApplication3.WebForm3" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="KYC.WebForm3" %>
 
 
 
@@ -47,7 +47,7 @@
 
                             <br>
 
-                            <h2 style="color: white; text-align: center;">Admin Login</h2>
+                            <h2 style="color:black; text-align: center;">Admin Login</h2>
                             <br>
                             <br>
                             <div style="text-align: center">
@@ -55,10 +55,10 @@
 
 
 
-                                <span style="color: white; text-align: center;">User Name</span><br>
+                                <span style="color:black; text-align: center;">User Name</span><br>
                                 <%--<input type="text" name="username" id="TextBox1" />--%><asp:TextBox ID="TextBox1" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox>
                                 <br>
-                                <span style="color: white; text-align: center;">Password</span><br>
+                                <span style="color:black; text-align: center;">Password</span><br>
                                 <%--<input type="password" name="password" id="TextBox2" />--%><asp:TextBox ID="TextBox2" type="password" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox>
                                 <br>
                                 <br>
