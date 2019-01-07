@@ -7,7 +7,7 @@ using System.Web.UI;
 using Newtonsoft.Json;
 using System.Text;
 
-namespace WebApplication3
+namespace KYC
 {
     public partial class Submits : System.Web.UI.Page
     {

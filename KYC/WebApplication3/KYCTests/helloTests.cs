@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WebApplication3.Tests
+namespace KYC.Tests
 {
     [TestClass()]
     public class helloTests

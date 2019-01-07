@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 //using System.Collections.Generic.List;
-namespace WebApplication3
+namespace KYC
 {
     public class clsJSONTest
     {

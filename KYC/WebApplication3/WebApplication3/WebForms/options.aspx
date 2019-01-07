@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="options.aspx.cs" Inherits="WebApplication3.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="options.aspx.cs" Inherits="KYC.WebForm2" %>
 
 <!DOCTYPE html>
 

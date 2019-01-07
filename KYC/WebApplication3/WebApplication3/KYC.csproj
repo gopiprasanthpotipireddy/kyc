@@ -98,7 +98,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="json.json" />
+    <Content Include="ModelClasses\json.json" />
     <Content Include="WebForms\checker.aspx" />
     <Content Include="WebForms\Login.aspx" />
     <Content Include="WebForms\NewCase.aspx" />
@@ -131,7 +131,7 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="hello.cs" />
+    <Compile Include="ModelClasses\hello.cs" />
     <Compile Include="ModelClasses\clsJSONTest.cs" />
     <Compile Include="ModelClasses\clsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
