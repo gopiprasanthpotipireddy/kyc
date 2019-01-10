@@ -23,7 +23,7 @@ namespace KYC
                 string username, password;
                 username = TextBox1.Text;
                 password = TextBox2.Text;
-                bool result = Hello.CheckUser(username, password);
+                bool result = clsLogin.CheckUser(username, password);
 
                 if (username == null || username == "")
                 {

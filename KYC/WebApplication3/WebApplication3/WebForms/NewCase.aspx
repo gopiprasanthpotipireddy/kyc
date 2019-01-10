@@ -1699,116 +1699,275 @@
                 </div>
 
             </div>
-        </div>
+       
 
         <div id="content2" class="tabcontent">
 
             <div class="bs-example">
-                <div class="panel-group" id="accordion">
+                <div class="panel-group" id="accordion1">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span>Associated Persons and Entities (Owners, Key Senior Mgmt, Directors, Signatories)</a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="collapseOne2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
                                     <table class="table">
+                                        <tr><td><label id ="SearchinCMCIF" runat="server">SearchinCMCIF</label></td></tr>
+                                        <tr><td><label id="BasicDetails" runat="server">BasicDetails</label></td></tr>
                                         <tr>
                                             <td>
-                                                <button>ClientName</button>
+                                               <label id="EntityName" runat="server">EntityName</label>
                                             </td>
+                                            <td>
+                                                <input id="Entity_Name" type="text" runat="server"/>
+                                                </td>
+                                            
+                                             <td>
+                                               <label id="Trade_Name" runat="server">TradeNameDoing BusinessAsACA(AlsoKnownAs)</label>
+                                            </td>
+                                                <td>
+                                                    <textarea id="TradeName" runat="server"></textarea>
+
+                                                    </td>
+                                                </tr>
+                                        <tr><td><label id="First_Name" runat="server">FirstName</label></td>
+                                            <td>
+                                                <input id="FirstName" type="text" runat="server" /></td>
+                                            </tr>
+                                        <tr>
+                                            <td><label id="Middle_Name" runat="server">MiddleName</label></td>
+                                            <td> <input id="MiddleName" type="text" runat="server"/></td
+                                            <td><label id="Last_Name" runat="server">LastName</label></td>
+                                            <td> <input id="LastName" type="text" runat="server" /></td>
+                                        </tr>
+                                         <tr>
+                                            <td><label id="Family_Name" runat="server">FamilyName</label></td>
+                                            <td> <input id="FamilyName" type="text" runat="server"/></td
+                                            <td><label id="Title" runat="server">Title</label></td>
+                                            <td> <input id="_Title" type="text" runat="server" /></td>
+                                              <td><label id="Suffix" runat="server">Suffix</label></td>
+                                            <td> <input id="_Suffix" type="text" runat="server"/></td>
+                                        </tr>
+                                        <tr><td><label id="CIFID" runat="server">CIFID</label></td>
+                                            <td> <input id="CIF_ID" type="text" runat="server"/></td>
+                                            <td><label id="UEN_Number" runat="server">CIFID</label></td>
+                                            <td> <input id="UENNumber" type="text" runat="server"/></td>
+                                        </tr>
+                                        <tr>
+                                             <td><label id="customerclassification" runat="server">CustomerClassification</label></td>
                                             <td>
                                                 <div class="dropdown">
                                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
                                                         <span class="caret"></span>
                                                     </button>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="#">HTML</a></li>
-                                                        <li><a href="#">CSS</a></li>
-                                                        <li><a href="#">JavaScript</a></li>
+                                                        <li>High Risk</li>
+                                                        <li>Low Risk</li>
+                                                        <li>Medium Risk</li>
                                                     </ul>
                                                 </div>
                                             </td>
                                             <td>
-                                                <button><a href="#">Client CI ID </a></button>
+                                                <label id="Prohibited" runat="server">Prohibited</label>
                                             </td>
                                             <td>
-                                                <input type="textbox"></input>
+                                                <input id="Prohibited_text" type="checkbox" />
                                             </td>
-                                            <td></td>
-                                            <td></td>
+                                           
+                                        </tr>
+                                        <tr><td> <label id="Individuals" runat="server">ForIndividualsOnly</label></td></tr>
+                                        <tr>
+                                            <td><label id="Occupation" runat="server">Occupation</label> </td>
+                                            <td> <input id="Occupation_text" type="text" /></td>
+                                            </tr>
+                                        <tr>
+                                            <td><label id="OccupationDescription" runat="server">OccupationDescriptionJustification</label> </td>
+                                            <td>
+                                                <textarea id="Occupation_Description"></textarea>
+                                                 </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <button><a href="#">Written internal Places, procedures and controls</a></button>
+                                              <label id="DateOfBirth" runat="server">DateofBirth</label>  
+                                            </td>
+                                            
+                                            <td>
+                                                <a href="#">Update/View</a>
+                                            </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label id="Occupation_Individual" runat="server">Occupation</label>  </td>
+                                                <td><div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div></td>
+                                            <td>
+                                                 <label id="Nationality" runat="server">Nationality</label>  
                                             </td>
                                             <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button><a href="#">A risk Assessment</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
+                                               <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li>America</li>
+                                                        <li>Australia</li>
+                                                        <li>Canada</li>
+                                                          <li>SriLanka</li>
+                                                        <li>India</li>
+                                                    </ul>
                                                 </div>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <button><a href="#">Designation Of Compliance Officer</a></button>
+                                               <label id="Citizenship" runat="server">Citizenship</label>   
                                             </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
+                                            <td> 
+                                                 <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div> 
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <button><a href="#">Periodic independency testing of AML Program</a></button>
+                                                <label id="TaxID" runat="server">TaxIdNumber</label> 
                                             </td>
                                             <td>
-                                                <div class="radio">
+                                                <a href="#">Update/View</a>
+                                            </td>
+                                           </tr>
+                                        <tr>
+                                            <td>
+                                              <label id="Entity" runat="server">IstherequestedaFinancialInstitution</label>
+                                            </td>
+                                            <td>
+                                            <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optradio">Yes</label>
+                                                        <input type="radio" id="Entity_yes" name="optradio" value="yes"/>Yes</label>
 
                                                     <label>
-                                                        <input type="radio" name="optradio">No</label>
+                                                        <input type="radio" id="Entity_no" name="optradio" value="no"/>No</label>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <button><a href="#">Periodic training of employees</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
+                                                <td> <label id="Primary_Regulator" runat="server">Primary Regulator</label></td>
+                                             <td> <input type="text" id="PrimaryRegulatorTextBox" runat="server"/></td>
+                                             <td> <label id="regulator_Country" runat="server">Regulator Country</label></td>
+                                             <td>  <div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li>America</li>
+                                                        <li>Australia</li>
+                                                        <li>Canada</li>
+                                                          <li>SriLanka</li>
+                                                        <li>India</li>
+                                                    </ul>
+                                                </div> </td>
+                                         </tr>
+                                          <tr>
+                                              <td> <label id="EntityExchange" runat="server">Is the Entity Publicly Listed on Exchange</label></td>
+                                              <td> <div class="radio">
                                                     <label>
-                                                        <input type="radio" name="optradio">Yes</label>
+                                                        <input type="radio" runat="server" id="EntityExchange_yes" name="optradio" value="yes"/>Yes</label>
 
                                                     <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                                        <input type="radio"  runat="server" id="EntityExchange_no" name="optradio" value="no"/>No</label>
+                                                </div></td>
+                                          </tr>
+                                        <tr>
+                                            <td><label id="EntityExchangeName" runat="server">Exchange Name</label></td>
+                                            <td><textarea id="EntityExchangeNameTextArea"></textarea><a href="#">Select</a></td>
+                                            <td><label id="Ticker" runat="server">Ticker Symbol</label></td>
+                                            <td>
+                                                <input id="TickerTextBox" type="text" /></td>
                                         </tr>
+                                        <tr><td><label id="Comments" runat="server">Comments</label></td>
+                                            <td><textarea id="CommentsTextArea"></textarea></td>
+                                            <td><label id="LegalEntityType" runat="server">LegalEntityType</label></td>
+                                            <td><div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                    </ul>
+                                                </div></td>
+                                           <td><label id="NatureOfBusiness" runat="server">NatureOfBusiness</label></td>
+                                            <td><textarea id="NatureOfBusinessTextArea"></textarea></td>
+                                        </tr>
+                                        <tr><td>
+                                            <label id="CountryOfIncorporationandFormation" runat="server">CountryOfIncorporationandFormation</label>
+                                            </td>
+                                            <td><div class="dropdown">
+                                                    <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                                                        <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li>America</li>
+                                                        <li>Australia</li>
+                                                        <li>Canada</li>
+                                                          <li>SriLanka</li>
+                                                        <li>India</li>
+                                                    </ul>
+                                                </div></td>
+                                            <td><label id="State" runat="server">StateProvinceOfIncorporationFormation</label></td>
+                                            <td> <input type="text" id="StateProvinceOfIncorporationFormationText" runat="server"/></td>
+                                             <td><label id="IncorporationRegistrationNumber" runat="server">IncorporationRegistrationNumber</label></td>
+                                            <td> <input type="text" id="IncorporationRegistrationNumberText" runat="server"/></td>
+                                        </tr>
+                                        <tr><td><label id="WatchListManagement" runat="server">WatchListManagement</label></td>
+                                             <td> <input type="text" id="WatchListManagementText" runat="server"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label id="PEFPPEP" runat="server">PEFP/FEP</label></td>
+                                            <td>
+                                                <input id="PEFPPEPCheckbox" type="checkbox" /></td>
+                                            <td><label id="PEFPPEPJustification" runat="server">PEFP/FEP justification</label></td>
+                                            <td>
+                                                <textarea id="PEFPorPEPJustificationCheckbox"  ></textarea></td>
+                                            <td><label id="PEFPorPEPDeterminationDate" runat="server">PEFP/PEPDeterminationDate</label></td>
+                                             <td><input type="text" id="PEFPorPEPDeterminationDateText" runat="server"/></td>
+                                            <td>
+                                                <asp:Calendar ID="PEFPorPEPDeterminationDateCalendar" runat="server"></asp:Calendar>
+                                            </td>
+                                        </tr>
+                                        <tr><td><label id="Sanction" runat="server">Sanction</label></td>
+                                           <td> <input id="SanctionCheckbox" type="checkbox" /></td>
+                                        </tr>
+                                        <tr><td><label id="SanctionJustification" runat="server">SanctionJustification</label></td>
+                                           <td> <textarea id="SanctionJustificationTextArea" ></textarea></td>
+                                            <td><label id="SanctionDeterminationDatelabel" runat="server">SanctionDeterminationDate</label></td>
+                                            <td> <input id="SanctionDeterminationDatelabelText" type="checkbox" /></td>
+                                            <td>
+                                                <asp:Calendar ID="SanctionDeterminationDate" runat="server"></asp:Calendar>
+                                            </td>
+                                        </tr>
+                                        <tr><td><label id="PreCheckDate" runat="server">PreCheckDate</label></td>
+                                            <td> <input id="PreCheckDateText" type="checkbox" /></td>
+                                            <td><asp:Calendar ID="PreCheckDateCalendar" runat="server"></asp:Calendar></td>
+                                        </tr>
+                                        <tr><td><label id="AddressSection" runat="server">Address Section</label></td></tr>
+                                        <tr><td><a href="#">Update/viewAddress</a></td></tr>
                                     </table>
                                 </p>
                             </div>
@@ -1834,20 +1993,12 @@
                                                         <span class="caret"></span>
                                                     </button>
                                                     <ul class="dropdown-menu">
-                                                        <li><a href="#">HTML</a></li>
-                                                        <li><a href="#">CSS</a></li>
-                                                        <li><a href="#">JavaScript</a></li>
+                                                        <li></li>
+                                                        <li></li>
+                                                        <li></li>
                                                     </ul>
                                                 </div>
                                             </td>
-                                            <td>
-                                                <button><a href="#">Client CI ID </a></button>
-                                            </td>
-                                            <td>
-                                                <input type="textbox"></input>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
                                         </tr>
                                         <tr>
                                             <td>
@@ -1931,14 +2082,14 @@
         </div>
         <div id="content3" class="tabcontent">
             <div class="bs-example">
-                <div class="panel-group" id="accordion">
+                <div class="panel-group" id="accordion3">
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-plus"></span>Jusrisdiction Information</a>
                             </h4>
                         </div>
-                        <div id="collapseOne" class="panel-collapse collapse">
+                        <div id="collapseOne3" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
                                     <table>
@@ -3702,6 +3853,8 @@
                     </div>
 
                 </div>
+                </div>
+            </div>
     </form>
 
 

@@ -125,8 +125,9 @@
     <Content Include="Config%27s\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="ModelClasses\json.json" />
+    <Content Include="DataAccessLayer\json.json" />
     <Content Include="data\Maker.csv" />
+    <Content Include="data\AssociatedPersonNEntities.csv" />
     <None Include="Properties\PublishProfiles\KYC.pubxml" />
     <None Include="Config%27s\Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -149,7 +150,7 @@
     <Content Include="WebForms\NewCase.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="WebForms\Submits.aspx" />
+    <Content Include="WebForms\View_Submits.aspx" />
     <Content Include="Config%27s\Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -157,10 +158,9 @@
     <Content Include="WebForms\Login.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelClasses\clsJSONTest.cs" />
-    <Compile Include="ModelClasses\clsModel.cs" />
-    <Compile Include="ModelClasses\data.cs" />
-    <Compile Include="ModelClasses\Hello.cs" />
+    <Compile Include="DataAccessLayer\clsAssociatedPersonsNEntities.cs" />
+    <Compile Include="DataAccessLayer\clsEntityRelationshiporOfferings.cs" />
+    <Compile Include="DataAccessLayer\clsLogin.cs" />
     <Compile Include="WebForms\NewCase.aspx.cs">
       <DependentUpon>NewCase.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -183,14 +183,14 @@
     <Compile Include="WebForms\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Submits.aspx.cs">
-      <DependentUpon>Submits.aspx</DependentUpon>
+    <Compile Include="WebForms\View_Submits.aspx.cs">
+      <DependentUpon>View_Submits.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Submits.aspx.designer.cs">
-      <DependentUpon>Submits.aspx</DependentUpon>
+    <Compile Include="WebForms\View_Submits.aspx.designer.cs">
+      <DependentUpon>View_Submits.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ModelClasses\try.cs" />
+    <Compile Include="DataAccessLayer\try.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

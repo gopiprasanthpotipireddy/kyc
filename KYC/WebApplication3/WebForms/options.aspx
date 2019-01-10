@@ -117,7 +117,7 @@
             }
 
                 .sidenav a:hover {
-                    color: black;
+                    color: hotpink;
                 }
 
         .main {
@@ -166,7 +166,7 @@
             <a href= "NewCase.aspx" target="iframe">New Case</a>
             <a href="#">Draft</a>
 
-            <a href="Submits.aspx" target="iframe">Submits</a>
+            <a href="View_Submits.aspx" target="iframe">View_Cases</a>
             <a href="Login.aspx">LogOut</a>
         </div>
         <div class="main">

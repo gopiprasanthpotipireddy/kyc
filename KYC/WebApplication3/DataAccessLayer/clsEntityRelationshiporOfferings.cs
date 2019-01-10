@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KYC
 {
-    public class clsModel
+    public class clsEntityRelationshiporOfferings
     {
         public string ClientName { get; set; }
         public int ClientID { get; set; }

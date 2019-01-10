@@ -1,8 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="KYC.WebForm3" %>
-
-
-
-
 <!DOCTYPE html>
 
 

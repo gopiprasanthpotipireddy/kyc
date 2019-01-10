@@ -23,7 +23,7 @@ namespace KYC.Tests
 
             //Act
 
-            actual = Hello.CheckUser(username, password);
+            actual = clsLogin.CheckUser(username, password);
             //Assert
 
             Assert.AreEqual(expected, actual);

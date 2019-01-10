@@ -5,7 +5,7 @@ using System.Web;
 
 namespace KYC
 {
-    public static class Hello
+    public static class clsLogin
     {
         static int _attempts = 3;
         public static bool CheckUser(string username, string password)

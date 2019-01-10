@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Submits.aspx.cs" Inherits="KYC.Submits" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="View_Submits.aspx.cs" Inherits="KYC.Submits" %>
 
 <!DOCTYPE html>
 
