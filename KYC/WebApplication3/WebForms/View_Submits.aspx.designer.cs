@@ -10,7 +10,7 @@
 namespace KYC {
     
     
-    public partial class Submits {
+    public partial class View_Submits {
         
         /// <summary>
         /// form1 control.

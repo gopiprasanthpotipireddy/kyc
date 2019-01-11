@@ -126,6 +126,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataAccessLayer\json.json" />
+    <None Include="data\Associated_retriever.csv" />
     <Content Include="data\Maker.csv" />
     <Content Include="data\AssociatedPersonNEntities.csv" />
     <None Include="Properties\PublishProfiles\KYC.pubxml" />
@@ -135,6 +136,7 @@
     <None Include="Config%27s\Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <None Include="data\Ownership.csv" />
     <Content Include="web.config" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

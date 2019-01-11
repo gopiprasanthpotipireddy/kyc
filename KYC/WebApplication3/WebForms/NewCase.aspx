@@ -62,6 +62,11 @@
                 .tab button.active {
                     background-color: orange;
                 }
+                /*Style the required field*/
+                .required{
+                    color:red;
+                    font-weight:bold;
+                }
 
         /* Style the tab content */
         .tabcontent {
@@ -127,10 +132,10 @@
     <form runat="server">
         <div class="main">
             <div class="tab">
-                <h1>Welcome Maker</h1>
-                <asp:Button class="tablinks" ID="tab4" OnClick="openCity(event,'content1')" Style="color: black;">ClientStaticData</asp:Button> &nbsp;&nbsp;&nbsp;
-                <asp:Button class="tablinks" ID="tab5" OnClick="openCity(event, 'content2')" Style="color: black;">AssociatedPersonsAndEntities</asp:Button>&nbsp;&nbsp;&nbsp;
-                <asp:Button class="tablinks" ID="tab6" OnClick="openCity(event, 'content3')" Style="color: black;">ChecklistItems</asp:Button>
+                <h1 id ="welcome">Welcome Maker</h1>
+                <asp:Button class="tablinks" id="tab4" OnClick="openCity(event,'content1')" Style="color: black;">ClientStaticData</asp:Button> &nbsp;&nbsp;&nbsp;
+                <asp:Button class="tablinks" id ="tab5" OnClick="openCity(event, 'content2')" Style="color: black;">AssociatedPersonsAndEntities</asp:Button>&nbsp;&nbsp;&nbsp;
+                <asp:Button class="tablinks" id="tab6" OnClick="openCity(event, 'content3')" Style="color: black;">ChecklistItems</asp:Button>
                 <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:orange; height: 50px; width: 120px; position:absolute; top:65px; right:300px;" value="submit" />
                 <%--<asp:Button ID="Button2" runat="server" Text="Button" Height="50px" OnClick="Button2_Click" Width="124px" />--%>
 <%--                 <input id="Button1" runat="server" type="button" onserverclick="submit_OnClick" style="background-color:white;height:50px; width:120px;position:absolute;top:65px;right:300px;" value="submit" />--%>
@@ -1708,39 +1713,45 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne1"><span class="glyphicon glyphicon-plus"></span>Associated Persons and Entities (Owners, Key Senior Mgmt, Directors, Signatories)</a>
+                                <a data-toggle="collapse"  id = "AssociatedPersons" data-parent="#accordion" href="#collapseOne1"><span class="glyphicon glyphicon-plus"></span>Associated Persons and Entities (Owners, Key Senior Mgmt, Directors, Signatories)</a>
                             </h4>
                         </div>
                         <div id="collapseOne1" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
                                     <table class="table">
-                                        <tr><td><label id ="SearchinCMCIF" runat="server">SearchinCMCIF</label></td></tr>
-                                        <tr><td><label id="BasicDetails" runat="server">BasicDetails</label></td></tr>
+                                        <tr><td><label id ="SearchinCMCIF" runat="server">Search in CMCIF</label></td></tr>
+                                        <tr><td><label id="BasicDetails" runat="server">Basic Details</label></td></tr>
                                         <tr>
                                             <td>
-                                               <label id="EntityName" runat="server">EntityName</label>
+                                               <label id="EntityName" runat="server">Entity Name</label>
+                                                 <label id ="required1" class ="required">*</label>
                                             </td>
                                             <td>
                                                 <input id="Entity_Name" type="text" runat="server"/>
+                                               
                                                 </td>
                                             
                                              <td>
-                                               <label id="Trade_Name" runat="server">TradeName/DoingBusinessAs/ACA(AlsoKnownAs)</label>
+                                               <label id="Trade_Name" runat="server">Trade Name/Doing Business As/ACA(AlsoKnownAs)</label>
                                             </td>
                                                 <td>
                                                     <textarea id="TradeName" runat="server"></textarea></td>
                                                 </tr>
-                                        <tr><td><label id="First_Name" runat="server">FirstName</label></td>
+                                        <tr><td><label id="First_Name" runat="server">First Name</label><label id ="required2" class ="required">*</label></td>
                                             <td>
-                                                <input id="FirstName" type="text" runat="server" /></td>
-                                            <td><label id="Middle_Name" runat="server">MiddleName</label></td>
+                                                <input id="FirstName" type="text" runat="server" />
+                                                   
+                                            </td>
+                                            <td><label id="Middle_Name" runat="server">Middle Name</label></td>
                                             <td> <input id="MiddleName" type="text" runat="server"/></td>
-                                            <td><label id="Last_Name" runat="server">LastName</label></td>
-                                            <td> <input id="LastName" type="text" runat="server" /></td>
+                                            <td><label id="Last_Name" runat="server">Last Name</label> <label id ="required3" class ="required">*</label></td>
+                                            <td> <input id="LastName" type="text" runat="server" />
+                                                  
+                                            </td>
                                         </tr>
                                          <tr>
-                                            <td><label id="Family_Name" runat="server">FamilyName</label></td>
+                                            <td><label id="Family_Name" runat="server">Family Name</label></td>
                                             <td> <input id="FamilyName" type="text" runat="server"/></td>
                                             <td><label id="Title" runat="server">Title</label></td>
                                             <td>  <div class="dropdown">
@@ -1752,13 +1763,17 @@
                                               <td><label id="Suffix" runat="server">Suffix</label></td>
                                             <td> <input id="SuffixText" type="text" runat="server"/></td>
                                         </tr>
-                                        <tr><td><label id="CIFID" runat="server">CIFID</label></td>
-                                            <td> <input id="CIF_ID" type="text" runat="server"/></td>
-                                            <td><label id="UEN_Number" runat="server">CIFID</label></td>
-                                            <td> <input id="UENNumber" type="text" runat="server"/></td>
+                                        <tr><td><label id="CIFID" runat="server">CIFID</label><label id ="required5" class ="required">*</label></td>
+                                            <td> <input id="CIF_ID" type="text" runat="server"/>
+                                                   
+                                            </td>
+                                            <td><label id="UEN_Number" runat="server">UEN Number</label>  <label id ="required6" class ="required">*</label></td>
+                                            <td> <input id="UENNumber" type="text" runat="server"/>
+                                                 
+                                            </td>
                                         </tr>
                                         <tr>
-                                             <td><label id="customerclassification" runat="server">CustomerClassification</label></td>
+                                             <td><label id="customerclassification" runat="server">Customer Classification</label></td>
                                             <td>
                                                 <div class="dropdown">
                                                    <select>
@@ -1784,13 +1799,13 @@
                                             </td>
                                            
                                         </tr>
-                                        <tr><td> <label id="Individuals" runat="server">ForIndividualsOnly</label></td></tr>
+                                        <tr><td> <label id="Individuals" runat="server">For Individuals Only</label></td></tr>
                                         <tr>
                                             <td><label id="Occupation" runat="server">Occupation</label> </td>
                                             <td> <input id="OccupationText" type="text" runat="server" /></td>
                                             </tr>
                                         <tr>
-                                            <td><label id="OccupationDescription" runat="server">OccupationDescriptionJustification</label> </td>
+                                            <td><label id="OccupationDescription" runat="server">Occupation Description Justification</label> </td>
                                             <td>
                                                 <textarea id="OccupationDescriptionText" runat="server"></textarea>
                                                  </td>
@@ -1845,7 +1860,7 @@
                                         </tr>
                                         <tr>
                                             <td>
-                                                <label id="TaxID" runat="server">TaxIdNumber</label> 
+                                                <label id="TaxID" runat="server">Tax IdNumber</label> 
                                             </td>
                                             <td>
                                                 <a href="#">Update/View</a>
@@ -1853,15 +1868,15 @@
                                            </tr>
                                         <tr>
                                             <td>
-                                              <label id="Entity" runat="server">IstherequestedFinancialInstitution</label>
+                                              <label id="Entity" runat="server">Is the requested Financial Institution</label>
                                             </td>
                                             <td>
                                             <div class="radio">
                                                     <label>
-                                                        <input type="radio" id="Entity_yes" name="optradio" value="yes"/>Yes</label>
+                                                        <input type="radio" id="Entity_yes" runat="server" name="Financial" value="yes"/>Yes</label>
 
                                                     <label>
-                                                        <input type="radio" id="Entity_no" name="optradio" value="no"/>No</label>
+                                                        <input type="radio" id="Entity_no" runat="server" name="Financial" value="no"/>No</label>
                                                 </div>
                                             </td>
                                                 <td> <label id="Primary_Regulator" runat="server">Primary Regulator</label></td>
@@ -1898,22 +1913,22 @@
                                         </tr>
                                         <tr><td><label id="Comments" runat="server">Comments</label></td>
                                             <td><textarea id ="CommentsText" runat="server"></textarea></td>
-                                            <td><label id="LegalEntityType" runat="server">LegalEntityType</label></td>
+                                            <td><label id="LegalEntityType" runat="server">Legal Entity Type</label></td>
                                             <td><div class="dropdown">
                                                      <select>
                                                    <option value="" ></option> 
-                                                   <option></option>
-                                                   <option></option>
-                                                        <option></option>
-                                                          <option></option>
-                                                         <option></option>
+                                                   <option>sole proprietorship</option>
+                                                   <option>general partnership</option>
+                                                        <option>limitedpartnership </option>
+                                                        <option>C-corporation</option>
+                                                         <option>S-corporation</option>
                                                  </select>
                                                 </div></td>
-                                           <td><label id="NatureOfBusiness" runat="server">NatureOfBusiness</label></td>
+                                           <td><label id="NatureOfBusiness" runat="server">Nature Of Business</label></td>
                                             <td><textarea id="NatureOfBusinessTextArea" runat="server" ></textarea></td>
                                         </tr>
                                         <tr><td>
-                                            <label id="CountryOfIncorporationandFormation" runat="server">CountryOfIncorporationandFormation</label>
+                                            <label id="CountryOfIncorporationandFormation" runat="server">Country Of Incorporation and Formation</label>
                                             </td>
                                             <td><div class="dropdown">
                                                     <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
@@ -1927,12 +1942,12 @@
                                                         <li>India</li>
                                                     </ul>
                                                 </div></td>
-                                            <td><label id="State" runat="server">StateProvinceOfIncorporationFormation</label></td>
+                                            <td><label id="State" runat="server">State / Province Of Incorporation Formation</label></td>
                                             <td> <input type="text" id="StateProvinceOfIncorporationFormationText" runat="server"/></td>
-                                             <td><label id="IncorporationRegistrationNumber" runat="server">IncorporationRegistrationNumber</label></td>
+                                             <td><label id="IncorporationRegistrationNumber" runat="server">Incorporation Registration Number</label></td>
                                             <td> <input type="text" id="IncorporationRegistrationNumberText" runat="server"/></td>
                                         </tr>
-                                        <tr><td><label id="WatchListManagement" runat="server">WatchListManagement</label></td>
+                                        <tr><td><label id="WatchListManagement" runat="server">WatchList     Management</label></td>
                                              <td> <input type="text" id="WatchListManagementText" runat="server"/></td>
                                         </tr>
                                         <tr>
@@ -1945,23 +1960,23 @@
                                             <td><label id="PEFPorPEPDeterminationDate" runat="server">PEFP/PEPDeterminationDate</label></td>
                                              <td><input type="text" id="PEFPorPEPDeterminationDateText" runat="server"/></td>
                                             <td>
-                                                <asp:Calendar ID="PEFPorPEPDeterminationDateCalendar" runat="server"></asp:Calendar>
+                                              <input type="date" runat="server"  data-date-inline-picker="true"  id ="PEFPorPEPDeterminationDatePicker"/> 
                                             </td>
                                         </tr>
                                         <tr><td><label id="Sanction" runat="server">Sanction</label></td>
                                            <td> <input id="SanctionCheckbox" type="checkbox" /></td>
                                         </tr>
-                                        <tr><td><label id="SanctionJustification" runat="server">SanctionJustification</label></td>
+                                        <tr><td><label id="SanctionJustification" runat="server">Sanction Justification</label></td>
                                            <td> <textarea id="SanctionJustificationTextArea"  runat="server" ></textarea></td>
-                                            <td><label id="SanctionDeterminationDatelabel" runat="server">SanctionDeterminationDate</label></td>
+                                            <td><label id="SanctionDeterminationDatelabel" runat="server">Sanction Determination Date</label></td>
                                             <td> <input id="SanctionDeterminationDatelabelText" type="checkbox" /></td>
                                             <td>
-                                                <asp:Calendar ID="SanctionDeterminationDate" runat="server"></asp:Calendar>
+                                                 <input type="date" runat="server" id="SanctionDetermination" data-date-inline-picker="true"/> 
                                             </td>
                                         </tr>
-                                        <tr><td><label id="PreCheckDate" runat="server">PreCheckDate</label></td>
+                                        <tr><td><label id="PreCheckDate" runat="server">PreCheck Date</label></td>
                                             <td> <input id="PreCheckDateText" type="checkbox" /></td>
-                                            <td><asp:Calendar ID="PreCheckDateCalendar" runat="server"></asp:Calendar></td>
+                                            <td><input type="date" runat="server" id="PreCheck" data-date-inline-picker="true" /></td>
                                         </tr>
                                         <tr><td><label id="AddressSection" runat="server">Address Section</label></td></tr>
                                         <tr><td><a href="#">Update/viewAddress</a></td></tr>
@@ -1973,108 +1988,262 @@
                     <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo2F"><span class="glyphicon glyphicon-plus"></span>Ownership Details / Roles INformation</a>
+                                <a data-toggle="collapse" data-parent="#accordion" id="Ownership" href="#collapseTwo2"><span class="glyphicon glyphicon-plus"></span>Ownership Details / Roles INformation</a>
                             </h4>
                         </div>
                         <div id="collapseTwo2" class="panel-collapse collapse">
                             <div class="panel-body">
                                 <p>
                                     <table class="table">
+                                       
                                         <tr>
                                             <td>
-                                                <button><a href="#">ClientName</a></button>
+                                             <label id="ClientName" runat="server"> Client Name</label>
                                             </td>
                                             <td>
+                                           <input type="text" id ="ClientNameText" runat="server" />
+                                            </td>
+                                            <td>
+                                                 <label id="ClientCIFID" runat="server"> Client CI ID </label>
+                                            </td>
+                                            <td>
+                                                  <input type="text" id ="ClientCIFIDText" runat="server"/>
+                                            </td>
+                                            <td></td>
+                                       
+                                           
+                                                   <td><a href="#">Owner/Role Player Information</a></td>
+                                               
+                                          
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label id="RolesInformation" runat="server">Roles Information</label>
+                                            </td>
+                                            <td>
+                                                 <input type="text" id ="RolesInformationText" runat="server"/>
+                                            </td>
+                                            <td>
+                                               <label id="_Entityname" runat="server">Entity Name</label>
+                                            </td>
+                                            <td>
+                                                <input type="text" id ="EntityNameText" runat="server"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label id="IndividualName" runat="server">Individual Name</label>
+                                            </td>
+                                            <td>
+                                                 <input type="text" id ="IndividualNameText" runat="server"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                             <td>
+                                                <label id="_Familyname" runat="server">Family Name</label>
+                                            </td>
+                                            <td>
+                                                 <input type="text" id ="Family_nameText" runat="server"/>
+                                            </td>
+                                            </tr>
+                                        <tr>
+                                            <td>
+                                                <label id="_CIFID" runat="server">CIFID</label>
+                                            </td>
+                                            <td>
+                                                 <input type="text" id ="_CIFIDText" runat="server"/>
+                                            </td>
+                                        </tr>
+                                            <tr>
+                                            <td>
+                                                <label id="Owner" runat="server">Owner</label>
+                                            </td>
+                                            <td>
+                                                <asp:CheckBox id="OwnerCheckBox" runat="server" />
+                                            </td>
+                                             <td>
+                                                <label id="ControlPhpng" runat="server">ControlPhpng</label>
+                                            </td>
+                                            <td>
+                                                <asp:CheckBox id="ControlPhpngCheckBox" runat="server" />
+                                            </td>
+                                               
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                           <label id="Director" runat="server">Director</label>
+                                                </td>
+                                            <td>
+                                                <asp:CheckBox id="DirectorMemberBoardCheckBox" runat="server" />
+                                                  <label id="DirectorMemberBoard" runat="server">Director/MemberBoard</label>
+                                                <asp:CheckBox id="ChairmanCheckBox" runat="server" />
+                                                  <label id="Chairman" runat="server">Chairman</label>
+                                                 <asp:CheckBox id="Vice_ChairmanCheckBox" runat="server" />
+                                                  <label id="Vice_Chairman" runat="server">Chairman</label>
+                                                 </td>
+                                            <td>
+                                               
+                                                  <label id="GeneralPartner" runat="server">GeneralPartner</label>
+                                                <asp:CheckBox id="GeneralPartnerCheckBox" runat="server" />
+                                             </td>
+                                            <td>
+                                                <label id="Signatory" runat="server">Signatory</label>
+                                                <asp:CheckBox id="SignatoryCheckBox" runat="server" />
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td>
+                                             <label id="KeySeniorManagement" runat="server">KeySeniorManagement</label></td>
+                                            <td>
+                                               <asp:CheckBox id="CEOorDeputyCheckBox" runat="server" />
+                                                <label id="CEOorDeputy" runat="server">CEOorDeputy</label>
+                                                  
+                                               <asp:CheckBox id="CFOCheckBox" runat="server" />
+                                                <label id="CFO" runat="server">CFO</label>
+                                                 <asp:CheckBox id="COOCheckBox" runat="server" />
+                                                <label id="COO" runat="server">COO/General</label>
+                                                   <asp:CheckBox id="PresidentCheckBox" runat="server" />
+                                                <label id="President" runat="server">President</label>
+                                                <asp:CheckBox id="OtherSeniorManagementCheckBox" runat="server" />
+                                                <label id="OtherSeniorManagement" runat="server">President</label>
+                                            </td>
+                                            <td>
+                                                <label id="ThirdParty" runat="server">ThirdParty</label> 
+                                            </td>
+                                            <td>
+                                                <asp:CheckBox id="ThirdPartyCheckBox" runat="server" />
+                                                </td>
+                                            <td>
+                                                  <label id="RelationshipBetweenThirdPartyandAccountHolder" runat="server">RelationshipBetweenThirdPartyandAccountHolder</label>
+                                                </td>
+                                            <td>
+                                                <input type="text" id ="RelationshipBetweenThirdPartyandAccountHolderText" runat="server"/>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td>
+                                                <label id="others" runat="server">Others</label>
+                                                </td>
+                                            <td>
+                                                 <asp:CheckBox id="BeneficiaryCheckBox" runat="server" />
+                                                 <label id="Beneficiary" runat="server">Beneficiary</label> 
+                                                 <asp:CheckBox id="CustodianCheckBox" runat="server" />
+                                                 <label id="Custodian" runat="server">Custodian</label> 
+                                                 <asp:CheckBox id="FeederEndCheckBox" runat="server" />
+                                                 <label id="FeederEnd" runat="server">FeederEnd</label> 
+                                                <asp:CheckBox id="FundAdministrationCheckBox" runat="server" />
+                                                 <label id="FundAdministration" runat="server">FundAdministration</label> 
+                                                  <asp:CheckBox id="InvestmentAdvisorCheckBox" runat="server" />
+                                                 <label id="InvestmentAdvisor" runat="server">InvestmentAdvisor</label> 
+                                                  <asp:CheckBox id="InvestmentManagerCheckBox" runat="server" />
+                                                 <label id="InvestmentManager" runat="server">InvestmentManager</label> 
+                                                 <asp:CheckBox id="MasterFundCheckBox" runat="server" />
+                                                 <label id="MasterFundLabel" runat="server">MasterFund</label> 
+                                                 <asp:CheckBox id="powerOfCheckBox" runat="server" />
+                                                 <label id="powerOfLabel" runat="server">powerOf</label> 
+                                                <asp:CheckBox id="SettorCheckBox1" runat="server" />
+                                                 <label id="SettorLabel" runat="server">Settor</label>
+                                                 <asp:CheckBox id="TrusteeCheckBox" runat="server" />
+                                                 <label id="TrusteeLabe" runat="server">Settor</label>
+                                                 <asp:CheckBox id="OtherCheckBox" runat="server" />
+                                                 <label id="OtherLabel" runat="server">Other</label>
+                                                </td>  
+                                            <td>
+                                                <label id="CommentsOthers" runat="server">Comments[In case of Others]</label>
+                                                </td>
+                                            <td>
+                                                <textarea runat="server" id="CommentOtherstext"></textarea>
+                                                </td>
+                                            <td>
+                                                  <label id="CorrespondentBank" runat="server">CorrespondentBank</label>
+                                                </td>
+                                            <td>
+                                                  <asp:CheckBox id="CorrespondentBankCheckBox" runat="server" />
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td><label id="BranchRolePlayer" runat="server">BranchRolePlayer</label>
+                                                </td>
+                                            <td>
+                                                 <asp:CheckBox id="BranchSnrMgmtCheckBox" runat="server" />
+                                                 <label id="BranchSnrMgmt" runat="server">branch Senior Management</label>
+                                                 <asp:CheckBox id="BranchAMLOfficerCheckBox2" runat="server" />
+                                                 <label id="BranchAMLOfficer" runat="server">Other</label>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td>
+                                                <label id ="PEPMaterialityForRole" runat="server">PEPMaterialityForRole</label>
+                                                </td>
+                                            <td><input type="text" id="PEPMaterialityForRoleText" runat="server"/></td>
+                                            </tr>
+                                        <tr>
+                                            <td>
+                                                 <label id ="IndividualsPEP" runat="server"> If Individuals PEP is their involvement material for the roles identified</label>
+                                                </td>
+                                            <td>
+                                                <div class="radio">
+                                                    <label>
+                                                        <input type="radio" name="IndividualsPEP" id="IndividualsPEP_yes" value="yes" runat="server"/>Yes</label>
+
+                                                    <label>
+                                                        <input type="radio" name="IndividualsPEP" id="IndividualsPEP_no"  value ="no" runat="server"/>No</label>
+                                                </div>
+                                                </td>
+                                            <td>
+                                                  <label id ="PEPMaterialityJustification" runat="server">PEPMaterialityJustification</label>
+                                                </td>
+                                            <td>
+                                                <textarea id="PEPMaterialityJustificationTextxArea" runat="server"></textarea>
+                                                </td>
+                                            </tr>
+                                        <tr>
+                                            <td> <label id ="Holding" runat="server">Holding%</label></td>
+                                            <td>
+                                                <input type="text" id="HoldingText" runat="server"/>
+                                            </td>
+                                            <td> <label id ="SelectedTo" runat="server">SelectedTo</label>
+                                                </td>
+                                            <td>
                                                 <div class="dropdown">
-                                                    
-                                                     <select>
+                                                   <select>
                                                    <option value="" ></option> 
                                                    <option></option>
                                                    <option></option>
-                                                        <option></option>
-                                                          <option></option>
-                                                         <option></option>
-                                                 </select>
-                                                </div>
-                                            </td>
+                                                 </select></div>
+                                                </td>
+                                              <td> <label id ="RejectedToLabel" runat="server">RejectedToCIFID</label>
+                                                </td>
+                                           
+                                            </tr>
+                                        <tr>
+                                            <td> <label id ="HoldingPercentileUnknown" runat="server">Holding % Unknown</label>
+                                                </td>
                                             <td>
-                                                <button><a href="#">Client CI ID </a></button>
-                                            </td>
+                                                <input id="HoldingPercentileUnknownCheckbox" type="checkbox" runat="server"/>
+                                                </td>
+                                            <td><label id ="HoldingPercentageRange" runat="server">HoldingPercentageRange</label>
+                                                </td>
                                             <td>
-                                                <input type="textbox"></input>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                                 <div class="dropdown">
+                                                   <select>
+                                                   <option value="" ></option> 
+                                                   <option>0-20</option>
+                                                   <option>20-40</option>
+                                                       <option>40-60</option>
+                                                       <option>60-80</option>
+                                                       <option>80-100</option>
+                                                 </select></div>
+                                                </td>
+                                            <td><label id ="ReasonHoldingpercentageUnknown" runat="server">Reason Holding % Unknown</label>
+                                                </td>
+                                            <td><textarea id="ReasonHoldingpercentageUnknowntextarea" runat="server"></textarea>
+                                                </td>
+                                            </tr>
                                         <tr>
                                             <td>
-                                                <button><a href="#">Written internal Places, procedures and controls</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button><a href="#">A risk Assessment</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button><a href="#">Designation Of Compliance Officer</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <button><a href="#">Periodic independency testing of AML Program</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <button><a href="#">Periodic training of employees</a></button>
-                                            </td>
-                                            <td>
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optradio">Yes</label>
-
-                                                    <label>
-                                                        <input type="radio" name="optradio">No</label>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
+                                                <input id="Submit" type="submit" value="submit" runat="server" /></td>
+                                            </tr>
                                     </table>
                                 </p>
                             </div>
