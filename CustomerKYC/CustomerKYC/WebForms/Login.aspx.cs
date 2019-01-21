@@ -1,52 +1,60 @@
-﻿using System;
+﻿using CustomerKYC.DalClasses;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
+//using System.Web.UI.WebControls;
 
-namespace CustomerKYC.WebForms
+namespace CustomerKYC
 {
-    public partial class Login : System.Web.UI.Page
+    public partial class WebForm3 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-        protected void Login_Click(object sender, EventArgs e)
+        static int _attempts = 3;
+        protected void Admin_Button(object sender, EventArgs e)
         {
             try
             {
-                string username = UsernameText.Value;
-                string password = PasswordText.Value;
-                string uname = "admin";
-                string pwd = "admin";
-                if (username == "")
+                string username, password;
+                username = TextBox1.Text;
+                password = TextBox2.Text;
+                bool result = DalLogin.CheckUser(username, password);
+
+                if (username == null || username == "")
                 {
-                    Response.Write("<span>");
-                    Response.Write(" <script>alert(" + '"' + "Username Field Can't be empty" + '"' + "); </script>");
-                    Response.Write("</span>");
+                    Response.Write("<script>alert('Please Check your Credentials');</script>");
+                    return;
                 }
-                if (password == "")
+                if (password == null || password == "")
                 {
-                    Response.Write("<span>");
-                    Response.Write(" <script>alert(" + '"' + "Password Field Can't be Empty" + '"' + "); </script>");
-                    Response.Write("</span>");
+                    Response.Write("<script>alert('Please Check your Credentials');</script>");
+                    return;
                 }
-                if ((username == uname) && (password == pwd))
+                if (username == "welcome" && password == "welcome")
                 {
-                    Response.Redirect("AADHAR.aspx");
+                    _attempts = 0;
+                    Response.Redirect("AfterLogin.aspx");
+                    Session["user_login"] = TextBox1.Text;
+                }
+                else if ((_attempts == 3) || (_attempts > 0))
+                {
+                    --_attempts;
+                    String attempts = Convert.ToString(_attempts);
+                    Response.Write("<script>alert('You Have Only'+'" + attempts + "'+' Attempt Left To Try');</script>");
+
                 }
                 else
                 {
-                    Response.Write("< p id = 'Label1'' style='height: 16px; width: 120px; Z - INDEX: 102; LEFT: 288px; POSITION: absolute; TOP: 144px; background - color: yellow;'>");
-                    Response.Write("<script>alert(" + '"' + "Incorrect Username or Password" + '"' + "); </script>");
-                    Response.Write("</p>");
+                    Response.Write("<script>alert('Sorry! please try later.');window.close();</script>");
                 }
             }
             catch (Exception exp)
             {
-                Response.Write("Null Pointer Exception");
+                Response.Write("Null Reference Exception");
             }
 
         }

@@ -121,6 +121,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="data\Aadhar_Details.csv" />
+    <Content Include="WebForms\Aadhar.aspx" />
+    <Content Include="WebForms\AadharVerification.aspx" />
     <Content Include="Config%27s\packages.config" />
     <Content Include="Config%27s\ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -160,6 +163,20 @@
     <Content Include="WebForms\Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="WebForms\Aadhar.aspx.cs">
+      <DependentUpon>Aadhar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Aadhar.aspx.designer.cs">
+      <DependentUpon>Aadhar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AadharVerification.aspx.cs">
+      <DependentUpon>AadharVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AadharVerification.aspx.designer.cs">
+      <DependentUpon>AadharVerification.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DataAccessLayer\clsAssociatedPersonsNEntities.cs" />
     <Compile Include="DataAccessLayer\clsEntityRelationshiporOfferings.cs" />
     <Compile Include="DataAccessLayer\clsLogin.cs" />

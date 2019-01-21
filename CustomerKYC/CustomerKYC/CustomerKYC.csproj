@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{72D134A8-38E4-4EF0-8D6F-EE89B019218C}</ProjectGuid>
+    <ProjectGuid>{9262DC5A-A8A5-41B0-AD14-680E62DB1E2C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -94,11 +94,34 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\hello.png" />
+    <Content Include="img\IndiaLogo.jpg" />
+    <Content Include="img\nsdlLogo.jpg" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Data\Aadhar_Details.csv" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="lib\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\fontawesome-webfont-.eot" />
+    <Content Include="fonts\fontawesome-webfont-v=4.0.3.eot" />
+    <Content Include="fonts\fontawesome-webfont-v=4.0.3.ttf" />
+    <Content Include="fonts\fontawesome-webfont-v=4.0.3.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="csv\PAN.csv" />
+    <Content Include="WebForms\AfterLogin.aspx" />
+    <Content Include="WebForms\Submits.aspx" />
+    <Content Include="csv\additionaldetails.csv" />
+    <Content Include="csv\details.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -107,49 +130,205 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="images\Aadharsymbol.jpg" />
-    <Content Include="images\UIDAI.jpg" />
+    <Content Include="css\bbpress.css" />
+    <Content Include="css\colors\asphalt.css" />
+    <Content Include="css\colors\blue.css" />
+    <Content Include="css\colors\brown.css" />
+    <Content Include="css\colors\mustard.css" />
+    <Content Include="css\colors\pomegranate.css" />
+    <Content Include="css\colors\turquoise.css" />
+    <Content Include="css\colors\yellow.css" />
+    <Content Include="css\style.css" />
+    <Content Include="fonts\fontawesome-webfont-v=4.0.3.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="img\404.png" />
+    <Content Include="img\AjaxLoader.gif" />
+    <Content Include="img\apple-touch-icon.png" />
+    <Content Include="img\arrow.png" />
+    <Content Include="img\check-hover.png" />
+    <Content Include="img\check.png" />
+    <Content Include="img\close-hover.png" />
+    <Content Include="img\close.png" />
+    <Content Include="img\cursor.png" />
+    <Content Include="img\demo_01.jpg" />
+    <Content Include="img\error.gif" />
+    <Content Include="img\facebook-hover.png" />
+    <Content Include="img\facebook.png" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\flickr_01.jpg" />
+    <Content Include="img\flickr_02.jpg" />
+    <Content Include="img\flickr_03.jpg" />
+    <Content Include="img\flickr_04.jpg" />
+    <Content Include="img\flickr_05.jpg" />
+    <Content Include="img\flickr_06.jpg" />
+    <Content Include="img\flickr_07.jpg" />
+    <Content Include="img\flickr_08.jpg" />
+    <Content Include="img\google-hover.png" />
+    <Content Include="img\google.png" />
+    <Content Include="img\in-hover.png" />
+    <Content Include="img\in.png" />
+    <Content Include="img\intro-bg.jpg" />
+    <Content Include="img\item-single.png" />
+    <Content Include="img\market_01.png" />
+    <Content Include="img\market_02.png" />
+    <Content Include="img\market_03.png" />
+    <Content Include="img\market_04.png" />
+    <Content Include="img\market_05.png" />
+    <Content Include="img\market_06.png" />
+    <Content Include="img\market_alone.png" />
+    <Content Include="img\market_single_01.png" />
+    <Content Include="img\nav.png" />
+    <Content Include="img\office.png" />
+    <Content Include="img\payments.png" />
+    <Content Include="img\pixel.gif" />
+    <Content Include="img\portfolio_01.jpg" />
+    <Content Include="img\portfolio_02.jpg" />
+    <Content Include="img\portfolio_03.jpg" />
+    <Content Include="img\portfolio_04.jpg" />
+    <Content Include="img\portfolio_05.jpg" />
+    <Content Include="img\portfolio_06.jpg" />
+    <Content Include="img\portfolio_07.jpg" />
+    <Content Include="img\portfolio_08.jpg" />
+    <Content Include="img\portfolio_09.jpg" />
+    <Content Include="img\portfolio_10.jpg" />
+    <Content Include="img\recent_post_01.png" />
+    <Content Include="img\recent_post_02.png" />
+    <Content Include="img\remove.png" />
+    <Content Include="img\search.png" />
+    <Content Include="img\sliderbg_01.png" />
+    <Content Include="img\sliderbg_02.png" />
+    <Content Include="img\slider_01.png" />
+    <Content Include="img\slider_02.png" />
+    <Content Include="img\slides_01.jpg" />
+    <Content Include="img\slides_02.jpg" />
+    <Content Include="img\slides_03.jpg" />
+    <Content Include="img\success.gif" />
+    <Content Include="img\support.png" />
+    <Content Include="img\team_01.png" />
+    <Content Include="img\team_02.png" />
+    <Content Include="img\team_03.png" />
+    <Content Include="img\team_04.png" />
+    <Content Include="img\team_05.png" />
+    <Content Include="img\team_06.png" />
+    <Content Include="img\twitter-hover.png" />
+    <Content Include="img\twitter.png" />
+    <Content Include="img\undo-hover.png" />
+    <Content Include="img\undo.png" />
+    <Content Include="img\zoom-hover.png" />
+    <Content Include="img\zoom.png" />
+    <Content Include="js\jquery.gmap.js" />
+    <Content Include="js\jquery.mb.YTPlayer.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\modernizr.js" />
+    <Content Include="lib\animate-enhanced\animate-enhanced.min.js" />
+    <Content Include="lib\bootstrap\css\bootstrap.css" />
+    <Content Include="lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="lib\bootstrap\js\bootstrap.js" />
+    <Content Include="lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="lib\easypiechart\easypiechart.min.js" />
+    <Content Include="lib\font-awesome\css\font-awesome.css" />
+    <Content Include="lib\font-awesome\css\font-awesome.min.css" />
+    <Content Include="lib\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="lib\hover\hoverdir.js" />
+    <Content Include="lib\hover\hoverex-all.css" />
+    <Content Include="lib\hover\hoverex.min.js" />
+    <Content Include="lib\isotope\isotope.min.js" />
+    <Content Include="lib\jetmenu\jetmenu.css" />
+    <Content Include="lib\jetmenu\jetmenu.js" />
+    <Content Include="lib\jigowatt\jigowatt.js" />
+    <Content Include="lib\jquery\jquery.js" />
+    <Content Include="lib\jquery\jquery.min.js" />
+    <Content Include="lib\owl-carousel\owl-carousel.css" />
+    <Content Include="lib\owl-carousel\owl-carousel.js" />
+    <Content Include="lib\php-mail-form\validate.js" />
+    <Content Include="lib\prettyphoto\css\prettyphoto.css" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\default_thumbnail.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\contentPattern.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\default_thumbnail.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_rounded\default_thumbnail.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_square\default_thumbnail.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_square\loader.gif" />
+    <Content Include="lib\prettyphoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="lib\prettyphoto\js\prettyphoto.js" />
+    <Content Include="lib\unveil-effects\unveil-effects.js" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
-    <Content Include="WebForms\Aadhar.aspx" />
-    <Content Include="WebForms\AadharDetails.aspx" />
-    <Content Include="WebForms\AadharVerification.aspx" />
-    <Content Include="WebForms\About.aspx" />
+    <Content Include="WebForms\AddtionalInfo.aspx" />
+    <Content Include="WebForms\Home.aspx" />
+    <Content Include="WebForms\iframe.aspx" />
     <Content Include="WebForms\Login.aspx" />
-    <Content Include="WebForms\Logout.aspx" />
+    <Content Include="WebForms\PanDetails.aspx" />
+    <Content Include="WebForms\PanId.aspx" />
+    <Content Include="WebForms\PanLogin.aspx" />
+    <Content Include="WebForms\Registration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DalClasses\clsRegistration.cs" />
+    <Compile Include="DalClasses\DalLogin.cs" />
+    <Compile Include="DalClasses\PAN.cs" />
+    <Compile Include="DalClasses\VerifyPanLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebForms\Aadhar.aspx.cs">
-      <DependentUpon>Aadhar.aspx</DependentUpon>
+    <Compile Include="WebForms\AddtionalInfo.aspx.cs">
+      <DependentUpon>AddtionalInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Aadhar.aspx.designer.cs">
-      <DependentUpon>Aadhar.aspx</DependentUpon>
+    <Compile Include="WebForms\AddtionalInfo.aspx.designer.cs">
+      <DependentUpon>AddtionalInfo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Aadhar.cs" />
-    <Compile Include="WebForms\AadharDetails.aspx.cs">
-      <DependentUpon>AadharDetails.aspx</DependentUpon>
+    <Compile Include="DalClasses\Details.cs" />
+    <Compile Include="WebForms\AfterLogin.aspx.cs">
+      <DependentUpon>AfterLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\AadharDetails.aspx.designer.cs">
-      <DependentUpon>AadharDetails.aspx</DependentUpon>
+    <Compile Include="WebForms\AfterLogin.aspx.designer.cs">
+      <DependentUpon>AfterLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\AdharDetails.cs" />
-    <Compile Include="WebForms\AadharVerification.aspx.cs">
-      <DependentUpon>AadharVerification.aspx</DependentUpon>
+    <Compile Include="WebForms\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\AadharVerification.aspx.designer.cs">
-      <DependentUpon>AadharVerification.aspx</DependentUpon>
+    <Compile Include="WebForms\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="WebForms\iframe.aspx.cs">
+      <DependentUpon>iframe.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
+    <Compile Include="WebForms\iframe.aspx.designer.cs">
+      <DependentUpon>iframe.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -158,14 +337,43 @@
     <Compile Include="WebForms\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Logout.aspx.cs">
-      <DependentUpon>Logout.aspx</DependentUpon>
+    <Compile Include="WebForms\PanDetails.aspx.cs">
+      <DependentUpon>PanDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Logout.aspx.designer.cs">
-      <DependentUpon>Logout.aspx</DependentUpon>
+    <Compile Include="WebForms\PanDetails.aspx.designer.cs">
+      <DependentUpon>PanDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\PanId.aspx.cs">
+      <DependentUpon>PanId.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\PanId.aspx.designer.cs">
+      <DependentUpon>PanId.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\PanLogin.aspx.cs">
+      <DependentUpon>PanLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\PanLogin.aspx.designer.cs">
+      <DependentUpon>PanLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Submits.aspx.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Submits.aspx.designer.cs">
+      <DependentUpon>Submits.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -179,9 +387,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56957</DevelopmentServerPort>
+          <DevelopmentServerPort>53843</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56957/</IISUrl>
+          <IISUrl>http://localhost:53843/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

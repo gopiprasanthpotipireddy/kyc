@@ -30,12 +30,13 @@
                                 }
                             </style>
                             <br>
-                            <h2 style="color:black; text-align: center;">Admin Login</h2>
+                            <h2 style="color:black; text-align: center; font:100">Admin Login</h2>
                             <br>
                             <br>
+                            <center>
                             <div style="text-align: center">
                                <span style="color:black; text-align: center;">User Name</span><br>
-                                <%--<input type="text" name="username" id="TextBox1" />--%><asp:TextBox ID="TextBox1" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox>
+                                <%--<input type="text" name="username" id="TextBox1" />--%><asp:TextBox ID="TextBox1" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox><br>
                                 <br>
                                 <span style="color:black; text-align: center;">Password</span><br>
                                 <%--<input type="password" name="password" id="TextBox2" />--%><asp:TextBox ID="TextBox2" type="password" runat="server" Style="height: 30px; width: 200px;"></asp:TextBox>
@@ -46,6 +47,7 @@
                                 <%--<asp: Button type= "submit" id="submit" runat="server"  OnClick="Button1_Click"/>--%>
                                 <asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Admin_Button" Style="background-color: orange; height: 40px; width: 200px;" />
                                 </div>
+                                </center>
                            </div>
                     </div>
                 </div>

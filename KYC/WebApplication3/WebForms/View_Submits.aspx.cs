@@ -49,7 +49,7 @@ namespace KYC
             Response.Write("<th  style = 'text-align: center;'>Nature Of Business</th>");
             Response.Write("<th  style = 'text-align: center;'>State/Province of Incorporation Number</th>");
             Response.Write("<th  style = 'text-align: center;'>Incorporation/Registration Number</th>");
-            Response.Write("Watch List Management");
+            //Response.Write("Watch List Management");
             Response.Write("<th  style = 'text-align: center;'>PEP Justification</th>");
 
             Response.Write("<th  style = 'text-align: center;'>Sanction Justification</th>");

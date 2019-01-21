@@ -1,186 +1,272 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CustomerKYC.WebForms.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="CustomerKYC.WebForm3" %>
 
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>MaxiBiz Bootstrap Business Template</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style>
-        body {
-            background: #0f3f6a;
-        }
+  <!-- Favicons -->
+  <link href="../img/favicon.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        .content {
-            width: 500px;
-            text-align: center;
-            height: 500px;
-            position: absolute;
-            top: 40%;
-            left: 30%;
-            background: white;
-            padding: 10px;
-            margin-top: -100px;
-            margin-left: -150px;
-        }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Ruda:400,900,700" rel="stylesheet">
 
-        #logintable {
-            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-            border-collapse: collapse;
-            width: 100%;
-        }
+  <!-- Bootstrap CSS File -->
+  <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-            #logintable tr td {
-                padding: 30px;
-            }
+  <!-- Libraries CSS Files -->
+  <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../lib/prettyphoto/css/prettyphoto.css" rel="stylesheet">
+  <link href="../lib/hover/hoverex-all.css" rel="stylesheet">
+  <link href="../lib/jetmenu/jetmenu.css" rel="stylesheet">
+  <link href="../lib/owl-carousel/owl-carousel.css" rel="stylesheet">
 
-            #logintable tr:nth-child(even) {
-                background-color: #f2f2f2;
-            }
+  <!-- Main Stylesheet File -->
+  <link href="../css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/colors/blue.css">
 
-            #logintable tr:hover {
-                background-color: #ddd;
-            }
-
-        .greenbutton {
-            background: #0f3f6a;
-            width: 200px;
-            height: 50px;
-        }
-
-        header {
-            background-color: white;
-            padding: 2px;
-            text-align: left;
-            font-size: 35px;
-            color: #0f3f6a;
-        }
-        article {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #0f3f6a;
-  height: 750px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-        footer {
-  background-color:white;
-  padding: 10px;
-  text-align: center;
-  color: white;
-}
-   ul {
-             list-style-type: none;
-             margin: 0;
-             padding: 0;
-             overflow: hidden;
-             background-color: orange;
-             position: relative;
-             left: 0px;
-         }
-
-        li {
-             float: left;
-         }
-
-            li a {
-                 display: block;
-                 color: white;
-                 text-align: center;
-                 padding: 6px 16px;
-                 text-decoration: none;
-                 left: 1500px;
-                 position: relative;
-             }
-
-                li a:hover:not(.active) {
-                     background-color: #791717;
-                 }
-
-        .active {
-             background-color: #791717;
-         }
-
-/*.active {
-  background-color: white;
-}*/
-
-    </style>
+  <!-- =======================================================
+    Template Name: MaxiBiz
+    Template URL: https://templatemag.com/maxibiz-bootstrap-business-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
 </head>
+
 <body>
-    <form runat="server">
-        <header>
-            <h3 style="text-align: left; color: #0f3f6a; top: 70px;" id="Aadharhead">Aadhar Verification
-                <img src="../images/Aadharsymbol.jpg" width="90" height="50" /></h3>
-        </header>
-        <div>
-            <ul>
-  <li><a class="active" href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul>
+  <div class="topbar clearfix">
+    <div class="container">
+      <div class="col-lg-12 text-right">
+        <div class="social_buttons">
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+          <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
         </div>
-        <section>
-        <article>
-        <div class="content">
-            <h1 style="text-align:left; color:#0f3f6a;font-size:30px;position:relative;left:30px;" id="LoginHead">Login!</h1>
-            <table id="logintable">
+      </div>
+    </div>
+    <!-- end container -->
+  </div>
+  <!-- end topbar -->
 
-
-                <tr>
-                    <td style="text-align: left">
-                        <label id="UsernameLabel" runat="server" style="color:#0f3f6a;font-size:15px;">Username:</label></td>
-                    <td>
-                        <input type="text" id="UsernameText" runat="server" style="border-color:#0f3f6a;padding:4px;" /></td>
-                </tr>
-                <tr>
-                    <td style="text-align: left">
-                        <label id="PasswordLabel" runat="server" style="color:#0f3f6a;font-size:15px;" >Password:</label></td>
-                    <td>
-                        <input type="password" id="PasswordText" runat="server" style="border-color:#0f3f6a;padding:4px;" /></td>
-                </tr>
-                <tr>
-                    <td>
-                        <p id="message"></p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <asp:Button ID="LoginButton" runat="server" Class="greenbutton" Style="color: white;" Text="Login" OnClick="Login_Click" /></td>
-                </tr>
-
-            </table>
-
-
+  <header class="header">
+    <div class="container">
+      <div class="site-header clearfix">
+        <div class="col-lg-3 col-md-3 col-sm-12 title-area">
+          <div class="site-title" id="title">
+            <a href="index.html" title="">
+              <h4>Prime<span>Bank</span></h4>
+            </a>
+          </div>
         </div>
-        </article>
-        </section>
-        <footer>
-  <%--<p>Footer</p>--%>
-            <img src="../images/Aadharsymbol.jpg" width="90" height="50" />
-</footer>
+        <!-- title area -->
+        <div class="col-lg-9 col-md-12 col-sm-12">
+          <div id="nav" class="right">
+            <div class="container clearfix">
+              <ul id="jetmenu" class="jetmenu blue">
+                <li><a href="Home.aspx">Home</a></li>
+                   <li><a href="login.aspx">Login</a></li>
+                   <li><a href="about.aspx">About Us</a></li>
+             </ul>
+            </div>
+          </div>
+          <!-- nav -->
+        </div>
+        <!-- title area -->
+      </div>
+      <!-- site header -->
+    </div>
+    <!-- end container -->
+  </header>
+  <!-- end header -->
 
-    </form>
-    <%-- <script>
-        function LoginClick() {
-            var username = document.getElementById('UsernameText');
-            var password = document.getElementById('PasswordText');
-            var errormessage;
-            if (username == "admin" && password == "admin") {
-                window.location("AadharVerification.aspx");
-            }
-            else {
-                errormessage = "Wrong Credentials";
-                document.getElementById('message').innerHTML = errormessage;
-            }
-            
-        }
-        </script>--%>
+  <section class="post-wrapper-top">
+    <div class="container">
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Login</li>
+        </ul>
+        <h2>LOGIN</h2>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <!-- search -->
+        <div class="search-bar">
+          <form action="" method="get">
+            <fieldset>
+              <input type="image" src="img/pixel.gif" class="searchsubmit" alt="" />
+              <input type="text" class="search_text showtextback" name="s" id="s" value="Search..." />
+            </fieldset>
+          </form>
+        </div>
+        <!-- / end div .search-bar -->
+      </div>
+    </div>
+  </section>
+  <!-- end post-wrapper-top -->
+
+  <section class="section1">
+    <div class="container clearfix">
+      <div class="content col-lg-12 col-md-12 col-sm-12 clearfix">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h4 class="title">
+                    	<span>Welcome !</span>
+                    </h4>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s.</p>
+          <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+          <p class="withpadding">Still not registered? <a href="#">Click Here</a> to register now.</p>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <h4 class="title">
+                    	<span>Login Form</span>
+                    </h4>
+          <form id="loginform" runat="server" method="post" name="loginform" action=" ">
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <%--<input type="text" class="form-control" id="TextBox" runat="server" placeholder="Username">--%>
+                  <asp:TextBox id ="TextBox1" class="form-control" runat="server" placeholder="Username" Style="height: 30px; width: 200px;"></asp:TextBox>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                <%--<input type="password" class="form-control" id="TextBox2" runat="server" placeholder="Password">--%>
+              <asp:TextBox id ="TextBox2" type="password" class="form-control" runat="server" placeholder="Username" Style="height: 30px; width: 200px;"></asp:TextBox>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox"> Remember me
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <asp:button type="submit" id="button" runat="server" OnClick ="Admin_Button" class="button" text="Sign In"></asp:button>
+                <%--<asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Admin_Button" Style="background-color: orange; height: 40px; width: 200px;" />--%>
+            </div>
+          </form>
+        </div>
+        <!-- end login -->
+      </div>
+      <!-- end content -->
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end section -->
+
+  <footer class="footer">
+    <div class="container">
+      <div class="widget col-lg-3 col-md-3 col-sm-12">
+        <h4 class="title">About us</h4>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry"s standard dummy text ever since the 1500s..</p>
+        <a class="button small" href="#">read more</a>
+      </div>
+      <!-- end widget -->
+      <div class="widget col-lg-3 col-md-3 col-sm-12">
+        <h4 class="title">Recent Posts</h4>
+        <ul class="recent_posts">
+          <li>
+            <a href="home1.html#">
+						<img src="img/recent_post_01.png" alt="" />Our New Dashboard Is Here</a>
+            <a class="readmore" href="#">read more</a>
+          </li>
+          <li>
+            <a href="home1.html#">
+						<img src="img/recent_post_02.png" alt="" />Design Is In The Air</a>
+            <a class="readmore" href="#">read more</a>
+          </li>
+        </ul>
+        <!-- recent posts -->
+      </div>
+      <!-- end widget -->
+      <div class="widget col-lg-3 col-md-3 col-sm-12">
+        <h4 class="title">Get In Touch</h4>
+        <ul class="contact_details">
+          <li><i class="fa fa-envelope-o"></i> info@yoursite.com</li>
+          <li><i class="fa fa-phone-square"></i> +34 5565 6555</li>
+          <li><i class="fa fa-home"></i> Some Fine Address, 887, Madrid, Spain.</li>
+          <li><a href="#"><i class="fa fa-map-marker"></i> View large map</a></li>
+        </ul>
+        <!-- contact_details -->
+      </div>
+      <!-- end widget -->
+      <div class="widget col-lg-3 col-md-3 col-sm-12">
+        <h4 class="title">Flickr Stream</h4>
+        <ul class="flickr">
+          <li><a href="#"><img alt="" src="img/flickr_01.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_02.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_03.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_04.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_05.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_06.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_07.jpg"></a></li>
+          <li><a href="#"><img alt="" src="img/flickr_08.jpg"></a></li>
+        </ul>
+      </div>
+      <!-- end widget -->
+    </div>
+    <!-- end container -->
+
+    <div class="copyrights">
+      <div class="container">
+        <div class="col-lg-6 col-md-6 col-sm-12 columns footer-left">
+          <p>Copyright © 2014 - All rights reserved.</p>
+          <div class="credits">
+            <!--
+              You are NOT allowed to delete the credit link to TemplateMag with free version.
+              You can delete the credit link only if you bought the pro version.
+              Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/maxibiz-bootstrap-business-template/
+              Licensing information: https://templatemag.com/license/
+            -->
+            Created with MaxiBiz template by <a href="https://templatemag.com/">TemplateMag</a>
+          </div>
+        </div>
+        <!-- end widget -->
+        <div class="col-lg-6 col-md-6 col-sm-12 columns text-right">
+          <div class="footer-menu right">
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Sitemap</a></li>
+              <li><a href="#">Site Terms</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- end large-6 -->
+      </div>
+      <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+  </footer>
+  <!-- end footer -->
+  <div class="dmtop">Scroll to Top</div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/php-mail-form/validate.js"></script>
+  <script src="lib/prettyphoto/js/prettyphoto.js"></script>
+  <script src="lib/isotope/isotope.min.js"></script>
+  <script src="lib/hover/hoverdir.js"></script>
+  <script src="lib/hover/hoverex.min.js"></script>
+  <script src="lib/unveil-effects/unveil-effects.js"></script>
+  <script src="lib/owl-carousel/owl-carousel.js"></script>
+  <script src="lib/jetmenu/jetmenu.js"></script>
+  <script src="lib/animate-enhanced/animate-enhanced.min.js"></script>
+  <script src="lib/jigowatt/jigowatt.js"></script>
+  <script src="lib/easypiechart/easypiechart.min.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
 </body>
 </html>
