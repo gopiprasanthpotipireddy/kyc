@@ -121,7 +121,7 @@ namespace CustomerKYC.WebForms
             Response.Write("</center>");
             Response.Write("</body>");
             Response.Write("</html>");
-
+            reader.Close();   
         }
     }
 }

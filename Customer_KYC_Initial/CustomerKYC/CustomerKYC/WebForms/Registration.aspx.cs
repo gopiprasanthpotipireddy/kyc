@@ -137,6 +137,7 @@ namespace CustomerKYC.WebForms
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Join(separator, obj1.Prefix, obj1.FirstName, obj1.MiddleName, obj1.LastName, obj1.Pannumber, obj1.AadharNumber, obj1.PassportNumber, obj1.Occupation, obj1.mobilenumber, obj1.emailid));
             File.AppendAllText(FilePath, sb.ToString());
+            
             Response.Redirect("Submits.aspx");
             //Additional Details
             obj1.SourceofFunds = sof.Value;
