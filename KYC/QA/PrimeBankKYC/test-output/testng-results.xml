@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="43432" started-at="2019-01-25T11:09:16Z" finished-at="2019-01-25T11:09:59Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="43432" started-at="2019-01-25T11:09:16Z" finished-at="2019-01-25T11:09:59Z">
+      <class name="Scripts.LoginTestScript">
+        <test-method status="PASS" signature="init()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="init" is-config="true" duration-ms="136" started-at="2019-01-25T16:39:15Z" finished-at="2019-01-25T16:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initializingConnections()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="initializingConnections" is-config="true" duration-ms="685" started-at="2019-01-25T16:39:16Z" finished-at="2019-01-25T16:39:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializingConnections -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5092" started-at="2019-01-25T16:39:16Z" finished-at="2019-01-25T16:39:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_BlankUserName_BlankPwd" duration-ms="423" started-at="2019-01-25T16:39:21Z" finished-at="2019-01-25T16:39:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_BlankUserName_BlankPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1054" started-at="2019-01-25T16:39:22Z" finished-at="2019-01-25T16:39:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5109" started-at="2019-01-25T16:39:23Z" finished-at="2019-01-25T16:39:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:23Z" finished-at="2019-01-25T16:39:23Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_BlankUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_BlankUserName_ValidPwd" duration-ms="441" started-at="2019-01-25T16:39:28Z" finished-at="2019-01-25T16:39:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_BlankUserName_ValidPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="974" started-at="2019-01-25T16:39:28Z" finished-at="2019-01-25T16:39:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5014" started-at="2019-01-25T16:39:29Z" finished-at="2019-01-25T16:39:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:29Z" finished-at="2019-01-25T16:39:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_BlankUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_InvalidUserName" duration-ms="1537" started-at="2019-01-25T16:39:34Z" finished-at="2019-01-25T16:39:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_InvalidUserName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1039" started-at="2019-01-25T16:39:36Z" finished-at="2019-01-25T16:39:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:37Z" finished-at="2019-01-25T16:39:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_InvalidUserName status=SUCCESS method=LoginTestScript.Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5516" started-at="2019-01-25T16:39:37Z" finished-at="2019-01-25T16:39:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_BlankPwd" duration-ms="1161" started-at="2019-01-25T16:39:42Z" finished-at="2019-01-25T16:39:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_ValidUserName_BlankPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="926" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5546" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_InvalidPwd" duration-ms="350" started-at="2019-01-25T16:39:50Z" finished-at="2019-01-25T16:39:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_ValidUserName_InvalidPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="972" started-at="2019-01-25T16:39:50Z" finished-at="2019-01-25T16:39:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5814" started-at="2019-01-25T16:39:51Z" finished-at="2019-01-25T16:39:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:51Z" finished-at="2019-01-25T16:39:51Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_InvalidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_ValidPwd" duration-ms="603" started-at="2019-01-25T16:39:57Z" finished-at="2019-01-25T16:39:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Home_Login_ValidUserName_ValidPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="947" started-at="2019-01-25T16:39:58Z" finished-at="2019-01-25T16:39:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="closingAllConnections()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="closingAllConnections" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingAllConnections -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="endreport" is-config="true" duration-ms="216" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Scripts.LoginTestScript -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
