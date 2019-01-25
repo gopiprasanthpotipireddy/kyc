@@ -29,7 +29,7 @@ namespace CustomerKYC.WebForms
             var DateOfBirthcol = new List<string>();
             var Mobilecol = new List<string>();
             var emailcol = new List<string>();
-            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\Aadhar_Details.csv";
+            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\Aadhar_Details.csv";
             var reader = new StreamReader(File.OpenRead(FilePath));
             //string Aadhar = AadharNumber.Value;
             if (Aadhar == null)

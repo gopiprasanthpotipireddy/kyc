@@ -148,7 +148,7 @@ footer {
     <form runat="server" >
      <header>
             <h3 style="text-align: left; color: white; top: 70px;" id="Aadharhead">Aadhar Verification
-                <img src="../images/Aadharsymbol.jpg" width="90" height="50" /></h3>
+                <img src="../img/Aadharsymbol.jpg" width="90" height="50" /></h3>
         </header>
       <section>
             <nav>

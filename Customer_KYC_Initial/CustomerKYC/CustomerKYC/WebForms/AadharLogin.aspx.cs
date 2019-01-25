@@ -39,7 +39,7 @@ namespace CustomerKYC.WebForms
                 }
                 else
                 {
-                    Response.Write("< p id = 'Label1'' style='height: 16px; width: 120px; Z - INDEX: 102; LEFT: 288px; POSITION: absolute; TOP: 144px; background - color: yellow;'>");
+                    Response.Write("<p id = 'Label1'' style='height: 16px; width: 120px; Z - INDEX: 102; LEFT: 288px; POSITION: absolute; TOP: 144px; background - color: yellow;'>");
                     Response.Write("<script>alert(" + '"' + "Incorrect Username or Password" + '"' + "); </script>");
                     Response.Write("</p>");
                 }

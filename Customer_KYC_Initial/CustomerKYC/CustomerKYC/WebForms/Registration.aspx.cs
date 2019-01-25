@@ -34,7 +34,7 @@ namespace CustomerKYC.WebForms
             if ((first_name.Value == "") || (last_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (occ_dd.Value == "") || (sof.Value == "") || (gross_inc.Value == "") || (res_type.Value == "") || (stat.Value == "") || (city_name.Value == "") || (flatno.Value == "") || (mob_num.Value == "") || (email_id.Value == ""))
             {
                 Response.Write("<span>");
-                Response.Write(" <script>alert(" + '"' + "Mandatory Fields cannot be empty" + '"' + "); </script>");
+                Response.Write("<script>alert(" + '"' + "Mandatory Fields cannot be empty" + '"' + ");</script>");
                 Response.Write("</span>");
 
             }
@@ -50,7 +50,7 @@ namespace CustomerKYC.WebForms
             if (obj1.Pannumber.Length != 10)
             {
                 Response.Write("<span>");
-                Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
+                Response.Write("<script>alert(" + '"' + " Please check the PAN Number" + '"' + ");</script>");
                 Response.Write("</span>");
 
             }
@@ -58,7 +58,7 @@ namespace CustomerKYC.WebForms
             if (obj1.AadharNumber.Length != 12)
             {
                 Response.Write("<span>");
-                Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
+                Response.Write("<script>alert(" + '"' + " Please check the Aadhar Number" + '"' + ");</script>");
                 Response.Write("</span>");
 
             }
@@ -120,7 +120,7 @@ namespace CustomerKYC.WebForms
             if ((obj1.mobilenumber.Length != 10))
             {
                 Response.Write("<span>");
-                Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
+                Response.Write("<script>alert(" + '"' + " Please check the mobile number" + '"' + ");</script>");
                 Response.Write("</span>");
             }
 
@@ -133,7 +133,7 @@ namespace CustomerKYC.WebForms
 
             //}
             string separator = ",";
-            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\details.csv";
+            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\details.csv";
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Join(separator, obj1.Prefix, obj1.FirstName, obj1.MiddleName, obj1.LastName, obj1.Pannumber, obj1.AadharNumber, obj1.PassportNumber, obj1.Occupation, obj1.mobilenumber, obj1.emailid));
             File.AppendAllText(FilePath, sb.ToString());
@@ -151,7 +151,7 @@ namespace CustomerKYC.WebForms
             obj1.Country = count.Value;
             string separator1 = ",";
 
-            string FilePath1 = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\additionaldetails.csv";
+            string FilePath1 = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\additionaldetails.csv";
             StringBuilder sb1 = new StringBuilder();
             sb1.AppendLine(string.Join(separator1, obj1.SourceofFunds, obj1.GrossAnnualIncome, obj1.Residencetype, obj1.FlatNo, obj1.Streetnumber, obj1.Landmark, obj1.State, obj1.City, obj1.Pincode, obj1.Country));
             File.AppendAllText(FilePath1, sb1.ToString());

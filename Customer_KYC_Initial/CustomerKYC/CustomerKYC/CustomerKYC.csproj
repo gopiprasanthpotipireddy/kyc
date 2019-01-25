@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="img\Aadharsymbol.jpg" />
     <Content Include="img\hello.png" />
     <Content Include="img\IndiaLogo.jpg" />
     <Content Include="img\nsdlLogo.jpg" />
@@ -118,10 +119,16 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="csv\PAN.csv" />
+    <Content Include="WebForms\AadharDetails.aspx" />
+    <Content Include="WebForms\AadharLogin.aspx" />
+    <Content Include="WebForms\AadharLogout.aspx" />
+    <Content Include="WebForms\AadharVerification.aspx" />
+    <Content Include="WebForms\About.aspx" />
     <Content Include="WebForms\AfterLogin.aspx" />
     <Content Include="WebForms\Submits.aspx" />
     <Content Include="csv\additionaldetails.csv" />
     <Content Include="csv\details.csv" />
+    <Content Include="csv\Aadhar_Details.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -296,11 +303,48 @@
     <Content Include="WebForms\Registration.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DalClasses\Aadhar.cs" />
+    <Compile Include="DalClasses\AdharDetails.cs" />
     <Compile Include="DalClasses\clsRegistration.cs" />
     <Compile Include="DalClasses\DalLogin.cs" />
     <Compile Include="DalClasses\PAN.cs" />
     <Compile Include="DalClasses\VerifyPanLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebForms\AadharDetails.aspx.cs">
+      <DependentUpon>AadharDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AadharDetails.aspx.designer.cs">
+      <DependentUpon>AadharDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AadharLogin.aspx.cs">
+      <DependentUpon>AadharLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AadharLogin.aspx.designer.cs">
+      <DependentUpon>AadharLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AadharLogout.aspx.cs">
+      <DependentUpon>AadharLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AadharLogout.aspx.designer.cs">
+      <DependentUpon>AadharLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\AadharVerification.aspx.cs">
+      <DependentUpon>AadharVerification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\AadharVerification.aspx.designer.cs">
+      <DependentUpon>AadharVerification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForms\AddtionalInfo.aspx.cs">
       <DependentUpon>AddtionalInfo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

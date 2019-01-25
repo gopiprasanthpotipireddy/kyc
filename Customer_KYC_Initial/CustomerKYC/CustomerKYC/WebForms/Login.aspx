@@ -138,7 +138,7 @@
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                 <%--<input type="password" class="form-control" id="TextBox2" runat="server" placeholder="Password">--%>
-              <asp:TextBox id ="TextBox2" type="password" class="form-control" runat="server" placeholder="Username" Style="height: 30px; width: 200px;"></asp:TextBox>
+              <asp:TextBox id ="TextBox2" type="Password" class="form-control" runat="server" placeholder="Password" Style="height: 30px; width: 200px;"></asp:TextBox>
               </div>
             </div>
             <div class="form-group">

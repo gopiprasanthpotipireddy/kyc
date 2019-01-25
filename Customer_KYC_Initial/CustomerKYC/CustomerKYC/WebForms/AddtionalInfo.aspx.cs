@@ -17,7 +17,7 @@ namespace CustomerKYC.WebForms
         protected void View_OnClick1(object sender, EventArgs e)
         {
 
-            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "data\\additionaldetails.csv";
+            string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\additionaldetails.csv";
             var reader = new StreamReader(File.OpenRead(FilePath));
             Response.Write("<html>");
             Response.Write(" <p><h4>Additional Information</h4><p>");
