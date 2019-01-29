@@ -1,171 +1,795 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="6" passed="6">
+<testng-results skipped="0" failed="10" total="16" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="43432" started-at="2019-01-25T11:09:16Z" finished-at="2019-01-25T11:09:59Z">
+  <suite name="Maven project" duration-ms="174944" started-at="2019-01-29T09:55:24Z" finished-at="2019-01-29T09:58:19Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="43432" started-at="2019-01-25T11:09:16Z" finished-at="2019-01-25T11:09:59Z">
+    <test name="Testscriptsexecution" duration-ms="174944" started-at="2019-01-29T09:55:24Z" finished-at="2019-01-29T09:58:19Z">
       <class name="Scripts.LoginTestScript">
-        <test-method status="PASS" signature="init()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="init" is-config="true" duration-ms="136" started-at="2019-01-25T16:39:15Z" finished-at="2019-01-25T16:39:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="initializingConnections()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="initializingConnections" is-config="true" duration-ms="685" started-at="2019-01-25T16:39:16Z" finished-at="2019-01-25T16:39:16Z">
+        <test-method status="PASS" signature="initializingConnections()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="initializingConnections" is-config="true" duration-ms="802" started-at="2019-01-29T15:25:24Z" finished-at="2019-01-29T15:25:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializingConnections -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5092" started-at="2019-01-25T16:39:16Z" finished-at="2019-01-25T16:39:21Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="10059" started-at="2019-01-29T15:25:25Z" finished-at="2019-01-29T15:25:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_BlankUserName_BlankPwd" duration-ms="423" started-at="2019-01-25T16:39:21Z" finished-at="2019-01-25T16:39:22Z">
+        <test-method status="PASS" signature="Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_BlankUserName_BlankPwd" duration-ms="493" started-at="2019-01-29T15:25:35Z" finished-at="2019-01-29T15:25:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_BlankUserName_BlankPwd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1054" started-at="2019-01-25T16:39:22Z" finished-at="2019-01-25T16:39:23Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1230" started-at="2019-01-29T15:25:36Z" finished-at="2019-01-29T15:25:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5109" started-at="2019-01-25T16:39:23Z" finished-at="2019-01-25T16:39:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:23Z" finished-at="2019-01-25T16:39:23Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:25:37Z" finished-at="2019-01-29T15:25:37Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Home_Login_BlankUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+                <![CDATA[[TestResult name=Home_Login_BlankUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_BlankUserName_ValidPwd" duration-ms="441" started-at="2019-01-25T16:39:28Z" finished-at="2019-01-25T16:39:28Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="7253" started-at="2019-01-29T15:25:37Z" finished-at="2019-01-29T15:25:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_BlankUserName_ValidPwd" duration-ms="403" started-at="2019-01-29T15:25:44Z" finished-at="2019-01-29T15:25:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_BlankUserName_ValidPwd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="974" started-at="2019-01-25T16:39:28Z" finished-at="2019-01-25T16:39:29Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1136" started-at="2019-01-29T15:25:45Z" finished-at="2019-01-29T15:25:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5014" started-at="2019-01-25T16:39:29Z" finished-at="2019-01-25T16:39:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:29Z" finished-at="2019-01-25T16:39:29Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:25:46Z" finished-at="2019-01-29T15:25:46Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Home_Login_BlankUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+                <![CDATA[[TestResult name=Home_Login_BlankUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_BlankUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_InvalidUserName" duration-ms="1537" started-at="2019-01-25T16:39:34Z" finished-at="2019-01-25T16:39:36Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="7522" started-at="2019-01-29T15:25:46Z" finished-at="2019-01-29T15:25:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_InvalidUserName" duration-ms="429" started-at="2019-01-29T15:25:53Z" finished-at="2019-01-29T15:25:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_InvalidUserName -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="1039" started-at="2019-01-25T16:39:36Z" finished-at="2019-01-25T16:39:37Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1076" started-at="2019-01-29T15:25:54Z" finished-at="2019-01-29T15:25:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:37Z" finished-at="2019-01-25T16:39:37Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:25:55Z" finished-at="2019-01-29T15:25:55Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Home_Login_InvalidUserName status=SUCCESS method=LoginTestScript.Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+                <![CDATA[[TestResult name=Home_Login_InvalidUserName status=SUCCESS method=LoginTestScript.Home_Login_InvalidUserName()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5516" started-at="2019-01-25T16:39:37Z" finished-at="2019-01-25T16:39:42Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="7317" started-at="2019-01-29T15:25:55Z" finished-at="2019-01-29T15:26:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_BlankPwd" duration-ms="1161" started-at="2019-01-25T16:39:42Z" finished-at="2019-01-25T16:39:44Z">
+        <test-method status="PASS" signature="Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_ValidUserName_BlankPwd" duration-ms="433" started-at="2019-01-29T15:26:02Z" finished-at="2019-01-29T15:26:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_ValidUserName_BlankPwd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="926" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:44Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1163" started-at="2019-01-29T15:26:03Z" finished-at="2019-01-29T15:26:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:44Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:26:04Z" finished-at="2019-01-29T15:26:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Home_Login_ValidUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_BlankPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_BlankPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5546" started-at="2019-01-25T16:39:44Z" finished-at="2019-01-25T16:39:50Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="7361" started-at="2019-01-29T15:26:04Z" finished-at="2019-01-29T15:26:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_InvalidPwd" duration-ms="350" started-at="2019-01-25T16:39:50Z" finished-at="2019-01-25T16:39:50Z">
+        <test-method status="PASS" signature="Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_ValidUserName_InvalidPwd" duration-ms="717" started-at="2019-01-29T15:26:11Z" finished-at="2019-01-29T15:26:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_ValidUserName_InvalidPwd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="972" started-at="2019-01-25T16:39:50Z" finished-at="2019-01-25T16:39:51Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1065" started-at="2019-01-29T15:26:12Z" finished-at="2019-01-29T15:26:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="setUp" is-config="true" duration-ms="5814" started-at="2019-01-25T16:39:51Z" finished-at="2019-01-25T16:39:57Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:26:13Z" finished-at="2019-01-29T15:26:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_InvalidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="setUp" is-config="true" duration-ms="7331" started-at="2019-01-29T15:26:13Z" finished-at="2019-01-29T15:26:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:51Z" finished-at="2019-01-25T16:39:51Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Home_Login_ValidUserName_InvalidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_InvalidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="Home_Login_ValidUserName_ValidPwd" duration-ms="603" started-at="2019-01-25T16:39:57Z" finished-at="2019-01-25T16:39:58Z">
+        <test-method status="PASS" signature="Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="Home_Login_ValidUserName_ValidPwd" duration-ms="679" started-at="2019-01-29T15:26:20Z" finished-at="2019-01-29T15:26:21Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Home_Login_ValidUserName_ValidPwd -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="tearDown" is-config="true" duration-ms="947" started-at="2019-01-25T16:39:58Z" finished-at="2019-01-25T16:39:59Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="tearDown" is-config="true" duration-ms="1258" started-at="2019-01-29T15:26:21Z" finished-at="2019-01-29T15:26:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="closingAllConnections()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="closingAllConnections" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closingAllConnections -->
-        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:26:22Z" finished-at="2019-01-29T15:26:22Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Home_Login_ValidUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1] output={null}]]]>
+                <![CDATA[[TestResult name=Home_Login_ValidUserName_ValidPwd status=SUCCESS method=LoginTestScript.Home_Login_ValidUserName_ValidPwd()[pri:0, instance:Scripts.LoginTestScript@5c3bd550] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTestResult -->
-        <test-method status="PASS" signature="endreport()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="endreport" is-config="true" duration-ms="216" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- endreport -->
-        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Scripts.LoginTestScript@3ffc5af1]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-01-25T16:39:59Z" finished-at="2019-01-25T16:39:59Z">
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="closeBrowser" is-config="true" duration-ms="0" started-at="2019-01-29T15:26:22Z" finished-at="2019-01-29T15:26:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="closingAllConnections()[pri:0, instance:Scripts.LoginTestScript@5c3bd550]" name="closingAllConnections" is-config="true" duration-ms="0" started-at="2019-01-29T15:26:22Z" finished-at="2019-01-29T15:26:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingAllConnections -->
       </class> <!-- Scripts.LoginTestScript -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="Scripts.Userscript">
+        <test-method status="PASS" signature="init()[pri:0, instance:Scripts.Userscript@26653222]" name="init" is-config="true" duration-ms="170" started-at="2019-01-29T15:25:24Z" finished-at="2019-01-29T15:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="initializingConnections()[pri:0, instance:Scripts.Userscript@26653222]" name="initializingConnections" is-config="true" duration-ms="134" started-at="2019-01-29T15:26:22Z" finished-at="2019-01-29T15:26:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializingConnections -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7998" started-at="2019-01-29T15:26:22Z" finished-at="2019-01-29T15:26:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyAadharNumber()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyAadharNumber" duration-ms="2483" started-at="2019-01-29T15:26:30Z" finished-at="2019-01-29T15:26:33Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyAadharNumber(Userscript.java:482)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyAadharNumber -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1127" started-at="2019-01-29T15:26:33Z" finished-at="2019-01-29T15:26:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="4" started-at="2019-01-29T15:26:34Z" finished-at="2019-01-29T15:26:34Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyAadharNumber status=FAILURE method=Userscript.RegistrationFormTest_EmptyAadharNumber()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="8224" started-at="2019-01-29T15:26:34Z" finished-at="2019-01-29T15:26:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyFirstName()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyFirstName" duration-ms="2491" started-at="2019-01-29T15:26:42Z" finished-at="2019-01-29T15:26:45Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyFirstName(Userscript.java:153)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyFirstName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1057" started-at="2019-01-29T15:26:45Z" finished-at="2019-01-29T15:26:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:26:46Z" finished-at="2019-01-29T15:26:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyFirstName status=FAILURE method=Userscript.RegistrationFormTest_EmptyFirstName()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7825" started-at="2019-01-29T15:26:46Z" finished-at="2019-01-29T15:26:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyGrossAnualIncome()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyGrossAnualIncome" duration-ms="2942" started-at="2019-01-29T15:26:54Z" finished-at="2019-01-29T15:26:56Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyGrossAnualIncome(Userscript.java:833)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyGrossAnualIncome -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1197" started-at="2019-01-29T15:26:56Z" finished-at="2019-01-29T15:26:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:26:58Z" finished-at="2019-01-29T15:26:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyGrossAnualIncome status=FAILURE method=Userscript.RegistrationFormTest_EmptyGrossAnualIncome()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="8164" started-at="2019-01-29T15:26:58Z" finished-at="2019-01-29T15:27:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyLastName()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyLastName" duration-ms="3389" started-at="2019-01-29T15:27:06Z" finished-at="2019-01-29T15:27:09Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyLastName(Userscript.java:313)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyLastName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1063" started-at="2019-01-29T15:27:09Z" finished-at="2019-01-29T15:27:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:27:10Z" finished-at="2019-01-29T15:27:10Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyLastName status=FAILURE method=Userscript.RegistrationFormTest_EmptyLastName()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="8055" started-at="2019-01-29T15:27:10Z" finished-at="2019-01-29T15:27:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyMiddleName()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyMiddleName" duration-ms="2572" started-at="2019-01-29T15:27:18Z" finished-at="2019-01-29T15:27:21Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyMiddleName(Userscript.java:232)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyMiddleName -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1109" started-at="2019-01-29T15:27:21Z" finished-at="2019-01-29T15:27:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:27:22Z" finished-at="2019-01-29T15:27:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyMiddleName status=FAILURE method=Userscript.RegistrationFormTest_EmptyMiddleName()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7767" started-at="2019-01-29T15:27:22Z" finished-at="2019-01-29T15:27:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyOccupation()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyOccupation" duration-ms="2503" started-at="2019-01-29T15:27:30Z" finished-at="2019-01-29T15:27:32Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyOccupation(Userscript.java:657)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyOccupation -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1045" started-at="2019-01-29T15:27:32Z" finished-at="2019-01-29T15:27:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:27:33Z" finished-at="2019-01-29T15:27:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyOccupation status=FAILURE method=Userscript.RegistrationFormTest_EmptyOccupation()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7854" started-at="2019-01-29T15:27:33Z" finished-at="2019-01-29T15:27:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyPanNumber()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyPanNumber" duration-ms="2524" started-at="2019-01-29T15:27:41Z" finished-at="2019-01-29T15:27:44Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyPanNumber(Userscript.java:397)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyPanNumber -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1081" started-at="2019-01-29T15:27:44Z" finished-at="2019-01-29T15:27:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:27:45Z" finished-at="2019-01-29T15:27:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyPanNumber status=FAILURE method=Userscript.RegistrationFormTest_EmptyPanNumber()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7741" started-at="2019-01-29T15:27:45Z" finished-at="2019-01-29T15:27:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyPassport()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyPassport" duration-ms="2442" started-at="2019-01-29T15:27:53Z" finished-at="2019-01-29T15:27:55Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyPassport(Userscript.java:568)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyPassport -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1063" started-at="2019-01-29T15:27:55Z" finished-at="2019-01-29T15:27:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:27:56Z" finished-at="2019-01-29T15:27:56Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyPassport status=FAILURE method=Userscript.RegistrationFormTest_EmptyPassport()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="8200" started-at="2019-01-29T15:27:56Z" finished-at="2019-01-29T15:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptyResidencyType()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptyResidencyType" duration-ms="2589" started-at="2019-01-29T15:28:04Z" finished-at="2019-01-29T15:28:07Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptyResidencyType(Userscript.java:917)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptyResidencyType -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1176" started-at="2019-01-29T15:28:07Z" finished-at="2019-01-29T15:28:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:Scripts.Userscript@26653222]" name="setUp" is-config="true" duration-ms="7544" started-at="2019-01-29T15:28:08Z" finished-at="2019-01-29T15:28:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="0" started-at="2019-01-29T15:28:08Z" finished-at="2019-01-29T15:28:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptyResidencyType status=FAILURE method=Userscript.RegistrationFormTest_EmptyResidencyType()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="FAIL" signature="RegistrationFormTest_EmptySourceOfFunds()[pri:0, instance:Scripts.Userscript@26653222]" name="RegistrationFormTest_EmptySourceOfFunds" duration-ms="2468" started-at="2019-01-29T15:28:16Z" finished-at="2019-01-29T15:28:18Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Scripts.Userscript.RegistrationFormTest_EmptySourceOfFunds(Userscript.java:745)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RegistrationFormTest_EmptySourceOfFunds -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Scripts.Userscript@26653222]" name="tearDown" is-config="true" duration-ms="1066" started-at="2019-01-29T15:28:18Z" finished-at="2019-01-29T15:28:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="getTestResult(org.testng.ITestResult)[pri:0, instance:Scripts.Userscript@26653222]" name="getTestResult" is-config="true" duration-ms="1" started-at="2019-01-29T15:28:19Z" finished-at="2019-01-29T15:28:19Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RegistrationFormTest_EmptySourceOfFunds status=FAILURE method=Userscript.RegistrationFormTest_EmptySourceOfFunds()[pri:0, instance:Scripts.Userscript@26653222] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTestResult -->
+        <test-method status="PASS" signature="closingAllConnections()[pri:0, instance:Scripts.Userscript@26653222]" name="closingAllConnections" is-config="true" duration-ms="0" started-at="2019-01-29T15:28:19Z" finished-at="2019-01-29T15:28:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingAllConnections -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Scripts.Userscript@26653222]" name="closeBrowser" is-config="true" duration-ms="1" started-at="2019-01-29T15:28:19Z" finished-at="2019-01-29T15:28:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:Scripts.Userscript@26653222]" name="endreport" is-config="true" duration-ms="259" started-at="2019-01-29T15:28:19Z" finished-at="2019-01-29T15:28:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
+      </class> <!-- Scripts.Userscript -->
+    </test> <!-- Testscriptsexecution -->
+  </suite> <!-- Maven project -->
 </testng-results>

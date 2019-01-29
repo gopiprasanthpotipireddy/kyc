@@ -25,7 +25,7 @@ public class DriverBase {
 	public static Properties properties;
 	public static ExtentReports report;
     public static	ExtentHtmlReporter htmlReporter;
-	  public static  ExtentTest logger;
+	public static  ExtentTest logger;
 	public  String path;
   
 	public void initialization() throws Exception 
@@ -106,15 +106,20 @@ public class DriverBase {
 	    
 	    @BeforeSuite
 		public void init(){
+	    	
 			path = System.getProperty("user.dir")+"\\data\\reports";
 			 File file = new File(path);
+			 System.out.println(path);
 		        if (!file.exists()) {
+		        	
 		            if (file.mkdir()) {
 		                System.out.println("Directory is created!");
-		            } else {
+		            }
+		            
+		        }else {
 		                System.out.println("Folder already exists!");
 		            }
-		        }
+		        
 			SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");  
 		    Date date = new Date();  
 		   String dynamicName = formatter.format(date).replace("/","_").replace(" ","_").replace(":","_");

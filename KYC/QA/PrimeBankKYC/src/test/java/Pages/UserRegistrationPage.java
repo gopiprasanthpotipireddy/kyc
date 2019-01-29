@@ -6,7 +6,9 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserRegistrationPage {
 	
@@ -38,6 +40,9 @@ WebDriver driver;
 	private By mobile = By.id("mob_num");
 	private By email = By.id("email_id");
 	private By submit = By.id("Button2");
+	private Object WebDriverWait;
+	WebDriverWait wait6;
+
 	
 	public void validatingRegistrationForm( ArrayList list)throws Exception
 	{
@@ -91,15 +96,23 @@ WebDriver driver;
 			i++;
 			
 			Select occupation = new Select(driver.findElement(occ));
+			WebDriverWait wait = new WebDriverWait(driver,10);
+			 wait.until(ExpectedConditions.elementToBeClickable(occ));
 			occupation.selectByValue(list.get(i).toString());
 			i++;
 			Select sourceoffund = new Select(driver.findElement(funsource));
+			WebDriverWait wait1 = new WebDriverWait(driver,10);
+			 wait1.until(ExpectedConditions.elementToBeClickable(funsource));
 			sourceoffund.selectByValue(list.get(i).toString());
 			i++;
 			Select grossanualincome1 = new Select(driver.findElement(grossanualincome));
+			WebDriverWait wait2 = new WebDriverWait(driver,10);
+			 wait2.until(ExpectedConditions.elementToBeClickable(grossanualincome));
 			grossanualincome1.selectByValue(list.get(i).toString());
 			i++;
 			Select residence = new Select(driver.findElement(residencetype));
+			WebDriverWait wait3 = new WebDriverWait(driver,30);
+			 wait3.until(ExpectedConditions.elementToBeClickable(residencetype));
 			residence.selectByValue(list.get(i).toString());
 			i++;
 			
@@ -165,6 +178,9 @@ WebDriver driver;
 			}
 		 WebElement submit1 = driver.findElement(submit);
 			if(submit1.isDisplayed())
+				wait6= new WebDriverWait(driver,30);
+			 wait6.until(ExpectedConditions.elementToBeClickable(submit1));
+				
 				submit1.click();
 			/*Alert alert = driver.switchTo().alert();
 			alert.accept();

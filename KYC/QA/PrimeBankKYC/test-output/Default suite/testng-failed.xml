@@ -3,19 +3,28 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Scripts.LoginTestScript">
+      <class name="Scripts.Userscript">
         <methods>
-          <include name="Home_Login_InvalidUserName"/>
+          <include name="RegistrationFormTest_EmptyOccupation"/>
+          <include name="RegistrationFormTest_EmptySourceOfFunds"/>
+          <include name="closingAllConnections"/>
+          <include name="RegistrationFormTest_EmptyAadharNumber"/>
+          <include name="RegistrationFormTest_EmptyMiddleName"/>
+          <include name="RegistrationFormTest_EmptyLastName"/>
           <include name="setUp"/>
-          <include name="Home_Login_BlankUserName_ValidPwd"/>
-          <include name="Home_Login_ValidUserName_ValidPwd"/>
-          <include name="Home_Login_ValidUserName_InvalidPwd"/>
+          <include name="RegistrationFormTest_EmptyGrossAnualIncome"/>
+          <include name="RegistrationFormTest_EmptyPanNumber"/>
+          <include name="endreport"/>
+          <include name="getTestResult"/>
+          <include name="RegistrationFormTest_EmptyResidencyType"/>
+          <include name="tearDown"/>
+          <include name="RegistrationFormTest_EmptyPassport"/>
+          <include name="RegistrationFormTest_EmptyFirstName"/>
           <include name="initializingConnections"/>
-          <include name="Home_Login_BlankUserName_BlankPwd"/>
           <include name="init"/>
-          <include name="Home_Login_ValidUserName_BlankPwd"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- Scripts.LoginTestScript -->
+      </class> <!-- Scripts.Userscript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
