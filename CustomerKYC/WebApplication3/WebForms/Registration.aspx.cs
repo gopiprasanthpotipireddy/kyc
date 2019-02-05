@@ -118,7 +118,7 @@ namespace WebApplication3
 
         }
         protected void verify(object sender, EventArgs e)
-        {
+{
             clsRegistration obj1 = new clsRegistration();
             int flag = 1;
             // Important Details
@@ -222,43 +222,6 @@ namespace WebApplication3
                 flag = 0;
 
             }
-
-
-
-
-            if (flag == 1)
-            {
-                string separator = ",";
-                string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\details.csv";
-                StringBuilder sb = new StringBuilder();
-                sb.AppendLine(string.Join(separator, obj1.Prefix, obj1.FirstName, obj1.MiddleName, obj1.LastName, obj1.Pannumber, obj1.AadharNumber, obj1.PassportNumber, obj1.Occupation, obj1.mobilenumber, obj1.emailid));
-                File.AppendAllText(FilePath, sb.ToString());
-                //Response.Redirect("Submits.aspx");
-                //Additional Details
-                obj1.SourceofFunds = sof.Value;
-                obj1.GrossAnnualIncome = gross_inc.Value;
-                obj1.Residencetype = res_type.Value;
-                obj1.FlatNo = flatno.Value;
-                obj1.Streetnumber = street_no.Value;
-                obj1.Landmark = land.Value;
-                obj1.State = stat.Value;
-                obj1.City = city_name.Value;
-                obj1.Pincode = pin_code.Value;
-                obj1.Country = count.Value;
-                string separator1 = ",";
-
-                string FilePath1 = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\additionaldetails.csv";
-                StringBuilder sb1 = new StringBuilder();
-                sb1.AppendLine(string.Join(separator1, obj1.SourceofFunds, obj1.GrossAnnualIncome, obj1.Residencetype, obj1.FlatNo, obj1.Streetnumber, obj1.Landmark, obj1.State, obj1.City, obj1.Pincode, obj1.Country));
-                File.AppendAllText(FilePath1, sb1.ToString());
-
-            }
-            //else
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Mandatory Fields cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-            //}
             else
             {
                 if (obj1.Pannumber.Length != 10)
@@ -284,69 +247,139 @@ namespace WebApplication3
                 }
             }
 
-    //        try
-    //        {
-    //            string conn = "";
-    //            int flag = 0;
-    //            List<string> pan_numbers = new List<string>();
-    //            conn = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
+            if (flag == 1)
+            {
 
-    //            SqlConnection objsqlconn = new SqlConnection(conn);
-
-
-    //            ///
-    //            ///For insertion
-    //            ///
-    //            //SqlCommand objcmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", objsqlconn);
-
-    //            //objcmd.ExecuteNonQuery();
-    //            string sql = "select PAN_Number from Applicant_Details";
-    //            SqlCommand objcmd1 = new SqlCommand(sql, objsqlconn);
-    //            objsqlconn.Open();
-    //            SqlDataReader rdr = objcmd1.ExecuteReader();
-    //            while (rdr.Read())
-    //            {
-    //                pan_numbers.Add(rdr["PAN_Number"].ToString());
-    //            }
-
-    //            foreach (string pan in pan_numbers)
-    //            {
-    //                if (obj1.Pannumber == pan)
-    //                {
-    //                    Response.Write("<span>");
-    //                    Response.Write("<script> alert(" + '"' + "city   cannot be empty" + '"' + "); </script>");
-    //                    Response.Write("</span>");
-    //                    flag = 0;
-    //                    break;
-    //                }
-    //                else
-    //                {
-    //                    flag = 1;
-    //                }
-    //            }
-    //            if (flag == 1)
-    //            {
-    //                SqlCommand objcmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", objsqlconn);
-
-    //                objcmd.ExecuteNonQuery();
-    //            }
+                //string conn = "";
+                //conn = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
+                //SqlConnection objsqlconn = new SqlConnection(conn);
+                //objsqlconn.Open();
+                try
+                {
 
 
+                    SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", con);
+                    cmd.ExecuteNonQuery();
+                    //con.Close();
+                    //con.Open();
+                    SqlCommand objcmd = new SqlCommand("Insert into AdditionalDetails(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", con);
 
-    //        }
-    //        catch (Exception exp)
-    //        {
-    //            Response.Write("Error");
-    //        }
+                    objcmd.ExecuteNonQuery();
+                    Response.Write("inserted ");
+                    Response.Redirect("subs.aspx");
+                    con.Close();
+                }
+                catch(Exception exe2)
+                {
+                    Response.Write(exe2);
+                }
 
+            }
+            else
+            {
+                Response.Write("please check");
+            }
 
-
-
-    //    }
-    //}
-
-
-
-}
+        }
     }
 }
+
+
+
+//string separator = ",";
+//string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\details.csv";
+//StringBuilder sb = new StringBuilder();
+//sb.AppendLine(string.Join(separator, obj1.Prefix, obj1.FirstName, obj1.MiddleName, obj1.LastName, obj1.Pannumber, obj1.AadharNumber, obj1.PassportNumber, obj1.Occupation, obj1.mobilenumber, obj1.emailid));
+//File.AppendAllText(FilePath, sb.ToString());
+////Response.Redirect("Submits.aspx");
+////Additional Details
+//obj1.SourceofFunds = sof.Value;
+//obj1.GrossAnnualIncome = gross_inc.Value;
+//obj1.Residencetype = res_type.Value;
+//obj1.FlatNo = flatno.Value;
+//obj1.Streetnumber = street_no.Value;
+//obj1.Landmark = land.Value;
+//obj1.State = stat.Value;
+//obj1.City = city_name.Value;
+//obj1.Pincode = pin_code.Value;
+//obj1.Country = count.Value;
+//string separator1 = ",";
+
+//string FilePath1 = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\additionaldetails.csv";
+//StringBuilder sb1 = new StringBuilder();
+//sb1.AppendLine(string.Join(separator1, obj1.SourceofFunds, obj1.GrossAnnualIncome, obj1.Residencetype, obj1.FlatNo, obj1.Streetnumber, obj1.Landmark, obj1.State, obj1.City, obj1.Pincode, obj1.Country));
+//File.AppendAllText(FilePath1, sb1.ToString());
+
+
+//else
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Mandatory Fields cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+//}
+
+
+//        try
+//        {
+//            string conn = "";
+//            int flag = 0;
+//            List<string> pan_numbers = new List<string>();
+//            conn = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
+
+//            SqlConnection objsqlconn = new SqlConnection(conn);
+
+
+//            ///
+//            ///For insertion
+//            ///
+//            //SqlCommand objcmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", objsqlconn);
+
+//            //objcmd.ExecuteNonQuery();
+//            string sql = "select PAN_Number from Applicant_Details";
+//            SqlCommand objcmd1 = new SqlCommand(sql, objsqlconn);
+//            objsqlconn.Open();
+//            SqlDataReader rdr = objcmd1.ExecuteReader();
+//            while (rdr.Read())
+//            {
+//                pan_numbers.Add(rdr["PAN_Number"].ToString());
+//            }
+
+//            foreach (string pan in pan_numbers)
+//            {
+//                if (obj1.Pannumber == pan)
+//                {
+//                    Response.Write("<span>");
+//                    Response.Write("<script> alert(" + '"' + "city   cannot be empty" + '"' + "); </script>");
+//                    Response.Write("</span>");
+//                    flag = 0;
+//                    break;
+//                }
+//                else
+//                {
+//                    flag = 1;
+//                }
+//            }
+//            if (flag == 1)
+//            {
+//                SqlCommand objcmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", objsqlconn);
+
+//                objcmd.ExecuteNonQuery();
+//            }
+
+
+
+//        }
+//        catch (Exception exp)
+//        {
+//            Response.Write("Error");
+//        }
+
+
+
+
+//    }
+//}
+
+

@@ -7,9 +7,19 @@
     <title></title>
 </head>
 <body>
-    <form id="form1" runat="server" onload="Pan_Details">
+    <form id="form1" runat="server" >
     <div>
-    
+        <asp:GridView ID="GridView0" runat="server">
+        <columns>
+             
+                 
+             <asp:BoundField runat="server" DataField="CustomerName" HeaderText="CustomerName" />
+             <asp:BoundField runat="server" DataField="Age" HeaderText="Age" />
+             <asp:BoundField  runat="server" DataField="PanNumber" HeaderText="PanNumber" />
+            
+            </columns>
+            </asp:GridView>
+       
     </div>
     </form>
 </body>

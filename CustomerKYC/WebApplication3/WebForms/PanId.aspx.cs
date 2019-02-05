@@ -8,8 +8,9 @@ using WebApplication3.DalClasses;
 
 namespace WebApplication3.WebForms
 {
-    public partial class PanId : System.Web.UI.Page
+    public partial  class PanId : System.Web.UI.Page
     {
+       
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -18,7 +19,9 @@ namespace WebApplication3.WebForms
         {
             PAN obj = new PAN();
             obj.pannumber = TextBox5.Text;
-
+            //string value= TextBox5.Text;
+            //PanDetails pd = new PanDetails();
+            //pd.first(value);
             int flag, i = 0;
             if (TextBox5.Text == "")
 
