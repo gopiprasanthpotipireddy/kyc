@@ -183,7 +183,7 @@ namespace WebApplication3
                     //SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
                     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EAMIL,MobileNo) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "','" + obj1.FlatNo + "','" + obj1.City + "','" + obj1.State + "','" + obj1.Pincode + "','" + obj1.emailid + "','" + obj1.mobilenumber + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EMAIL,MobileNo) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "','" + obj1.FlatNo + "','" + obj1.City + "','" + obj1.State + "','" + obj1.Pincode + "','" + obj1.emailid + "','" + obj1.mobilenumber + "')", con);
                     cmd.ExecuteNonQuery();
                     //con.Close();
                     //con.Open();
