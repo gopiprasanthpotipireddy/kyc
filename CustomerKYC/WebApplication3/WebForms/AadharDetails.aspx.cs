@@ -46,7 +46,7 @@ namespace WebApplication3.WebForms
                 {
                     con.Open();
 
-                    SqlCommand cmd1 = new SqlCommand("Update AdditionalDetails set AADHAR_Status='SUCCESS' where AADHAR_Number=@Aadhar", con);
+                    SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set AADHAR_Status='SUCCESS' where AADHAR_Number=@Aadhar", con);
                     cmd1.Parameters.AddWithValue("@Aadhar", Aadhar);
                     cmd1.ExecuteNonQuery();
                     SqlCommand cmd3 = new SqlCommand("select * from AadharDetails where AADHARNUMBER=@Aadhar", con);
@@ -71,7 +71,7 @@ namespace WebApplication3.WebForms
                 {
                     Response.Write("<script>alert('Sorry! your Aadhar is not verified');</script>");
                     con.Open();
-                    SqlCommand cmd0 = new SqlCommand("Update AdditionalDetails set PAN_Status='FAILURE' where AADHAR_Number=@Aadhar", con);
+                    SqlCommand cmd0 = new SqlCommand("Update Applicant_Details set PAN_Status='FAILURE' where AADHAR_Number=@Aadhar", con);
                     cmd0.Parameters.AddWithValue("@Aadhar", Aadhar);
                     cmd0.ExecuteNonQuery();
                     con.Close();

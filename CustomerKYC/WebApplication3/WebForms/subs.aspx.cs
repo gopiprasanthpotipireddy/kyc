@@ -81,6 +81,7 @@ namespace WebApplication3.WebForms
 
                 int index;
                 int value;
+                int value1;
                 if (e.CommandName == "CEdit")
                 {
                     Response.Redirect("Update.aspx");
@@ -102,8 +103,8 @@ namespace WebApplication3.WebForms
                     int rowIndex = Convert.ToInt32(e.CommandArgument);
                     GridViewRow row = GridView1.Rows[rowIndex];
                     //int va = Convert.ToInt32((row.FindControl("Applicant_ID") as TextBox).Text);
-                    int value1 = Convert.ToInt32(row.Cells[0].Text);
-                    Add.Additional1(value1);
+                     value1 = Convert.ToInt32(row.Cells[0].Text);
+                    //Add.Additional1(value1);
                     Response.Redirect("Additional.aspx");
 
                     //retrieve(value1);

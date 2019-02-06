@@ -42,14 +42,14 @@ namespace WebApplication3.WebForms
                 SqlDataReader rdr = cmd.ExecuteReader();
                 while (rdr.Read())
                 {
-                    string value = rdr["PanNumber"].ToString();
+                    string value = rdr["Pan_Number"].ToString();
                     list.Add(value);
                 }
                 rdr.Close();
                
                 if (list.Contains(pannumber))
                 {
-                    SqlCommand cmd1 = new SqlCommand("Update AdditionalDetails set PAN_Status='SUCCESS' where PAN_Number=@pannumber", con);
+                    SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set PAN_Status='SUCCESS' where PAN_Number=@pannumber", con);
                     cmd1.Parameters.AddWithValue("@pannumber", pannumber);
                     cmd1.ExecuteNonQuery();
                     SqlCommand cmd3 = new SqlCommand("select * from PanDetails where PanNumber=pannumber", con);
@@ -72,7 +72,7 @@ namespace WebApplication3.WebForms
                 {
                     Response.Write("<script>alert('Sorry! your Pan is not verified');</script>");
                     con.Open();
-                    SqlCommand cmd0 = new SqlCommand("Update AdditionalDetails set PAN_Status='FAILURE' where PAN_Number=@pannumber", con);
+                    SqlCommand cmd0 = new SqlCommand("Update Applicant_Details set PAN_Status='FAILURE' where PAN_Number=@pannumber", con);
                     cmd0.Parameters.AddWithValue("@pannumber", pannumber);
                     cmd0.ExecuteNonQuery();
                     con.Close();
