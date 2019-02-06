@@ -3,19 +3,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-    <asp:GridView ID="GridView1" runat="server">
+    <asp:GridView ID="GridView2" runat="server">
         <Columns>
 <asp:BoundField runat="server" DataField="Applicant_ID" HeaderText="Applicant_ID" />
-             <asp:BoundField runat="server" DataField="FirstName" HeaderText="FirstName" />
-             <asp:BoundField DataField="MiddleName" HeaderText="MiddleName" />
-             <asp:BoundField DataField="LastName" HeaderText="LastName" />
-             <asp:BoundField DataField="PAN_Number" HeaderText="PAN_Number" />
-             <asp:BoundField DataField="AADHAR_Number" HeaderText="AADHAR_Number" />
-             <asp:BoundField DataField="PASSPORT_Number" HeaderText="PASSPORT_Number" />
-            <asp:BoundField DataField="AADHAR_Status" HeaderText="AADHAR_Status" />
-            <asp:BoundField DataField="PAN_Status" HeaderText="PAN_Status" />
-            <asp:BoundField DataField="PASSPORT_Status" HeaderText="PASSPORT_Status" />
-            <asp:BoundField DataField="OVERALL_Status" HeaderText="OVERALL_Status" />
+             <asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
+             <asp:BoundField DataField="City" HeaderText="City" />
+             <asp:BoundField DataField="State" HeaderText="State" />
+             <asp:BoundField DataField="PIN" HeaderText="PIN" />
+             <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" />
+             <asp:BoundField DataField="DOB" HeaderText="DOB" />
+            <asp:BoundField DataField="MobileNo" HeaderText="MobileNo" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" />
+            
 
 
         </Columns>

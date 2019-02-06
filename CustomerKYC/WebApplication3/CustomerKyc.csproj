@@ -310,14 +310,15 @@
     <Content Include="WebForms\Submits.aspx" />
     <Content Include="WebForms\iframe.aspx" />
     <Content Include="WebForms\subs.aspx" />
-    <Content Include="WebForms\AdditionalInfo.aspx" />
     <Content Include="WebForms\Updateadditional.aspx" />
     <Content Include="WebForms\Additional.aspx" />
+    <Content Include="WebForms\Update.aspx" />
+    <Content Include="WebForms\PassportDetails.aspx" />
     <Content Include="WebForms\WebForm7.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DalClasses\Aadhar.cs" />
-    <Compile Include="DalClasses\Additional.cs" />
+    <Compile Include="DalClasses\Add.cs" />
     <Compile Include="DalClasses\AdharDetails.cs" />
     <Compile Include="DalClasses\clsRegistration.cs" />
     <Compile Include="DalClasses\DalLogin.cs" />
@@ -460,13 +461,6 @@
     <Compile Include="WebForms\subs.aspx.designer.cs">
       <DependentUpon>subs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\AdditionalInfo.aspx.cs">
-      <DependentUpon>AdditionalInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\AdditionalInfo.aspx.designer.cs">
-      <DependentUpon>AdditionalInfo.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForms\Updateadditional.aspx.cs">
       <DependentUpon>Updateadditional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -480,6 +474,20 @@
     </Compile>
     <Compile Include="WebForms\Additional.aspx.designer.cs">
       <DependentUpon>Additional.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\Update.aspx.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\Update.aspx.designer.cs">
+      <DependentUpon>Update.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\PassportDetails.aspx.cs">
+      <DependentUpon>PassportDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\PassportDetails.aspx.designer.cs">
+      <DependentUpon>PassportDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\WebForm7.aspx.cs">
       <DependentUpon>WebForm7.aspx</DependentUpon>

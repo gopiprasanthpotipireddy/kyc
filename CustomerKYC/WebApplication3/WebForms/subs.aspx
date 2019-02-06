@@ -13,6 +13,11 @@
              <asp:BoundField DataField="PAN_Number" HeaderText="PAN_Number" />
              <asp:BoundField DataField="AADHAR_Number" HeaderText="AADHAR_Number" />
              <asp:BoundField DataField="PASSPORT_Number" HeaderText="PASSPORT_Number" />
+             <asp:BoundField DataField="PAN_Status" HeaderText="PAN_Status" />
+             <asp:BoundField DataField="AADHAR_Status" HeaderText="AADHAR_Status" />
+             <asp:BoundField DataField="PASSPORT_Status" HeaderText="PASSPORT_Status" />
+             <asp:BoundField DataField="OVERALL_Status" HeaderText="OVERALL_Status" />
+              <asp:BoundField DataField="Remarks" HeaderText="" />
              
              
              <asp:TemplateField>
@@ -20,11 +25,11 @@
 <%--                    
     <asp:Button ID="btnEdit" runat="server" Width="50" Text="Edit" CommandName="CEdit" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />  &nbsp&nbsp&nbsp&nbsp--%>
                      <div>
-                     <a href="Popup.aspx">Edit</a>
-                         <a href="Additional.aspx">Additional Info</a>
-                      
-<%--                      <asp:Button ID="btnSave" runat="server" Width="50" Text="Save" CommandName="CSave" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" /> &nbsp&nbsp&nbsp&nbsp--%>
-<%--                      <asp:Button ID="btnAdditional" runat="server" Text="AdditionalInfo" CommandName="CAddInf" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />  --%>
+<%--                     <a href="Popup.aspx">Edit</a>--%>
+                         <%--<a href="Additional.aspx">Additional Info</a>--%>
+<%--                         <asp:Button ID="btnAdditional" runat="server" Text="AdditionalInfo" OnClick="Page_Load" />--%>
+                      <asp:Button ID="Edit" runat="server" Width="50" Text="Edit" CommandName="CEdit" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" /> &nbsp&nbsp&nbsp&nbsp
+                      <asp:Button ID="btnAdditional" runat="server" Text="AdditionalInfo" CommandName="CAddInf"  CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />  
 
                      <script type="text/javascript">
 
@@ -51,23 +56,19 @@
        
     </div>
      
-    <div>
+    <%--<div>
         <asp:GridView ID="GridView2" runat="server">
          <columns>
-             <asp:BoundField runat="server" DataField="ApplicantID" HeaderText="ApplicantID" />
-             <asp:BoundField runat="server" DataField="FirstName" HeaderText="FirstName" />
-             <asp:BoundField DataField="MiddleName" HeaderText="MiddleName" />
-             <asp:BoundField DataField="LastName" HeaderText="LastName" />
-             
-             <asp:BoundField DataField="AADHAR_Number" HeaderText="AADHAR_Number" />
-             <asp:BoundField DataField="AADHAR_Status" HeaderText="AADHAR_Status" />
-              <asp:BoundField DataField="PAN_Number" HeaderText="PAN_Number" />
-              <asp:BoundField DataField="PAN_Status" HeaderText="PAN_Status" />
-              <asp:BoundField DataField="PASSPORT_Number" HeaderText="PASSPORT_Number" />
-              <asp:BoundField DataField="PASSPORT_Status" HeaderText="PASSPORT_Status" />
-             <asp:BoundField DataField="OVERALL_Status" HeaderText="OVERALL_Status" />
+             <asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
+             <asp:BoundField DataField="City" HeaderText="City" />
+             <asp:BoundField DataField="State" HeaderText="State" />
+             <asp:BoundField DataField="PIN" HeaderText="PIN" />
+             <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" />
+             <asp:BoundField DataField="DOB" HeaderText="DOB" />
+            <asp:BoundField DataField="MobileNo" HeaderText="MobileNo" />
+            <asp:BoundField DataField="Gender" HeaderText="Gender" />
              </columns>
             </asp:GridView>
 
-    </div>
+    </div>--%>
 </asp:Content>

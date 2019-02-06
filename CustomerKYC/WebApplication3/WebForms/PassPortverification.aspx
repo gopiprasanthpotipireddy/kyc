@@ -170,6 +170,7 @@ footer {
             </article>
 
         </section>
+       
 
         <footer>
             <img src="../img/Passportimg2.PNG" width="120" height="120" alt="logo" />

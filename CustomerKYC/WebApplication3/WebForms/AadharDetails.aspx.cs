@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
@@ -28,7 +29,8 @@ namespace WebApplication3.WebForms
             {
                 string Aadhar = AdharDetails.an;
                 ArrayList list = new ArrayList();
-                System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                //System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
                 con.Open();
                 SqlCommand cmd = new SqlCommand("select * from AadharDetails ", con);
                 SqlDataReader rdr = cmd.ExecuteReader();

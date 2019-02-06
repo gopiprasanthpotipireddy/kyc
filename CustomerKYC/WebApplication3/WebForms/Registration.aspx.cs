@@ -132,95 +132,24 @@ namespace WebApplication3
             obj1.Occupation = occ_dd.Value;
             obj1.mobilenumber = mob_num.Value;
             obj1.emailid = email_id.Value;
-
+            obj1.FlatNo = flatno.Value;
+            obj1.City = city_name.Value;
+            obj1.State = stat.Value;
+            obj1.Pincode = pin_code.Value;
+            obj1.Country = count.Value;
+            //string flat = obj1.FlatNo;
+            //string city = obj1.City;
+            //string Address = String.Concat( flat, city);
             if ((first_name.Value == "") || (last_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (occ_dd.Value == "") || (sof.Value == "") || (gross_inc.Value == "") || (res_type.Value == "") || (stat.Value == "") || (city_name.Value == "") || (flatno.Value == "") || (mob_num.Value == "") || (email_id.Value == ""))
             {
-
                 flag = 0;
-
             }
-
-            //if (last_name.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Last Name cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-
-
-            //if (occ_dd.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Occupation cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //if (sof.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Source Of Fund  cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //if (gross_inc.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "gross income  cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //if (res_type.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Residence Type  cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //if (stat.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "State   cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //if (city_name.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "city   cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-            //if (flatno.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "Building/ Flat No    cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
-            //}
-            //if (email_id.Value == "")
-            //{
-            //    Response.Write("<span>");
-            //    Response.Write(" <script>alert(" + '"' + "EmailId  cannot be empty" + '"' + "); </script>");
-            //    Response.Write("</span>");
-
-            //}
-
             if (obj1.Pannumber.Length != 10 || obj1.AadharNumber.Length != 12 || obj1.mobilenumber.Length != 10)
             {
                 //Response.Write("<span>");
                 //Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
                 //Response.Write("</span>");
                 flag = 0;
-
             }
             else
             {
@@ -229,15 +158,12 @@ namespace WebApplication3
                     Response.Write("<span>");
                     Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
                     Response.Write("</span>");
-
                 }
-
                 if (obj1.AadharNumber.Length != 12)
                 {
                     Response.Write("<span>");
                     Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
                     Response.Write("</span>");
-
                 }
                 if ((obj1.mobilenumber.Length != 10))
                 {
@@ -246,27 +172,21 @@ namespace WebApplication3
                     Response.Write("</span>");
                 }
             }
-
             if (flag == 1)
             {
-
                 //string conn = "";
                 //conn = ConfigurationManager.ConnectionStrings["dbconnection"].ToString();
                 //SqlConnection objsqlconn = new SqlConnection(conn);
                 //objsqlconn.Open();
                 try
                 {
-
-
-                    SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                    //SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", con);
+                    SqlCommand cmd = new SqlCommand("Insert into Applicant_Details(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EAMIL,MobileNo) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "','" + obj1.FlatNo + "','" + obj1.City + "','" + obj1.State + "','" + obj1.Pincode + "','" + obj1.emailid + "','" + obj1.mobilenumber + "')", con);
                     cmd.ExecuteNonQuery();
                     //con.Close();
                     //con.Open();
-                    SqlCommand objcmd = new SqlCommand("Insert into AdditionalDetails(FirstName, MiddleName, LastName,PAN_Number,AADHAR_Number,PASSPORT_Number) Values('" + obj1.FirstName + "', '" + obj1.MiddleName + "', '" + obj1.LastName + "','" + obj1.Pannumber + "','" + obj1.AadharNumber + "','" + obj1.PassportNumber + "')", con);
-
-                    objcmd.ExecuteNonQuery();
                     Response.Write("inserted ");
                     Response.Redirect("subs.aspx");
                     con.Close();
@@ -275,7 +195,6 @@ namespace WebApplication3
                 {
                     Response.Write(exe2);
                 }
-
             }
             else
             {
@@ -285,6 +204,79 @@ namespace WebApplication3
         }
     }
 }
+//if (last_name.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Last Name cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+
+
+//if (occ_dd.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Occupation cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//if (sof.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Source Of Fund  cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//if (gross_inc.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "gross income  cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//if (res_type.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Residence Type  cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//if (stat.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "State   cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//if (city_name.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "city   cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+//if (flatno.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "Building/ Flat No    cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
+
+//}
+//if (email_id.Value == "")
+//{
+//    Response.Write("<span>");
+//    Response.Write(" <script>alert(" + '"' + "EmailId  cannot be empty" + '"' + "); </script>");
+//    Response.Write("</span>");
+
+//}
 
 
 

@@ -349,7 +349,7 @@ display:none;
                     </td>
                     <td>
                         <label id="email" runat="server">Email Id</label>
-                        <label id="req12" class="required">*</label>
+                        <label id="req12" class="required">*</label>    
                     </td>
                     <td>
                         <input type="text" id="email_id" runat="server" required/>&nbsp&nbsp

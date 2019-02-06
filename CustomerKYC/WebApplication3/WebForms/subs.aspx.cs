@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
@@ -24,15 +25,17 @@ namespace WebApplication3.WebForms
         {
             try
             {
-                SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+                //SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from Applicant_Details", con);
+                SqlCommand cmd = new SqlCommand("select Applicant_ID,FirstName,MiddleName,LastName,PAN_Number,AADHAR_Number,PASSPORT_Number,PAN_Status,AADHAR_Status,PASSPORT_Status,OVERALL_Status,Remarks    from Applicant_Details", con);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 da.Fill(dt);
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
                 SqlDataReader rdr = cmd.ExecuteReader();
+                
                 con.Close();
 
                 //SqlCommand cmd = new SqlCommand("select * from Applicant_Details", con);
@@ -55,50 +58,81 @@ namespace WebApplication3.WebForms
                 Response.Write(exc);
             }
         }
+        //public void test(Object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+
+        //        GridViewRow row = GridView1.SelectedRow;
+        //        value = Convert.ToInt32(row.Cells[0].Text);
+        //        Additional.Additional1(value);
+        //        Response.Redirect("Additional.aspx");
+        //    }
+        //    catch(Exception exd)
+        //    {
+        //        Response.Write(exd);
+        //    }
+        //}
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-            int index;
-            int value;
-            if (e.CommandName == "CEdit")
+            try
             {
-                //     index = Convert.ToInt32(e.CommandArgument);
-                //    GridViewRow row = GridView1.Rows[index];
-                //     value=row.Cells[0].Text;
 
-                //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
+
+                int index;
+                int value;
+                if (e.CommandName == "CEdit")
+                {
+                    Response.Redirect("Update.aspx");
+                    //index = Convert.ToInt32(e.CommandArgument);
+                    //GridViewRow row = GridView1.Rows[index];
+                    //value = Convert.ToInt32(row.Cells[0].Text);
+                    //Add.Additional1(value);
+                    ////Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
+                }
+                else if (e.CommandName == "CSave")
+                {
+                    //index = Convert.ToInt32(e.CommandArgument);
+                    //GridViewRow row = GridView1.Rows[index];
+                    //value = row.Cells[0].Text;
+                    //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
+                }
+                else if (e.CommandName == "CAddInf")
+                {
+                    int rowIndex = Convert.ToInt32(e.CommandArgument);
+                    GridViewRow row = GridView1.Rows[rowIndex];
+                    //int va = Convert.ToInt32((row.FindControl("Applicant_ID") as TextBox).Text);
+                    int value1 = Convert.ToInt32(row.Cells[0].Text);
+                    Add.Additional1(value1);
+                    Response.Redirect("Additional.aspx");
+
+                    //retrieve(value1);
+                    //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
+                }
             }
-            else if (e.CommandName == "CSave")
+            catch(Exception exd)
             {
-                //index = Convert.ToInt32(e.CommandArgument);
-                //GridViewRow row = GridView1.Rows[index];
-                //value = row.Cells[0].Text;
-                //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
-            }
-            else if (e.CommandName == "CAddinf")
-            {
-                index = Convert.ToInt32(e.CommandArgument);
-                GridViewRow row = GridView1.Rows[index];
-                value = Convert.ToInt32(row.Cells[0].Text);
-                Additional.Additional1(value);
-                //retrive(value);
-                //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
+                Response.Write(exd);
             }
         }
-    }
-       
-        //public void retrive(string value)
+        //public void retrieve(int value1)
         //{
         //    //Response.Redirect(AdditionalInfo.aspx);
+        //    int fun = value1;
         //    SqlConnection conn = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
         //    conn.Open();
-        //    SqlCommand cmd1 = new SqlCommand("select * from AdditionalDetails where ApplicantID=value", conn);
-        //    SqlDataReader rdr = cmd1.ExecuteReader();
-           
+        //    SqlCommand cmd1 = new SqlCommand("select Applicant_ID,Address,city,state,PIN,EMAIL,DOB,MobileNo,Gender from Applicant_Details where Applicant_ID=@app_id", conn);
+        //    cmd1.Parameters.AddWithValue("@app_id", value1);
+        //    SqlDataReader rdr1 = cmd1.ExecuteReader();
+
         //    DataTable dt1 = new DataTable();
         //    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
         //    da1.Fill(dt1);
-        //    GridView2.DataSource = rdr;
+        //    GridView2.DataSource = rdr1;
         //    GridView2.DataBind();
         //    conn.Close();
         //}
     }
+}
+
+

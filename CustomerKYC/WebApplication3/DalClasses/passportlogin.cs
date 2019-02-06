@@ -9,6 +9,7 @@ namespace WebApplication3.DalClasses
         public class passportlogin
         {
             static int _attempts1 = 3;
+       public static string value;
 
             public static bool passport(string username1, string password1)
             {
@@ -37,5 +38,9 @@ namespace WebApplication3.DalClasses
                 }
 
             }
+        public static void passportverify(string val)
+        {
+            value = val;
+        }
         }
     }
