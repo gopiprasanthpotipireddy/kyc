@@ -71,7 +71,7 @@ li a:hover:not(.active) {
             <input type="text" name="email" id="email" class="form-control" placeholder="Email">--%>
             <div class="pull-right" align="center">
               <%--<input type="submit" value="NewCase" style="position:center;" id="submit" class="button">--%>
-      <asp:Button ID="submit" runat="server" Text="View Submissions" onclick="demo1" CssClass="button" style="position:center;" />
+<%--      <asp:Button ID="submit" runat="server" Text="View Submissions" onclick="demo1" CssClass="button" style="position:center;" />--%>
                       </div>
       
           <%--</form>--%>
@@ -91,13 +91,19 @@ li a:hover:not(.active) {
                 <ul class="recent_posts">
                   <li>
                     <a href="PanLogin.aspx">
-                                    <img src="../img/recent_post_01.png" alt="" />Link to verify PAN-id:
+                                    <img src="../img/nsdlLogo.jpg" alt="" />Link to verify PAN-id:
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
                   <li>
                     <a href="AadharLogin.aspx">
-                                    <img src="../img/recent_post_02.png" alt="" />Link to verify address proof:
+                                    <img src="../img/Aadharsymbol.jpg" alt="" />Link to verify Aadhar:
+                                    </a>
+                    <a class="readmore" href="#">read more</a>
+                  </li>
+                     <li>
+                    <a href="PassPortLogin.aspx">
+                                    <img src="../img/Passportimg.png" alt="" />Link to verify Passport:
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>

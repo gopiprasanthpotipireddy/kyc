@@ -1,13 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PassPortverification.aspx.cs" Inherits="WebApplication3.WebForms.PassPortverification" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Paniframe.aspx.cs" Inherits="WebApplication3.WebForms.Paniframe" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<style>
+    <style>
 * {
   box-sizing: border-box;
 }
@@ -18,9 +16,9 @@ body {
 
 /* Style the header */
 header {
-  background-color:cornflowerblue;
+  background-color:orange;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
   color:#791717;
   border-image-width:10px;
@@ -64,8 +62,8 @@ section:after {
 
 /* Style the footer */
 footer {
-  background-color:cornflowerblue;
-  /*padding: 10px;*/
+  background-color:orange;
+  padding: 10px;
   text-align: center;
   color: white;
 }
@@ -79,8 +77,8 @@ footer {
 
 .header img {
   float: left;
-  width: 100%;
-  height: 90%;
+  width: 20%;
+  height: 20%;
   resize:initial;
   background: #555;
   
@@ -88,7 +86,7 @@ footer {
 }
 
 .header h1 {
-  position: center;
+  position: relative;
   top: 18px;
   
 }
@@ -100,26 +98,32 @@ footer {
 <body>
     <form id="form1" runat="server">
     <div>
-    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+       
+         <div>
+
+            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
-    </div>
+
+        </div>
+
+
         <header>
             <div class="header">
-                <img src="../img/Passportimg.png" width="120" height="120" alt="logo" />
-                <h1>PassPort Verification</h1>
+                <img src="../img/nsdlLogo.jpg" width="120" height="120" alt="logo" />
+                <h4>National Securities Depository Limited</h4>
             </div>
-           
+            <h3></h3>
             <div style="text-align:right">
                 <ul>
                     
-                                <div><a href="PassPortLogin.aspx" >Logout</a></div>
+                                <div><a href="PanLogin.aspx" >Logout</a></div>
                </ul>
                </div>
         </header>
-         
+       
         <section>
             <nav>
                 <ul>
@@ -135,7 +139,7 @@ footer {
                     <li><a href="#">Procedure for change of DSC</a></li>
                      <br/>
                      <br/>
-                    <li><a href="#">Procedure for Renewal of PassPort Verification Facility</a></li>
+                    <li><a href="#">Procedure for Renewal of PAN Verification Facility</a></li>
                      <br/>
                      <br/>
                     <li><a href="#">Registration Status Track</a></li>
@@ -153,35 +157,25 @@ footer {
                 </ul>
             </nav>
 
-            <article>
-                <h2 style="color:#791717;">PassPort Information Network</h2>
-                <p>A passport is a travel document, usually issued by a country's government, that certifies the identity and nationality of its holder primarily for the purpose of international travel.</p>
+           <article>
+                <h2 style="color:#791717;">Tax Information Network</h2>
+                <p>To enable eligible Entities verify Permanent Account Numbers (PANs), Income Tax Department (ITD) has authorized NSDL e-Governance Infrastructure Limited (NSDL e-Gov ) to launch an online PAN verification service for verification of PANs by authorized entities.</p>
                 <br/>
                 
-                <p>*Passports are often requested in other circumstances to confirm identification such as checking in to a hotel or when changing money to a local currency</p>
-                
-                <br/>
-                <p><h3 style="color:#791717;text-align:center;">Verify PassPort Number:</h3></p>
-                <p style="text-align:center;">Enter the PassPort number here</p>
-       
+          <iframe height="600" width="1300" style="border-color:orange;align:center;"id="iframepan" name="ifr2" src="PanDetails.aspx"></iframe>
 
-                <div align="center">
-                <asp:TextBox id ="TextBox5"  runat="server"  placeholder="passport Number"  style="border-color:#791717;height: 30px; width: 250px;text-align=center;" ></asp:TextBox>
-                    <br/><br/>
-                    <asp:Button ID="Button2" runat="server" onclick="Passportverify" Text="Verify" style="height:30px;width:100px;background-color:dodgerblue;color:white;"/>
-              </div>
 
                 
-            </article>
+     <%--       </article>--%>
 
         </section>
-       
 
         <footer>
-            <img src="../img/Passportimg2.PNG" width="120" height="120" alt="logo" />
+            <img src="../img/IndiaLogo.jpg" width="120" height="120" alt="logo" />
             
         </footer>
-         </form>
-</body>
 
+    </div>
+    </form>
+</body>
 </html>

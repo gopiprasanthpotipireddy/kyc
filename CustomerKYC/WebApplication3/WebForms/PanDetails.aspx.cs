@@ -46,13 +46,15 @@ namespace WebApplication3.WebForms
                     list.Add(value);
                 }
                 rdr.Close();
-               
+                con.Close();
                 if (list.Contains(pannumber))
                 {
+                    con.Open();
                     SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set PAN_Status='SUCCESS' where PAN_Number=@pannumber", con);
                     cmd1.Parameters.AddWithValue("@pannumber", pannumber);
                     cmd1.ExecuteNonQuery();
-                    SqlCommand cmd3 = new SqlCommand("select * from PanDetails where PanNumber=pannumber", con);
+                    SqlCommand cmd3 = new SqlCommand("select * from PanDetails where Pan_Number=@pannumber", con);
+                    cmd3.Parameters.AddWithValue("@pannumber", pannumber);
                     DataTable dt1 = new DataTable();
                     SqlDataAdapter da1 = new SqlDataAdapter(cmd3);
                     da1.Fill(dt1);

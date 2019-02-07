@@ -10,7 +10,7 @@
 namespace WebApplication3.WebForms {
     
     
-    public partial class PassportDetails {
+    public partial class DisplayInfo {
         
         /// <summary>
         /// form1 control.

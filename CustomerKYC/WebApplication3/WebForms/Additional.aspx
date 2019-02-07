@@ -3,10 +3,10 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-    <asp:GridView ID="GridView2" runat="server">
-        <Columns>
-<asp:BoundField runat="server" DataField="Applicant_ID" HeaderText="Applicant_ID" />
-             <asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
+    <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center">
+      <%-- <Columns>
+<asp:BoundField runat="server" DataField="Applicant_ID" HeaderText="Applicant_ID" />--%>
+             <%--<asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
              <asp:BoundField DataField="City" HeaderText="City" />
              <asp:BoundField DataField="State" HeaderText="State" />
              <asp:BoundField DataField="PIN" HeaderText="PIN" />
@@ -17,7 +17,7 @@
             
 
 
-        </Columns>
+        </Columns>--%>
 
     </asp:GridView>
         </div>

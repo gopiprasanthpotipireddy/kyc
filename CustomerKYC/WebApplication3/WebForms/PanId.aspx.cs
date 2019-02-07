@@ -38,7 +38,7 @@ namespace WebApplication3.WebForms
             {
                 //string separator = ",";
                 Details.PanDetails(TextBox5.Text);
-                Response.Redirect("PanDetails.aspx");
+                Response.Redirect("Paniframe.aspx");
                 //    string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "csv\\PAN.csv";
                 //    var reader = new StreamReader(File.OpenRead(FilePath));
                 //    var PanCol = new List<string>();

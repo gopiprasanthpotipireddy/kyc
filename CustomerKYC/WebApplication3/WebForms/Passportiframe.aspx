@@ -1,14 +1,12 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PassPortverification.aspx.cs" Inherits="WebApplication3.WebForms.PassPortverification" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Passportiframe.aspx.cs" Inherits="WebApplication3.WebForms.Passportiframe" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<style>
-* {
+    <style>
+.header {
   box-sizing: border-box;
 }
 
@@ -100,6 +98,7 @@ footer {
 <body>
     <form id="form1" runat="server">
     <div>
+    <div>
     <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
             <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
@@ -161,15 +160,7 @@ footer {
                 <p>*Passports are often requested in other circumstances to confirm identification such as checking in to a hotel or when changing money to a local currency</p>
                 
                 <br/>
-                <p><h3 style="color:#791717;text-align:center;">Verify PassPort Number:</h3></p>
-                <p style="text-align:center;">Enter the PassPort number here</p>
-       
-
-                <div align="center">
-                <asp:TextBox id ="TextBox5"  runat="server"  placeholder="passport Number"  style="border-color:#791717;height: 30px; width: 250px;text-align=center;" ></asp:TextBox>
-                    <br/><br/>
-                    <asp:Button ID="Button2" runat="server" onclick="Passportverify" Text="Verify" style="height:30px;width:100px;background-color:dodgerblue;color:white;"/>
-              </div>
+               <iframe height="500" width="1339" style="border-color:cornflowerblue;"id="iframepassport" name="ifr1" src="PassportDetails.aspx"></iframe>
 
                 
             </article>
@@ -181,7 +172,7 @@ footer {
             <img src="../img/Passportimg2.PNG" width="120" height="120" alt="logo" />
             
         </footer>
-         </form>
+    </div>
+    </form>
 </body>
-
 </html>

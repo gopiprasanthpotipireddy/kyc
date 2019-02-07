@@ -118,8 +118,15 @@ footer {
                 <h4>National Securities Depository Limited</h4>
             </div>
             <h3></h3>
-
+             <div style="text-align:right">
+                <ul>
+                    
+                                <div><a href="PanLogin.aspx" >Logout</a></div>
+               </ul>
+               </div>
         </header>
+          
+          
 
         <section>
             <nav>
@@ -180,9 +187,7 @@ footer {
         </section>
 
         <footer>
-            <img src="../img/IndiaLogo.jpg" width="120" height="120" alt="logo" />
-            
-        </footer>
+            &nbsp;<img src="../img/IndiaLogo.jpg" width="120" height="120" alt="logo" /></footer>
 
     </div>
     </form>

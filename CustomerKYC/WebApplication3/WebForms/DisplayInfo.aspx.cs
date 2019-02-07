@@ -11,7 +11,7 @@ using WebApplication3.DalClasses;
 
 namespace WebApplication3.WebForms
 {
-    public partial class WebForm2 : System.Web.UI.Page
+    public partial class DisplayInfo : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -35,7 +35,7 @@ namespace WebApplication3.WebForms
                 GridView1.DataSource = dt;
                 GridView1.DataBind();
                 SqlDataReader rdr = cmd.ExecuteReader();
-                
+
                 con.Close();
 
                 //SqlCommand cmd = new SqlCommand("select * from Applicant_Details", con);
@@ -79,12 +79,12 @@ namespace WebApplication3.WebForms
             {
 
 
-                int index;
-                int value;
+                //int index;
+                //int value;
                 int value1;
                 if (e.CommandName == "CEdit")
                 {
-                    Response.Redirect("Update.aspx");
+                    Response.Redirect("UpdateForm.aspx");
                     //index = Convert.ToInt32(e.CommandArgument);
                     //GridViewRow row = GridView1.Rows[index];
                     //value = Convert.ToInt32(row.Cells[0].Text);
@@ -103,37 +103,18 @@ namespace WebApplication3.WebForms
                     int rowIndex = Convert.ToInt32(e.CommandArgument);
                     GridViewRow row = GridView1.Rows[rowIndex];
                     //int va = Convert.ToInt32((row.FindControl("Applicant_ID") as TextBox).Text);
-                     value1 = Convert.ToInt32(row.Cells[0].Text);
-                   Add.Additional1(value1);
-                    Response.Redirect("Additional.aspx");
+                    value1 = Convert.ToInt32(row.Cells[0].Text);
+                    Add.Additional1(value1);
+                    Response.Redirect("AdditionalData.aspx");
 
                     //retrieve(value1);
                     //Response.Redirect("~/UpdateGridView.aspx?EmpNo=" + row.Cells[0].Text);
                 }
             }
-            catch(Exception exd)
+            catch (Exception exd)
             {
                 Response.Write(exd);
             }
         }
-        //public void retrieve(int value1)
-        //{
-        //    //Response.Redirect(AdditionalInfo.aspx);
-        //    int fun = value1;
-        //    SqlConnection conn = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
-        //    conn.Open();
-        //    SqlCommand cmd1 = new SqlCommand("select Applicant_ID,Address,city,state,PIN,EMAIL,DOB,MobileNo,Gender from Applicant_Details where Applicant_ID=@app_id", conn);
-        //    cmd1.Parameters.AddWithValue("@app_id", value1);
-        //    SqlDataReader rdr1 = cmd1.ExecuteReader();
-
-        //    DataTable dt1 = new DataTable();
-        //    SqlDataAdapter da1 = new SqlDataAdapter(cmd1);
-        //    da1.Fill(dt1);
-        //    GridView2.DataSource = rdr1;
-        //    GridView2.DataBind();
-        //    conn.Close();
-        //}
     }
 }
-
-

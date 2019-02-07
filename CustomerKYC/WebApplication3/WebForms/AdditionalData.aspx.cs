@@ -11,11 +11,10 @@ using WebApplication3.DalClasses;
 
 namespace WebApplication3.WebForms
 {
-    public partial class WebForm4 : System.Web.UI.Page
-    {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
+	public partial class AdditionalData : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
             if (!this.IsPostBack)
             {
                 BindGridView();
@@ -35,10 +34,10 @@ namespace WebApplication3.WebForms
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd6);
                 da.Fill(dt);
-                GridView2.DataSource = dt;
-                GridView2.DataBind();
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
                 SqlDataReader rdr = cmd6.ExecuteReader();
-               
+
                 con.Close();
             }
             catch (Exception exp3)
@@ -46,6 +45,5 @@ namespace WebApplication3.WebForms
                 Response.Write(exp3);
             }
         }
-
     }
 }
