@@ -8,6 +8,11 @@
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
     <style>
         * {
             box-sizing: border-box;
@@ -171,7 +176,7 @@
 
                     <%--<li><a href="#news">News</a></li>--%>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="AadharLogout.aspx">Logout</a></li>
+                    <%--<li><a href="AadharLogout.aspx">Logout</a></li>--%>
                     <li><a href="#about">About</a></li>
                 </ul>
             </div>

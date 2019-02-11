@@ -19,14 +19,14 @@
       </div>
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <!-- search -->
-        <div class="search-bar">
+        <%--<div class="search-bar">
         
             <fieldset>
               <input type="image" src="img/pixel.gif" class="searchsubmit" alt="" />
               <input type="text" class="search_text showtextback" name="s" id="s" value="Search..." />
             </fieldset>
         
-        </div>
+        </div>--%>
         <!-- / end div .search-bar -->
       </div>
     </div>
@@ -71,9 +71,9 @@
               </div>
             </div>
             <div class="form-group">
-              <asp:button type="submit" id="button" runat="server"   OnClick ="Admin_Button" class="button" text="Sign In"></asp:button>
-                <%--<asp:Button ID="Button1" runat="server" Text="Log In" OnClick="Admin_Button" Style="background-color: orange; height: 40px; width: 200px;" />--%>
+              <asp:button type="submit" id="button" runat="server"   OnClick ="Admin_Button" class="button" text="Login In"></asp:button>
             </div>
+            
           
         </div>
         <!-- end login -->

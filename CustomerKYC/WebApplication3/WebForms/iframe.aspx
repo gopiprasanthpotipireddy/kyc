@@ -90,20 +90,20 @@ li a:hover:not(.active) {
               <div class="tab-pane active" id="recent">
                 <ul class="recent_posts">
                   <li>
-                    <a href="PanLogin.aspx">
+                    <a href="PanLogin.aspx" target="_blank">
                                     <img src="../img/nsdlLogo.jpg" alt="" />Link to verify PAN-id:
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
                   <li>
-                    <a href="AadharLogin.aspx">
+                    <a href="AadharLogin.aspx" target="_blank">
                                     <img src="../img/Aadharsymbol.jpg" alt="" />Link to verify Aadhar:
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
                      <li>
-                    <a href="PassPortLogin.aspx">
-                                    <img src="../img/Passportimg.png" alt="" />Link to verify Passport:
+                    <a href="PassPortLogin.aspx" target="_blank">
+                                    <img src="../img/Passportimg.png" alt="" style="height:70px" />Link to verify Passport:
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>

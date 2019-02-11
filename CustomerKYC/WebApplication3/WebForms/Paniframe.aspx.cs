@@ -11,7 +11,15 @@ namespace WebApplication3.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
+        }
+        public void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("PanLogin.aspx", false);
         }
     }
 }

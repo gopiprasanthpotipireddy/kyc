@@ -1,6 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebForms/Site1.Master" AutoEventWireup="true" CodeBehind="AfterLogin.aspx.cs" Inherits="WebApplication3.WebForm3" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> 
 </asp:Content>
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <style>
     #viewSubmits
@@ -20,11 +26,12 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <!-- search -->
         <div class="search-bar">
-         
-            <fieldset>
+<asp:Button ID="Button1" runat="server" Text="LogOut" OnClick="Logout" Style="background-color: orange; height: 40px; width: 200px;" />
+
+            <%--<fieldset>
               <input type="image" src="img/pixel.gif" class="searchsubmit" alt="" />
               <input type="text" class="search_text showtextback" name="s" id="s" value="Search..." />
-            </fieldset>
+            </fieldset>--%>
          
         </div>
         <!-- / end div .search-bar -->
@@ -77,8 +84,9 @@
             <input type="text" name="email" id="email" class="form-control" placeholder="Email">--%>
             <div class="pull-right" align="center">
               <%--<input type="submit" value="NewCase" style="position:center;" id="submit" class="button">--%>
-      <asp:Button ID="submit" runat="server" Text="NewCase" OnClick="NewCase" CssClass="button" style="position:center;" />
+      <asp:Button ID="submit" runat="server" Text="NewCustomerRegistration" OnClick="NewCase" CssClass="button" style="position:center;color:" target="_blank"/>
                       </div>
+            
       
           <%--</form>--%>
         </div>
@@ -96,20 +104,20 @@
               <div class="tab-pane active" id="recent">
                 <ul class="recent_posts">
                   <li>
-                    <a href="AadharLogin.aspx">
+                    <a href="AadharLogin.aspx" target="_blank">
                                     <img src="../img/Aadharsymbol.jpg" alt="" />AadharLogin Is Here
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
                   <li>
-                    <a href="PanLogin.aspx">
+                    <a href="PanLogin.aspx" target="_blank">
                                     <img src="../img/nsdlLogo.jpg" alt="" />PanLogin Is Here
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
                     <li>
-                    <a href="PassPortLogin.aspx">
-                                    <img src="../img/Passportimg.png" alt="" />PassPortLogin Is Here
+                    <a href="PassPortLogin.aspx" target="_blank">
+                                    <img src="../img/Passportimg.png" style="height:70px" alt="" />PassPortLogin Is Here
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>

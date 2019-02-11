@@ -100,22 +100,22 @@ footer {
 <body>
     <form id="form1" runat="server">
     <div>
-    <a href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
-            <a href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
+    <a id="f1" href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a>
+            <a id="t1" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a id="g1" href="#" data-toggle="tooltip" data-placement="bottom" title="Google+"><i class="fa fa-google-plus"></i></a>
+            <a id="d1" href="#" data-toggle="tooltip" data-placement="bottom" title="Dribbble"><i class="fa fa-dribbble"></i></a>
+            <a id="r1" href="#" data-toggle="tooltip" data-placement="bottom" title="RSS"><i class="fa fa-rss"></i></a>
     </div>
         <header>
             <div class="header">
                 <img src="../img/Passportimg.png" width="120" height="120" alt="logo" />
-                <h1>PassPort Verification</h1>
+                <h1 id="p2">PassPort Verification</h1>
             </div>
            
             <div style="text-align:right">
                 <ul>
                     
-                                <div><a href="PassPortLogin.aspx" >Logout</a></div>
+                               <%-- <div><a href="PassPortLogin.aspx" >Logout</a></div>--%>
                </ul>
                </div>
         </header>
@@ -154,14 +154,14 @@ footer {
             </nav>
 
             <article>
-                <h2 style="color:#791717;">PassPort Information Network</h2>
+                <h2 id="i1" style="color:#791717;">PassPort Information Network</h2>
                 <p>A passport is a travel document, usually issued by a country's government, that certifies the identity and nationality of its holder primarily for the purpose of international travel.</p>
                 <br/>
                 
                 <p>*Passports are often requested in other circumstances to confirm identification such as checking in to a hotel or when changing money to a local currency</p>
                 
                 <br/>
-                <p><h3 style="color:#791717;text-align:center;">Verify PassPort Number:</h3></p>
+                <p><h3 id="v1" style="color:#791717;text-align:center;">Verify PassPort Number:</h3></p>
                 <p style="text-align:center;">Enter the PassPort number here</p>
        
 

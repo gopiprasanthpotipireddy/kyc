@@ -120,9 +120,10 @@ footer {
             <h3></h3>
              <div style="text-align:right">
                 <ul>
-                    
-                                <div><a href="PanLogin.aspx" >Logout</a></div>
+                    <%--<asp:LinkButton ID="LinkButton1" runat="server" OnClick="Logout">Logout</asp:LinkButton>--%>
+<%--                                <div><a href="PanLogin.aspx" >Logout</a></div>--%>
                </ul>
+                 
                </div>
         </header>
           

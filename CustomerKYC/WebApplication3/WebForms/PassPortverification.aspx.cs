@@ -24,7 +24,6 @@ public void Passportverify(object sender, EventArgs e)
     ArrayList list = new ArrayList();
     try
     {
-        //SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
         SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
         con.Open();
         SqlCommand cmd = new SqlCommand("select  * from Passport_Details", con);
@@ -34,19 +33,17 @@ public void Passportverify(object sender, EventArgs e)
             string value = rdr["PassportNumber"].ToString();
             list.Add(value);
         }
-        //    rst = stm.executeQuery(sql);
-        //}
+        
         con.Close();
         if (list.Contains(TextBox5.Text))
         {
             con.Open();
-            //Response.Write("<script>alert('your passport number is verified');</script>");
             SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set PASSPORT_Status='SUCCESS' where PASSPORT_NUMBER=@PassportId", con);
             cmd1.Parameters.AddWithValue("@PassportId", TextBox5.Text);
             cmd1.ExecuteNonQuery();
             value1 = TextBox5.Text;
             passportlogin.passportverify(value1);
-            Response.Redirect("Passportiframe.aspx");
+            Response.Redirect("PassportIframe.aspx");
 
         }
         else

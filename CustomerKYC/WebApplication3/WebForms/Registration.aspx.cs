@@ -144,12 +144,12 @@ namespace WebApplication3
             {
                 flag = 0;
             }
-            if (obj1.Pannumber.Length != 10 || obj1.AadharNumber.Length != 12 || obj1.mobilenumber.Length != 10)
+            if (obj1.Pannumber.Length == 10 && obj1.AadharNumber.Length == 12 && obj1.mobilenumber.Length == 10)
             {
                 //Response.Write("<span>");
                 //Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
                 //Response.Write("</span>");
-                flag = 0;
+                flag = 1;
             }
             else
             {
@@ -158,18 +158,21 @@ namespace WebApplication3
                     Response.Write("<span>");
                     Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
                     Response.Write("</span>");
+                    flag = 0;
                 }
                 if (obj1.AadharNumber.Length != 12)
                 {
                     Response.Write("<span>");
                     Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
                     Response.Write("</span>");
+                    flag = 0;
                 }
                 if ((obj1.mobilenumber.Length != 10))
                 {
                     Response.Write("<span>");
                     Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
                     Response.Write("</span>");
+                    flag = 0;
                 }
             }
             if (flag == 1)

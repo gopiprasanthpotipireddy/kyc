@@ -1,5 +1,8 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -18,11 +21,53 @@ namespace WebApplication3.WebForms
         {
 
             AdharDetails.AadharNumber(AadharNumber.Value);
-            Response.Redirect("Aadhariframe.aspx");
+            try
+            {
+                // string Aadhar = AdharDetails.an;
+                string Aadhar = AadharNumber.Value;
+                ArrayList list = new ArrayList();
+                //System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+                con.Open();
+                SqlCommand cmd = new SqlCommand("select * from AadharDetails ", con);
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    string value = rdr["AadharNumber"].ToString();
+                    list.Add(value);
+                }
+                //    rst = stm.executeQuery(sql);
+                //}
+                con.Close();
+                if (list.Contains(Aadhar))
+                {
+                    con.Open();
+                    SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set AADHAR_Status='SUCCESS' where AADHAR_Number=@Aadhar", con);
+                    cmd1.Parameters.AddWithValue("@Aadhar", Aadhar);
+                    cmd1.ExecuteNonQuery();
+                    Response.Redirect("Aadhariframe.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('Sorry! your Aadhar is not verified');</script>");
+                    con.Open();
+                    SqlCommand cmd0 = new SqlCommand("Update Applicant_Details set PAN_Status='FAILURE' where AADHAR_Number=@Aadhar", con);
+                    cmd0.Parameters.AddWithValue("@Aadhar", Aadhar);
+                    cmd0.ExecuteNonQuery();
+                    con.Close();
+                }
+            }
+            catch (Exception ec)
+            {
+                Response.Write(ec);
+            }
 
         }
+       
+
     }
-}
+    }
+
 
 //    Aadhar obj = new Aadhar();
 //    AdharDetails obj1 = new AdharDetails();

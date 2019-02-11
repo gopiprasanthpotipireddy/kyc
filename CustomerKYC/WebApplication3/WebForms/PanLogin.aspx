@@ -150,6 +150,14 @@ margin-left: -10px;
             overflow-x: hidden;
         }
     </style>
+<script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> 
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -169,7 +177,8 @@ margin-left: -10px;
 
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="#about">About</a></li>
-                     <li><a href="AfterLogin.aspx">Logout</a></li>
+                    <%-- <li><a href="AfterLogin.aspx">Logout</a></li>--%>
+                    <%--<li><asp:LinkButton ID="LinkButton1" runat="server" OnClick="Logout">Logout</asp:LinkButton></li>--%>
                 </ul>
             </div>
             <section>

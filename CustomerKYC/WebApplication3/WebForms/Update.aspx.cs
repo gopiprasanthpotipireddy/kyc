@@ -86,13 +86,13 @@ namespace WebApplication3.WebForms
                     com1.ExecuteNonQuery();
                     if (panstat == "Success" && passstat == "Success" && aadharstat == "Success")
                     {
-                        SqlCommand cmd2 = new SqlCommand("Update demotb set OVERALL_Status = 'SUCCESS' ", con);
+                        SqlCommand cmd2 = new SqlCommand("Update Applicant_Details set OVERALL_Status = 'SUCCESS' ", con);
                         cmd2.ExecuteNonQuery();
 
                     }
                     else
                     {
-                        SqlCommand cmd3 = new SqlCommand("update AdditionalDetails set OVERALL_Status='FAILURE'", con);
+                        SqlCommand cmd3 = new SqlCommand("update Applicant_Details set OVERALL_Status='FAILURE'", con);
                         cmd3.ExecuteNonQuery();
                     }
                     con.Close();
@@ -107,6 +107,30 @@ namespace WebApplication3.WebForms
             {
                 Response.Write(exp1);
             }
+        }
+        public void upload(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                string path = "../DataFile" + "\\"+app_id.Value;
+                bool exists = System.IO.Directory.Exists(Server.MapPath(path));
+                if (!exists)
+                {
+                    System.IO.Directory.CreateDirectory(Server.MapPath(path));
+                    FileUpload1.SaveAs(Server.MapPath(path + "\\" + FileUpload1.FileName));
+                }
+                else
+                {
+                    FileUpload1.SaveAs(Server.MapPath(path + "\\" + FileUpload1.FileName));
+
+                }
+            }catch(Exception exs)
+            {
+                Response.Write(exs);
+            }
+
         }
     }
 }

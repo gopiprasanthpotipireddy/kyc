@@ -23,70 +23,49 @@ namespace WebApplication3.WebForms
         //}
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
             if (!this.IsPostBack)
             {
                 BindGridView();
             }
+
         }
         private void BindGridView()
         {
-            try
-            {
+            try {
                 string pannumber = Details.pn;
-                ArrayList list = new ArrayList();
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
-                //System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from PanDetails ", con);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    string value = rdr["Pan_Number"].ToString();
-                    list.Add(value);
-                }
-                rdr.Close();
+                SqlCommand cmd3 = new SqlCommand("select * from PanDetails where Pan_Number=@pannumber", con);
+                cmd3.Parameters.AddWithValue("@pannumber", pannumber);
+                DataTable dt1 = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd3);
+                da1.Fill(dt1);
+                GridView0.DataSource = dt1;
+                GridView0.DataBind();
+                SqlDataReader rdr0 = cmd3.ExecuteReader();
                 con.Close();
-                if (list.Contains(pannumber))
-                {
-                    con.Open();
-                    SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set PAN_Status='SUCCESS' where PAN_Number=@pannumber", con);
-                    cmd1.Parameters.AddWithValue("@pannumber", pannumber);
-                    cmd1.ExecuteNonQuery();
-                    SqlCommand cmd3 = new SqlCommand("select * from PanDetails where Pan_Number=@pannumber", con);
-                    cmd3.Parameters.AddWithValue("@pannumber", pannumber);
-                    DataTable dt1 = new DataTable();
-                    SqlDataAdapter da1 = new SqlDataAdapter(cmd3);
-                    da1.Fill(dt1);
-                    GridView0.DataSource = dt1;
-                    GridView0.DataBind();
-                    SqlDataReader rdr0 = cmd3.ExecuteReader();
-                    con.Close();
-                    //DataTable dt = new DataTable();
-                    //SqlDataAdapter da = new SqlDataAdapter(cmd3);
-                    //cmd3.ExecuteReader();
-                    //da.Fill(dt);
-                    //GridView1.DataSource = dt;
-                    //GridView1.DataBind();
-                    //con.Close();
-                }
-                else
-                {
-                    Response.Write("<script>alert('Sorry! your Pan is not verified');</script>");
-                    con.Open();
-                    SqlCommand cmd0 = new SqlCommand("Update Applicant_Details set PAN_Status='FAILURE' where PAN_Number=@pannumber", con);
-                    cmd0.Parameters.AddWithValue("@pannumber", pannumber);
-                    cmd0.ExecuteNonQuery();
-                    con.Close();
-                    //Response.Redirect("PanId.aspx");
-
-                }
+                //DataTable dt = new DataTable();
+                //SqlDataAdapter da = new SqlDataAdapter(cmd3);
+                //cmd3.ExecuteReader();
+                //da.Fill(dt);
+                //GridView1.DataSource = dt;
+                //GridView1.DataBind();
+                //con.Close();
             }
-            catch(Exception exp5)
+            
+        catch(Exception exk)
             {
-                Response.Write(exp5);
-            }
-
+                    Response.Write(exk);
+             }
+        }
+        public void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("PanLogin.aspx", false);
         }
     }
 }

@@ -5,17 +5,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-
+ 
 </head>
 <body>
     <form id="form1" runat="server" >
-    <div>
-        <br />
-        <br />
-         <br />
-        <br />
-      <h1 id="HD1" Style="text-align:center">DETAILS</h1>
+   <div>
+                     <h1 id="HD1" Style="text-align:center">DETAILS</h1>
         <asp:GridView ID="GridView0" runat="server" style="border-color:orange;position:relative;" HorizontalAlign="Center">
+             </asp:GridView>
+                   </div> 
+     
       <%--  <columns>
               <asp:BoundField  runat="server" DataField="Pan_Number" HeaderText="Pan_Number" />
                  
@@ -25,9 +24,9 @@
             
             
             </columns>--%>
-            </asp:GridView>
+           
        
-    </div>
+    
     </form>
 </body>
 </html>

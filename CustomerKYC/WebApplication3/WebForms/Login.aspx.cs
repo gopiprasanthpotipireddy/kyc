@@ -12,7 +12,12 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["username"] == null)
+            {
+                Response.Write("<script>alert('Please Check your Credentials');</script>");
+                Response.Redirect("Login.aspx");
+                return;
+            }
         }
         static int _attempts = 3;
         protected void Admin_Button(object sender, EventArgs e)
@@ -22,11 +27,13 @@ namespace WebApplication3
                 string username, password;
                 username = TextBox1.Text;
                 password = TextBox2.Text;
+                Session["username"] = username;
                 bool result = DalLogin.CheckUser(username, password);
 
-                if (username == null || username == "")
+                if (Session["username"]==null)
                 {
                     Response.Write("<script>alert('Please Check your Credentials');</script>");
+                    Response.Redirect("Login.aspx");
                     return;
                 }
                 if (password == null || password == "")
@@ -57,6 +64,14 @@ namespace WebApplication3
                 Response.Write("Null Reference Exception");
             }
 
+        }
+        public void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("Login.aspx", false);
         }
     }
 }

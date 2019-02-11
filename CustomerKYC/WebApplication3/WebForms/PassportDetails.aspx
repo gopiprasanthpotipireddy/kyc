@@ -7,22 +7,20 @@
      <title></title>
     <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<div>
 
-    </div>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-     <div>
-        <center>
-            <br />
-            <br />
-             <br />
-             <br />
-             <br />
-            <h1 id="HD1" Style="text-align:center">DETAILS</h1>
-            <asp:GridView ID="GridView1" runat="server" style="border-color:cornflowerblue;">
+    
+             <h1 id="HD1" Style="text-align:center">DETAILS</h1>
+                        <asp:GridView ID="GridView1" runat="server" style="border-color:cornflowerblue;">
+                             </asp:GridView>
+         
+
+      </div>
+
+         
                 
                 <%--<Columns>
                      <asp:BoundField runat="server" DataField="PassportNumber" HeaderText="PassportNumber" />
@@ -43,10 +41,8 @@
 
            
                 </Columns>--%>
-            </asp:GridView>
-         </center>
-            </div>
-    </div>
+           
+        
     </form>
 </body>
 </html>

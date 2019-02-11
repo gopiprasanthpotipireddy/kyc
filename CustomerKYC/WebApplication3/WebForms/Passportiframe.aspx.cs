@@ -13,5 +13,13 @@ namespace WebApplication3.WebForms
         {
 
         }
+        public void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("PassPortLogin.aspx", false);
+        }
     }
 }

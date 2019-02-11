@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+     <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
     <style>
 .header {
   box-sizing: border-box;
@@ -108,13 +113,13 @@ footer {
         <header>
             <div class="header">
                 <img src="../img/Passportimg.png" width="120" height="120" alt="logo" />
-                <h1>PassPort Verification</h1>
+                <h1 id="PP1">PassPort Verification</h1>
             </div>
            
             <div style="text-align:right">
                 <ul>
-                    
-                                <div><a href="PassPortLogin.aspx" >Logout</a></div>
+                    <asp:LinkButton ID="LinkButton1" OnClick="Logout" runat="server">Logout</asp:LinkButton>
+                               <%-- <div><a  href="PassPortLogin.aspx" >Logout</a></div>--%>
                </ul>
                </div>
         </header>
@@ -153,7 +158,7 @@ footer {
             </nav>
 
             <article>
-                <h2 style="color:#791717;">PassPort Information Network</h2>
+                <h2 id="PP2" style="color:#791717;">PassPort Information Network</h2>
                 <p>A passport is a travel document, usually issued by a country's government, that certifies the identity and nationality of its holder primarily for the purpose of international travel.</p>
                 <br/>
                 

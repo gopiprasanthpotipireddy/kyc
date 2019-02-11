@@ -28,61 +28,26 @@ namespace WebApplication3.WebForms
             try
             {
                 string Aadhar = AdharDetails.an;
-                ArrayList list = new ArrayList();
-                //System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
                 con.Open();
-                SqlCommand cmd = new SqlCommand("select * from AadharDetails ", con);
-                SqlDataReader rdr = cmd.ExecuteReader();
-                while (rdr.Read())
-                {
-                    string value = rdr["AadharNumber"].ToString();
-                    list.Add(value);
-                }
-                //    rst = stm.executeQuery(sql);
-                //}
+                SqlCommand cmd3 = new SqlCommand("select * from AadharDetails where AADHARNUMBER=@Aadhar", con);
+                cmd3.Parameters.AddWithValue("@Aadhar", Aadhar);
+                DataTable dt1 = new DataTable();
+                SqlDataAdapter da1 = new SqlDataAdapter(cmd3);
+                da1.Fill(dt1);
+                GridView1.DataSource = dt1;
+                GridView1.DataBind();
+                SqlDataReader rdr0 = cmd3.ExecuteReader();
                 con.Close();
-                if (list.Contains(Aadhar))
-                {
-                    con.Open();
-
-                    SqlCommand cmd1 = new SqlCommand("Update Applicant_Details set AADHAR_Status='SUCCESS' where AADHAR_Number=@Aadhar", con);
-                    cmd1.Parameters.AddWithValue("@Aadhar", Aadhar);
-                    cmd1.ExecuteNonQuery();
-                    SqlCommand cmd3 = new SqlCommand("select * from AadharDetails where AADHARNUMBER=@Aadhar", con);
-                    cmd3.Parameters.AddWithValue("@Aadhar", Aadhar);
-                    DataTable dt1 = new DataTable();
-                    SqlDataAdapter da1 = new SqlDataAdapter(cmd3);
-                    da1.Fill(dt1);
-                    GridView1.DataSource = dt1;
-                    GridView1.DataBind();
-                    SqlDataReader rdr0 = cmd3.ExecuteReader();
-                    con.Close();
-                    //DataTable dt = new DataTable();
-                    //SqlDataAdapter da = new SqlDataAdapter(cmd3);
-                    //SqlDataReader rd8=new cmd3.ExecuteReader();
-                    //da.Fill(dt);
-                    //GridView1.DataSource = dt;
-                    //GridView1.DataBind();
-
-                    con.Close();
-                }
-                else
-                {
-                    Response.Write("<script>alert('Sorry! your Aadhar is not verified');</script>");
-                    con.Open();
-                    SqlCommand cmd0 = new SqlCommand("Update Applicant_Details set PAN_Status='FAILURE' where AADHAR_Number=@Aadhar", con);
-                    cmd0.Parameters.AddWithValue("@Aadhar", Aadhar);
-                    cmd0.ExecuteNonQuery();
-                    con.Close();
-                }
             }
-            catch(Exception ec)
-            {
-                Response.Write(ec);
-            }
-              
-        }
+            catch(Exception exf)
+                {
+                Response.Write(exf);
+            }  
+
+                   
+                }
+               
     }
 }
 //protected void Verify(object sender, EventArgs e)

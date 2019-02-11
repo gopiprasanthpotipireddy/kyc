@@ -12,7 +12,7 @@ namespace WebApplication3.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
         }
         static int _attempts1 = 3;
         public void Admin_Button1(object sender, EventArgs e)
@@ -23,9 +23,10 @@ namespace WebApplication3.WebForms
                 string username1, password1;
                 username1 = TextBox3.Text;
                 password1 = TextBox4.Text;
+                Session["username1"] = username1;
                 bool result = VerifyPanLogin.Rambo(username1, password1);
 
-                if (username1 == null || username1 == "")
+                if (Session["username1"] == null)
                 {
                     Response.Write("<script>alert('Please Check your Credentials');</script>");
                     return;
@@ -53,11 +54,19 @@ namespace WebApplication3.WebForms
                     Response.Write("<script>alert('Sorry! please try later.');window.close();</script>");
                 }
             }
-            catch (Exception exp)
+            catch (Exception exp7)
             {
-                Response.Write("Null Reference Exception");
+                Response.Write(exp7);
             }
-
         }
+            public void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("AfterLogin.aspx", false);
+        }
+
     }
-}
+    }

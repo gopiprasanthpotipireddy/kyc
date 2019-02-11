@@ -11,7 +11,7 @@
     <form id="form1" runat="server">
         <div>
             <h1 id="HD1">DETAILS</h1>
-            <asp:GridView ID="GridView1" runat="server">
+            <asp:GridView ID="GridView1" runat="server" >
             <columns>
                  <asp:BoundField runat="server" DataField="AadharNumber" HeaderText="AadharNumber" />
              <asp:BoundField runat="server" DataField="CustomerName" HeaderText="CustomerName" />

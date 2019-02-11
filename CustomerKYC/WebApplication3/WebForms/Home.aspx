@@ -1,9 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebForms/Site1.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="WebApplication3.WebForm1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+     <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> 
     </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
- <style>
+    <style>
     #viewSubmits
     {
         display:none;
@@ -16,6 +20,33 @@
         <div class="col-md-8 col-md-offset-2">
           <h1>Global Economic Growth concerns weigh on our PrimeBank</h1>
           <p>Improve efficiency, outpace competitors and drive growth with solutions from IHS Markit. We combine information, analytics and expertise to help you see why things happen and focus on what matters. That's why 50,000+ organizations, including 80% of the Fortune Global 500, rely on our insights.</p>
+         <br />
+            <br />
+            <div class="form-group">
+              <div class="input-group"  style="position:relative;padding-left:120px;">
+                <%--<span class="input-group-addon"><i class="fa fa-user"></i></span>--%>
+                <%--<input type="text" class="form-control" id="TextBox" runat="server" placeholder="Username">--%>
+                  <asp:TextBox id ="TextBox1" class="form-control" runat="server" placeholder="Username" Style="height: 30px; width: 200px;"></asp:TextBox>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group" style="position:relative;padding-left:120px;">
+                <%--<span class="input-group-addon"><i class="fa fa-lock"></i></span>--%>
+                <%--<input type="password" class="form-control" id="TextBox2" runat="server" placeholder="Password">--%>
+              <asp:TextBox id ="TextBox2" type="password" class="form-control" runat="server" placeholder="password" Style="height: 30px; width: 200px;"></asp:TextBox>
+              </div>
+            </div>
+           <%-- <div class="form-group">
+              <div class="checkbox"  style="position:relative;padding-right:200px;">
+                <label>
+                  <input type="checkbox"/> Remember me
+                </label>
+              </div>
+            </div>--%>
+            <div class="form-group"style="position:relative;padding-right:80px; ">
+              <asp:button type="submit" id="button" runat="server" OnClick ="Admin_Button" class="button" text="Login In"></asp:button>
+            </div>
+            
         </div>
       </div>
     </div>

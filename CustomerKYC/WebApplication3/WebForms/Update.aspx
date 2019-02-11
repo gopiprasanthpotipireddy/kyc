@@ -189,7 +189,16 @@
                        
                      </td>
     </tr>
-     &nbsp;</div>
+                    
+     <br />
+                    
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UpLoadFile&nbsp;&nbsp;
+    <asp:FileUpload paddingle ID="FileUpload1" runat="server" Height="37px" Width="395px" />
+                     <asp:Button margin runat="server" ID="btnUpload" Text="Upload" 
+                onclick="upload" style="position:relative;left:15%" />
+
          <br /> 
                       <br /> 
           <asp:Button ID="Update" runat="server" Text="Update" OnClick="update" Style="font-size:small;background-color:#3498db;color:white;width:90px;position:relative;left:2%;" /><br/><br/>

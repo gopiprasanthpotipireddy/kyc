@@ -152,13 +152,18 @@ margin-left: -10px;
             overflow-x: hidden;
         }
     </style>
+    <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script> 
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
      <header>
                 <div class="header">
-                    <img src="../img/Passportimg2.PNG" width="120" height="120" alt="logo"  />
+                    <img src="../img/Passportimg2.PNG" width="200" height="120" alt="logo"  />
                     <h1 >Passport Seva</h1>
                     <h4>Ministry of External Affairs, Government of India</h4>
                 </div>
@@ -166,11 +171,11 @@ margin-left: -10px;
 
             <div>
                 <ul>
-                    <li><a class="active" href="#home">Login</a></li>
-                    <li><a href="#news">News</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#about">About</a></li>
-                     <li><a href="AfterLogin.aspx">Logout</a></li>
+                    <li><a id="h1" class="active" href="#home">Login</a></li>
+                    <li><a id="n1" href="#news">News</a></li>
+                    <li><a  id="c1" href="#contact">Contact</a></li>
+                    <li><a id="a1" href="#about">About</a></li>
+                    <%-- <li><a id="l1" href="AfterLogin.aspx">Logout</a></li>--%>
                 </ul>
             </div>
             <section>

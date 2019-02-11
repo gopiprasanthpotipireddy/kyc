@@ -5,6 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
     <style>
 * {
   box-sizing: border-box;
@@ -113,13 +118,13 @@ footer {
         <header>
             <div class="header">
                 <img src="../img/nsdlLogo.jpg" width="120" height="120" alt="logo" />
-                <h4>National Securities Depository Limited</h4>
+                <h4 id="PD1">National Securities Depository Limited</h4>
             </div>
             <h3></h3>
             <div style="text-align:right">
                 <ul>
-                    
-                                <div><a href="PanLogin.aspx" >Logout</a></div>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Logout">Logout</asp:LinkButton>
+<%--                                <div><a href="PanLogin.aspx" >Logout</a></div>--%>
                </ul>
                </div>
         </header>
@@ -158,15 +163,15 @@ footer {
             </nav>
 
            <article>
-                <h2 style="color:#791717;">Tax Information Network</h2>
-                <p>To enable eligible Entities verify Permanent Account Numbers (PANs), Income Tax Department (ITD) has authorized NSDL e-Governance Infrastructure Limited (NSDL e-Gov ) to launch an online PAN verification service for verification of PANs by authorized entities.</p>
+                <h2 id="PD2" id="PD1" style="color:#791717;">Tax Information Network</h2>
+                <p id="PD3">To enable eligible Entities verify Permanent Account Numbers (PANs), Income Tax Department (ITD) has authorized NSDL e-Governance Infrastructure Limited (NSDL e-Gov ) to launch an online PAN verification service for verification of PANs by authorized entities.</p>
                 <br/>
                 
           <iframe height="600" width="1300" style="border-color:orange;align:center;"id="iframepan" name="ifr2" src="PanDetails.aspx"></iframe>
 
 
                 
-     <%--       </article>--%>
+            </article>
 
         </section>
 

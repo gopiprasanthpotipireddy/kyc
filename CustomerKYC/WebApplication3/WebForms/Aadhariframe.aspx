@@ -7,6 +7,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <script type = "text/javascript" >
+      function preventBack(){window.history.forward();}
+        setTimeout("preventBack()", 0);
+        window.onunload=function(){null};
+    </script>
     <style>
         /*/* Style the tab */
 
@@ -98,9 +103,9 @@
         article {
             float: left;
             padding: 20px;
-            width: 70%;
+            width: 60%;
             background-color: white;
-            height: 750px; /* only for demonstration, should be removed */
+            height: 500px; /* only for demonstration, should be removed */
         }
         /* Clear floats after the columns */
         section:after {
@@ -198,7 +203,7 @@
             <article>
 
 
-                <iframe height="1000" width="1590" id="iframeAdhar" name="iframe" src="AadharDetails.aspx"></iframe>
+                <iframe height="750" width="1500" id="iframeAdhar" name="iframe" src="AadharDetails.aspx"></iframe>
 
             </article>
 

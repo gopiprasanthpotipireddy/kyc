@@ -87,7 +87,7 @@
                             <div class="container clearfix">
                                 <ul id="jetmenu" class="jetmenu blue">
                                     <li><a href="Home.aspx">Home</a></li>
-                                    <li><a href="Login.aspx">Login</a></li>
+                                  
                                     <li><a href="about.aspx">About Us</a></li>
 
                                 </ul>
@@ -197,6 +197,7 @@
                                 <li><a href="#">Sitemap</a></li>
                                 <li><a href="#">Site Terms</a></li>
                                 <li><a href="contact">Contact</a></li>
+<%--                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Logout">LinkButton</asp:LinkButton>--%>
                             </ul>
                         </div>
                     </div>
