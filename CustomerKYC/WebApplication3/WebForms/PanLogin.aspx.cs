@@ -26,7 +26,7 @@ namespace WebApplication3.WebForms
                 Session["username1"] = username1;
                 bool result = VerifyPanLogin.Rambo(username1, password1);
 
-                if (Session["username1"] == null)
+                if (username1 == null)
                 {
                     Response.Write("<script>alert('Please Check your Credentials');</script>");
                     return;

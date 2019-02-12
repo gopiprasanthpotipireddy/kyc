@@ -12,12 +12,7 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Write("<script>alert('Please Check your Credentials');</script>");
-                Response.Redirect("Login.aspx");
-                return;
-            }
+            
         }
         static int _attempts = 3;
         protected void Admin_Button(object sender, EventArgs e)
@@ -30,7 +25,7 @@ namespace WebApplication3
                 Session["username"] = username;
                 bool result = DalLogin.CheckUser(username, password);
 
-                if (Session["username"]==null)
+                if (username==null)
                 {
                     Response.Write("<script>alert('Please Check your Credentials');</script>");
                     Response.Redirect("Login.aspx");

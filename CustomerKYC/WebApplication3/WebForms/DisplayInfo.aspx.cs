@@ -84,7 +84,7 @@ namespace WebApplication3.WebForms
                 int value1;
                 if (e.CommandName == "CEdit")
                 {
-                    Response.Redirect("UpdateForm.aspx");
+                    Response.Redirect("Update.aspx");
                     //index = Convert.ToInt32(e.CommandArgument);
                     //GridViewRow row = GridView1.Rows[index];
                     //value = Convert.ToInt32(row.Cells[0].Text);

@@ -12,13 +12,7 @@ namespace WebApplication3.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["passportusername"] != null)
-            {
-
-                Response.Write("<script>alert('Please Check your Credentials');</script>");
-                Response.Redirect("AfterLogin.aspx");
-                return;
-            }
+          
         }
         static int _attempts1 = 3;
         public void Admin_Button(object sender, EventArgs e)

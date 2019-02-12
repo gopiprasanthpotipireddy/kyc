@@ -11,12 +11,7 @@ namespace WebApplication3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["username"] == null)
-            {
-                Response.Write("<script>alert('Please Check your Credentials');</script>");
-                Response.Redirect("Home.aspx");
-                return;
-            }
+           
         }
         protected void NewCase(object sender , EventArgs e)
         {
