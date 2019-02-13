@@ -4,7 +4,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
      <div >
-         <asp:GridView ID="GridView1" runat="server">
+         
+         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" HorizontalAlign="Center">
      
          <columns>
              <asp:BoundField runat="server" DataField="Applicant_ID" HeaderText="Applicant_ID" />
@@ -21,7 +22,7 @@
               <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
              <asp:TemplateField>
                  <ItemTemplate>
-              <asp:Button ID="Edit" runat="server" Width="50" Text="Edit" CommandName="CEdit" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" /> &nbsp&nbsp&nbsp&nbsp
+              <asp:Button ID="Edit" runat="server" Width="50"    Text="Edit" CommandName="CEdit" CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" /> &nbsp&nbsp&nbsp&nbsp
                       <asp:Button ID="btnAdditional" runat="server" Text="AdditionalInfo" CommandName="CAddInf"  CommandArgument="<%# ((GridViewRow) Container).RowIndex %>" />  
                      <script type="text/javascript">
 </script> 

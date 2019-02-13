@@ -95,6 +95,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataFile\10028\AadharDetails.txt" />
+    <Content Include="FILES\Popup.aspx" />
     <Content Include="img\Aadharsymbol.jpg" />
     <Content Include="img\Passportimg.png" />
     <Content Include="img\Passportimg2.PNG" />
@@ -117,7 +119,6 @@
     <Content Include="WebForms\Passportiframe.aspx" />
     <Content Include="WebForms\PassPortLogin.aspx" />
     <Content Include="WebForms\PassPortverification.aspx" />
-    <Content Include="WebForms\Popup.aspx" />
     <Content Include="WebForms\Site1.Master" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
@@ -139,7 +140,8 @@
     <Content Include="csv\details.csv" />
     <Content Include="csv\PAN.csv" />
     <Content Include="csv\Aadhar_Details.csv" />
-    <Content Include="WebForms\UpdateForm.aspx" />
+    <Content Include="FILES\UpdateForm.aspx" />
+    <Content Include="WebForms\update1.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -309,17 +311,17 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
     <Content Include="WebForms\Home.aspx" />
-    <Content Include="WebForms\Login.aspx" />
+    <Content Include="FILES\Login.aspx" />
     <Content Include="WebForms\AfterLogin.aspx" />
     <Content Include="WebForms\Registration.aspx" />
-    <Content Include="WebForms\Submits.aspx" />
+    <Content Include="FILES\Submits.aspx" />
     <Content Include="WebForms\iframe.aspx" />
-    <Content Include="WebForms\subs.aspx" />
-    <Content Include="WebForms\Updateadditional.aspx" />
-    <Content Include="WebForms\Additional.aspx" />
-    <Content Include="WebForms\Update.aspx" />
+    <Content Include="FILES\subs.aspx" />
+    <Content Include="FILES\Updateadditional.aspx" />
+    <Content Include="FILES\Additional.aspx" />
+    <Content Include="FILES\Update.aspx" />
     <Content Include="WebForms\PassportDetails.aspx" />
-    <Content Include="WebForms\Subs1.aspx" />
+    <Content Include="FILES\Subs1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DalClasses\Aadhar.cs" />
@@ -332,6 +334,13 @@
     <Compile Include="DalClasses\passportlogin.cs" />
     <Compile Include="DalClasses\VerifyAdharLogin.cs" />
     <Compile Include="DalClasses\VerifyPanLogin.cs" />
+    <Compile Include="FILES\Popup.aspx.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FILES\Popup.aspx.designer.cs">
+      <DependentUpon>Popup.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebForms\AadharDetails.aspx.cs">
       <DependentUpon>AadharDetails.aspx</DependentUpon>
@@ -431,13 +440,6 @@
     <Compile Include="WebForms\PassPortverification.aspx.designer.cs">
       <DependentUpon>PassPortverification.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Popup.aspx.cs">
-      <DependentUpon>Popup.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForms\Popup.aspx.designer.cs">
-      <DependentUpon>Popup.aspx</DependentUpon>
-    </Compile>
     <Compile Include="WebForms\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -452,11 +454,11 @@
     <Compile Include="WebForms\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Login.aspx.cs">
+    <Compile Include="FILES\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Login.aspx.designer.cs">
+    <Compile Include="FILES\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\AfterLogin.aspx.cs">
@@ -473,11 +475,11 @@
     <Compile Include="WebForms\Registration.aspx.designer.cs">
       <DependentUpon>Registration.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Submits.aspx.cs">
+    <Compile Include="FILES\Submits.aspx.cs">
       <DependentUpon>Submits.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Submits.aspx.designer.cs">
+    <Compile Include="FILES\Submits.aspx.designer.cs">
       <DependentUpon>Submits.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\iframe.aspx.cs">
@@ -487,32 +489,32 @@
     <Compile Include="WebForms\iframe.aspx.designer.cs">
       <DependentUpon>iframe.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\subs.aspx.cs">
+    <Compile Include="FILES\subs.aspx.cs">
       <DependentUpon>subs.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\subs.aspx.designer.cs">
+    <Compile Include="FILES\subs.aspx.designer.cs">
       <DependentUpon>subs.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Updateadditional.aspx.cs">
+    <Compile Include="FILES\Updateadditional.aspx.cs">
       <DependentUpon>Updateadditional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Updateadditional.aspx.designer.cs">
+    <Compile Include="FILES\Updateadditional.aspx.designer.cs">
       <DependentUpon>Updateadditional.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Additional.aspx.cs">
+    <Compile Include="FILES\Additional.aspx.cs">
       <DependentUpon>Additional.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Additional.aspx.designer.cs">
+    <Compile Include="FILES\Additional.aspx.designer.cs">
       <DependentUpon>Additional.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Update.aspx.cs">
+    <Compile Include="FILES\Update.aspx.cs">
       <DependentUpon>Update.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Update.aspx.designer.cs">
+    <Compile Include="FILES\Update.aspx.designer.cs">
       <DependentUpon>Update.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForms\PassportDetails.aspx.cs">
@@ -522,23 +524,30 @@
     <Compile Include="WebForms\PassportDetails.aspx.designer.cs">
       <DependentUpon>PassportDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\Subs1.aspx.cs">
+    <Compile Include="FILES\Subs1.aspx.cs">
       <DependentUpon>Subs1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\Subs1.aspx.designer.cs">
+    <Compile Include="FILES\Subs1.aspx.designer.cs">
       <DependentUpon>Subs1.aspx</DependentUpon>
     </Compile>
-    <Compile Include="WebForms\UpdateForm.aspx.cs">
+    <Compile Include="FILES\UpdateForm.aspx.cs">
       <DependentUpon>UpdateForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="WebForms\UpdateForm.aspx.designer.cs">
+    <Compile Include="FILES\UpdateForm.aspx.designer.cs">
       <DependentUpon>UpdateForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForms\update1.aspx.cs">
+      <DependentUpon>update1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForms\update1.aspx.designer.cs">
+      <DependentUpon>update1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DataFile\" />
+    <Folder Include="DataFile1\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
