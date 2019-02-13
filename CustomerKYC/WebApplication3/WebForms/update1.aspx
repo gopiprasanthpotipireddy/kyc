@@ -46,14 +46,14 @@
          <label id="mn" class="required" style="color:red">*</label>
                      <td>
                          
-                         <input type="text" id="mid_name" runat="server" />&nbsp&nbsp </td>
+                         <input type="text" id="mid_name" runat="server"  />&nbsp&nbsp </td>
                     
          &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp
         <label id="Gender_id" runat="server">Gender</label></td>
          <label id="gd" class="required" style="color:red">*</label>
                      <td>
                          
-                         <input type="text" id="Gender" runat="server" />&nbsp&nbsp </td>
+                         <input type="text" id="Gender" runat="server"  required/>&nbsp&nbsp </td>
                     
          
          <br />
@@ -116,7 +116,7 @@
                          <label id="passport" runat="server">Passport Number</label></td>
                       <label id="psn" class="required" style="color:red">*</label>
                      <td>
-                         <input type="text" id="pass_num" runat="server" />
+                         <input type="text" id="pass_num" runat="server" required />
                        
                      </td>
                       &nbsp&nbsp &nbsp&nbsp &nbsp

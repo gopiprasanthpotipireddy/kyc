@@ -562,7 +562,7 @@ body.nobg .section1 {
   float: right;
   position: relative;
   display: inline-block;
-  background: url("../img/search.png") left top no-repeat;
+ 
   margin-top: 60px;
 }
 

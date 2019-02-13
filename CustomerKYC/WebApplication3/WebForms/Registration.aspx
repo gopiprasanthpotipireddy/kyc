@@ -9,6 +9,10 @@
 {
  display:none;
 }
+.xyz{
+     padding: 0 0 0 35px !important;
+      float: right !important;
+}
 
 .footer
 {
@@ -22,6 +26,7 @@ display:none;
 </style>
     
     <div class="header">
+
         <asp:GridView ID="GridView1" runat="server"></asp:GridView>
     </div>
 
@@ -44,9 +49,14 @@ display:none;
 
 
             <h2 style="text-align:center;color:#3498db;font-family:sans-serif;font-size:medium;">User Details </h2>
+         
+
+<%--<asp:Button ID="Button9" runat="server"  class="xyz" Text="LogOut" OnClick="Logout" Style="background-color: #3498db; height: 40px; width: 100px; color:white;" />--%>
+    
             
            
             <p class="title" style="font-size:medium;color:#3498db;">Personal</p>
+
 
             <table class="cust" style="font-size:medium;">
 
@@ -71,11 +81,13 @@ display:none;
                         <label id="req" class="required">*</label>
                     </td>
                     <td>
-                        <input type="text" id="first_name" runat="server"  required/>
-                        &nbsp&nbsp </td>
-
+                       <input type="text" id="first_name" runat="server"  required/>
+                       </td>
+                    <td>  &nbsp&nbsp  &nbsp&nbsp  &nbsp&nbsp </td>
                     <td>
-                        <label id="mname" runat="server">Middle Name</label></td>
+                        <label id="mname" runat="server">Middle Name</label>
+
+                    </td>
                     <td>
                         <input type="text" id="mid_name" runat="server" />&nbsp&nbsp </td>
                     <td>
@@ -154,10 +166,10 @@ display:none;
                 <tr>
                     <td>
                         <label id="occ" runat="server">Occupation</label>
-                        <label id="req4" class="required">*</label>
+                       
                     </td>
                     <td>
-                        <select name="dropdwn" id="occ_dd" runat="server" required>
+                        <select name="dropdwn" id="occ_dd" runat="server" >
                             <option selected="selected" value="Select">Select</option>
                             <option value="Salaried">Salaried</option>
                             <option value="Self Employed">Self Employed</option>
@@ -227,10 +239,10 @@ display:none;
                 <tr>
                     <td>
                         <label id="res" runat="server">Residence Type</label>
-                        <label id="req7" class="required">*</label>
+                       
                     </td>
                     <td>
-                        <select name="dropdwn" id="res_type" runat="server" required>
+                        <select name="dropdwn" id="res_type" runat="server">
                             <option selected="selected" value="Select">Select</option>
                             <option value="Owned">Owned</option>
                             <option value=">Rental/Leased">Rental/Leased</option>

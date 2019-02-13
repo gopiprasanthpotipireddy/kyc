@@ -40,30 +40,48 @@ namespace WebApplication3.WebForms
                 string gender = Gender.Value;
                 //string status = "success";
                 //string Fstatus = "Failure";
-                if ((first_name.Value == "") || (mid_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (Pstat.Value == "") || (aadhar_num.Value == "") || (Astat.Value == "") || (pass_num.Value == "") || (pastat.Value == ""))
+                if ((first_name.Value == "") || (mid_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (pass_num.Value == "") || (mobilenumber==""))
                 {
 
                     flag = 0;
-                    Response.Write("mandatory fields should not be left empty");
+                    Response.Write(" <script>alert(" + '"' + " Please fill out mandatory details" + '"' + ");</script>");
+                }
+                if (pannum.Length == 10 && aadnum.Length == 12 && mobilenumber.Length == 10)
+                {
+                    //Response.Write("<span>");
+                    //Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
+                    //Response.Write("</span>");
+                    flag = 1;
+                }
+                else
+                {
+                    if (pannum.Length != 10)
+                    {
+                        Response.Write("<span>");
+                        Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
+                        Response.Write("</span>");
+                        flag = 0;
+                    }
+                    if (aadnum.Length != 12)
+                    {
+                        Response.Write("<span>");
+                        Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
+                        Response.Write("</span>");
+                        flag = 0;
+                    }
+                    if ((mobilenumber.Length != 10))
+                    {
+                        Response.Write("<span>");
+                        Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
+                        Response.Write("</span>");
+                        flag = 0;
+                    }
                 }
                 if (flag == 1)
                 {
                     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
-                    //System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
                     con.Open();
-                    //string updateQuery = " Update AdditionalDetails set FirstName = @firstname, MiddleName =@midname, PAN_Number = @pannum, PAN_Status = @panstat, AADHAR_Number = @aadnum, AADHAR_Status = @aadharstat, PASSPORT_Number = @passnum, PASSPORT_Status = @passstat where Applicant_ID = @app_id; ";
-                    //SqlCommand com = new SqlCommand(updateQuery, con);
-
-                    //com.Parameters.AddWithValue("@app_id", app_id.Value);
-                    //com.Parameters.AddWithValue("@firstname", first_name.Value);
-                    //com.Parameters.AddWithValue("@midname", mid_name.Value);
-                    //com.Parameters.AddWithValue("@pannum", pan_num.Value);
-                    //com.Parameters.AddWithValue("@panstat", Pstat.Value);
-                    //com.Parameters.AddWithValue("@aadnum ", aadhar_num.Value);
-                    //com.Parameters.AddWithValue("@aadharstat", Astat.Value);
-                    //com.Parameters.AddWithValue("@passnum", pass_num.Value);
-                    //com.Parameters.AddWithValue("@passstat", pastat.Value);
-                    //com.ExecuteNonQuery();
+                   
                     string updateQuery1 = " Update Applicant_Details set  FirstName = @firstname, MiddleName = @midname, PAN_Number = @pannum, AADHAR_Number = @aadnum, PASSPORT_Number = @passnum,PAN_Status=@panstat,AADHAR_Status=@aadharstat,PASSPORT_Status=@passstat,Address=@address,City=@city,State=@state,PIN=@pin,EMAIL=@email,MobileNo=@mobilenumber,Gender=@gender where Applicant_id=@app_id; ";
                     SqlCommand com1 = new SqlCommand(updateQuery1, con);
                     com1.Parameters.AddWithValue("@app_id", appid);
@@ -82,7 +100,6 @@ namespace WebApplication3.WebForms
                     com1.Parameters.AddWithValue("@email", email);
                     com1.Parameters.AddWithValue("@mobilenumber", mobilenumber);
                     com1.Parameters.AddWithValue("@gender", gender);
-
                     com1.ExecuteNonQuery();
                     if (panstat == "Success" && passstat == "Success" && aadharstat == "Success")
                     {
@@ -117,17 +134,19 @@ namespace WebApplication3.WebForms
                 string path = @"../DataFile" + "\\" + app_id.Value;
                 //string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "DataFile\\";
                 //string path = FilePath + app_id.Value;
-                //   bool exists = System.IO.Directory.Exists(Server.MapPath(path));
-                /*  if (!exists)
+                   bool exists = System.IO.Directory.Exists(Server.MapPath(path));
+                 if (!exists)
                   {
                       System.IO.Directory.CreateDirectory(Server.MapPath(path));
                       FileUpload1.SaveAs(Server.MapPath(path + "\\" + FileUpload1.FileName));
-                  }*/
-                //  else
-                //  {
-                FileUpload1.SaveAs(Server.MapPath(path + "\\" + FileUpload1.FileName));
+                    Response.Write(" <script>alert(" + '"' + " Uploaded file successfully" + '"' + "); </script>");
 
-              //  }
+                }
+                else
+                  {
+                FileUpload1.SaveAs(Server.MapPath(path + "\\" + FileUpload1.FileName));
+                    Response.Write(" <script>alert(" + '"' + " Uploaded File Successfully" + '"' + "); </script>");
+                }
             }
             catch (Exception exs)
             {
@@ -137,3 +156,18 @@ namespace WebApplication3.WebForms
         }
     }
 }
+//System.Data.SqlClient.SqlConnection con = new SqlConnection(@"Data Source=HDRBPRPA2; Initial Catalog=PrimeBankPOCdb; User ID=sa;Password=admin@123");
+
+//string updateQuery = " Update AdditionalDetails set FirstName = @firstname, MiddleName =@midname, PAN_Number = @pannum, PAN_Status = @panstat, AADHAR_Number = @aadnum, AADHAR_Status = @aadharstat, PASSPORT_Number = @passnum, PASSPORT_Status = @passstat where Applicant_ID = @app_id; ";
+//SqlCommand com = new SqlCommand(updateQuery, con);
+
+//com.Parameters.AddWithValue("@app_id", app_id.Value);
+//com.Parameters.AddWithValue("@firstname", first_name.Value);
+//com.Parameters.AddWithValue("@midname", mid_name.Value);
+//com.Parameters.AddWithValue("@pannum", pan_num.Value);
+//com.Parameters.AddWithValue("@panstat", Pstat.Value);
+//com.Parameters.AddWithValue("@aadnum ", aadhar_num.Value);
+//com.Parameters.AddWithValue("@aadharstat", Astat.Value);
+//com.Parameters.AddWithValue("@passnum", pass_num.Value);
+//com.Parameters.AddWithValue("@passstat", pastat.Value);
+//com.ExecuteNonQuery();

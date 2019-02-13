@@ -117,6 +117,14 @@ namespace WebApplication3
 
 
         }
+        protected void Logout(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Clear();
+            Session.RemoveAll();
+            System.Web.Security.FormsAuthentication.SignOut();
+            Response.Redirect("Home.aspx", false);
+        }
         protected void verify(object sender, EventArgs e)
 {
             clsRegistration obj1 = new clsRegistration();
@@ -201,7 +209,9 @@ namespace WebApplication3
             }
             else
             {
-                Response.Write("please check");
+                Response.Write(" <script>alert(" + '"' + " Please fill all the required details" + '"' + "); </script>");
+
+                
             }
 
         }

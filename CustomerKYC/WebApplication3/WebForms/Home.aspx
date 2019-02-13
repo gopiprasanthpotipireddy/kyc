@@ -44,7 +44,7 @@
               </div>
             </div>--%>
             <div class="form-group"style="position:relative;padding-right:80px; ">
-              <asp:button type="submit" id="button" runat="server" OnClick ="Admin_Button" class="button" text="Login In"></asp:button>
+              <asp:button type="submit" id="button" runat="server" OnClick ="Admin_Button" class="button" text="Login"></asp:button>
             </div>
             
         </div>

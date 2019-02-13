@@ -152,7 +152,7 @@ li a:hover:not(.active) {
       
  
      <div class="main">
-      <iframe name ="iframe"  id="iframe"   src="Registration.aspx" height="800" width="1400"style="position:relative;left:2%;align-self:center;border-color:#3498db;"></iframe>
+      <iframe name ="iframe"  id="iframe"   src="Registration.aspx" height="800" width="1600"style="position:relative;left:2%;align-self:center;border-color:#3498db;"></iframe>
 
   </div>
 </asp:Content>

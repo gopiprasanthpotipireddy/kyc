@@ -26,7 +26,7 @@
       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
         <!-- search -->
         <div class="search-bar">
-<asp:Button ID="Button1" runat="server" Text="LogOut" OnClick="Logout" Style="background-color: orange; height: 40px; width: 200px;" />
+<asp:Button ID="Button1" runat="server" Text="LogOut" OnClick="Logout" Style="background-color: #3498db; height: 40px; width: 200px; color:white;" />
 
             <%--<fieldset>
               <input type="image" src="img/pixel.gif" class="searchsubmit" alt="" />
