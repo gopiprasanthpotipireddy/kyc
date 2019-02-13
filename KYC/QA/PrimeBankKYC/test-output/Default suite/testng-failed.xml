@@ -3,28 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Scripts.Userscript">
+      <class name="Scripts.NSDLVerificationTestScript">
         <methods>
-          <include name="RegistrationFormTest_EmptyOccupation"/>
-          <include name="RegistrationFormTest_EmptySourceOfFunds"/>
-          <include name="closingAllConnections"/>
-          <include name="RegistrationFormTest_EmptyAadharNumber"/>
-          <include name="RegistrationFormTest_EmptyMiddleName"/>
-          <include name="RegistrationFormTest_EmptyLastName"/>
           <include name="setUp"/>
-          <include name="RegistrationFormTest_EmptyGrossAnualIncome"/>
-          <include name="RegistrationFormTest_EmptyPanNumber"/>
-          <include name="endreport"/>
-          <include name="getTestResult"/>
-          <include name="RegistrationFormTest_EmptyResidencyType"/>
-          <include name="tearDown"/>
-          <include name="RegistrationFormTest_EmptyPassport"/>
-          <include name="RegistrationFormTest_EmptyFirstName"/>
-          <include name="initializingConnections"/>
+          <include name="invalid_pan_id"/>
+          <include name="blank_pan_id"/>
+          <include name="valid_pan_id"/>
           <include name="init"/>
-          <include name="closeBrowser"/>
+          <include name="initializingConnections"/>
         </methods>
-      </class> <!-- Scripts.Userscript -->
+      </class> <!-- Scripts.NSDLVerificationTestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

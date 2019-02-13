@@ -1,6 +1,7 @@
 package Scripts;
 
 import java.io.File;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -71,9 +72,10 @@ public class LoginTestScript  extends DriverBase{
 		basePage = new DriverBase();
 		basePage.initialization();
 		loginPage = new LoginPage(driver);
-		WebElement info1 = driver.findElement(info);
-		info1.click();
-
+		/*WebElement info1 = driver.findElement(info);
+		info1.click();*/
+		WebElement heading = driver.findElement(By.xpath("//*[@id=\"intro\"]/div/div/div/h1"));
+        heading.getLocation();
 		
 		
 		
@@ -102,7 +104,7 @@ public void Home_Login_ValidUserName_ValidPwd( ) throws Exception {
 			expectedResult = rs.getField("ExpectedResult");
 			System.out.println(rs.getField("UserName") + " ::: " + rs.getField("Password"));
 			loginPage.loginToKyc(uName, pword);
-			 but = driver.findElement(By.xpath("//*[@id=\"form1\"]/div[3]/section[1]/div/div[1]/h2")).getText();
+			 but = driver.findElement(By.xpath("//*[@id=\"form1\"]/div[4]/section[1]/div/div[1]/h2")).getText();
 			 
 			
 			if (expectedResult.equals("Pass") && but.contains("Welcome Admin")) {
@@ -151,8 +153,9 @@ public void Home_Login_ValidUserName_ValidPwd( ) throws Exception {
 				 loginPage.loginToKyc(uName, pword);
 				 
 				 alert = driver.switchTo().alert();
+				 
 			     msg = alert.getText();
-			
+		
 				 if (expectedResult.equals("Fail") )
 				 {
 				 
@@ -432,13 +435,6 @@ public void tearDown() {
 		 } 
  }*/
 		 
-	 
-	 
- 
- 
- 
-	
-
 
  
 @AfterClass

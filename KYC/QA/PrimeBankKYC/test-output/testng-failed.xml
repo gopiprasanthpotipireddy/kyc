@@ -1,40 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Maven project]">
-  <test name="Testscriptsexecution(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Scripts.Userscript">
+      <class name="Scripts.NSDLVerificationTestScript">
         <methods>
-          <include name="RegistrationFormTest_EmptyOccupation"/>
-          <include name="RegistrationFormTest_EmptySourceOfFunds"/>
-          <include name="closingAllConnections"/>
-          <include name="RegistrationFormTest_EmptyAadharNumber"/>
-          <include name="RegistrationFormTest_EmptyMiddleName"/>
-          <include name="RegistrationFormTest_EmptyLastName"/>
           <include name="setUp"/>
-          <include name="RegistrationFormTest_EmptyGrossAnualIncome"/>
-          <include name="RegistrationFormTest_EmptyPanNumber"/>
-          <include name="endreport"/>
-          <include name="getTestResult"/>
-          <include name="RegistrationFormTest_EmptyResidencyType"/>
-          <include name="tearDown"/>
-          <include name="RegistrationFormTest_EmptyPassport"/>
-          <include name="RegistrationFormTest_EmptyFirstName"/>
-          <include name="initializingConnections"/>
+          <include name="invalid_pan_id"/>
+          <include name="blank_pan_id"/>
+          <include name="valid_pan_id"/>
           <include name="init"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.Userscript -->
-      <class name="Scripts.LoginTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="closingAllConnections"/>
-          <include name="tearDown"/>
           <include name="initializingConnections"/>
-          <include name="closeBrowser"/>
-          <include name="getTestResult"/>
         </methods>
-      </class> <!-- Scripts.LoginTestScript -->
+      </class> <!-- Scripts.NSDLVerificationTestScript -->
     </classes>
-  </test> <!-- Testscriptsexecution(failed) -->
-</suite> <!-- Failed suite [Maven project] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

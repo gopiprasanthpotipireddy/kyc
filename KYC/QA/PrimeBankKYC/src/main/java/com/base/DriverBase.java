@@ -42,7 +42,7 @@ public class DriverBase {
 		
 		
 		if (browserType.equals("chrome")) {
-			String chromePath = "C:\\Users\\sudheerkumarn\\Downloads\\chromedriver_win32\\chromedriver.exe";
+			String chromePath = "C:\\Drivers\\chromedriver.exe";
 
 			// Setting the webdriver.chrome.driver property to set executable's
 			System.setProperty("webdriver.chrome.driver", chromePath);
