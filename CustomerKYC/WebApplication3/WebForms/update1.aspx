@@ -14,7 +14,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-     <h1 style="text-align:left;color:#3498db;font-family:sans-serif;font-size:large;">Update your  Details </h1>
+     <h1 style="text-align:left;padding-left:250px;color:#3498db;font-family:sans-serif;font-size:large;">Update your  Details </h1>
           <br />
           <br />
     &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp

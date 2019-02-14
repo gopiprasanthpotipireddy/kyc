@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
      
- <div>
+    <div>
     
 
 <%--<style>
@@ -108,6 +108,13 @@ li a:hover:not(.active) {
                                     </a>
                     <a class="readmore" href="#">read more</a>
                   </li>
+                    <li>
+                    <a href="DisplayInfo.aspx" target="iframe" style="color:#3498db;font-size:large">
+                                    ViewSubmissions
+                                    </a>
+                    
+                  </li>
+
                 </ul>
                 <!-- recent posts -->
               </div>

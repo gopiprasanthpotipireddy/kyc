@@ -204,7 +204,7 @@ namespace WebApplication3
                     cmd.ExecuteNonQuery();
                     //con.Close();
                     //con.Open();
-                    //Response.Write(" <script>alert(" + '"' + " Successfully Inserted" + '"' + "); </script>");
+                    Response.Write(" <script>alert(" + '"' + " Successfully Inserted" + '"' + "); </script>");
                     //Response.Redirect("DisplayInfo.aspx");
                     con.Close();
                 }
@@ -223,11 +223,7 @@ namespace WebApplication3
 
         }
        
-            protected void Navigate(object sender, EventArgs e)
-            {
-                Response.Redirect("DisplayInfo.aspx");
-            }
-        
+           
     }
 }
 //if (last_name.Value == "")
