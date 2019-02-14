@@ -61,9 +61,10 @@ li a:hover:not(.active) {
       <div id="sidebar" class="col-lg-4 col-md-4 col-sm-4 col-xs-12" >
 
         <div class="widget">
-          <h4 class="title">
-                        <span ><h3 style="color:#3498db;">View Submissions</h3></span>
-                    </h4>
+          <%--<h4 class="title">
+<%--                        <span ><h3 style="color:#3498db;">View Submissions</h3></span>--%>
+<%--              <asp:LinkButton ID="LinkButton1" runat="server" OnClick="Navigate" >View Submissions</asp:LinkButton>--%>
+                 <%--   </h4>--%<%
 
          <%-- <form id="subscribe"  name="subscribe" action="iframe.aspx" method="post">--%>
             <p><h3 style="color:black;font-family:'Times New Roman', Times, serif;">Please click here to view your previously submitted records.</h3></p>

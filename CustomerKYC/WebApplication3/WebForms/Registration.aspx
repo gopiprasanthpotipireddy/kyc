@@ -379,7 +379,10 @@ display:none;
         </div>
         <br />
         <br/>
-        <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="verify" Style="font-size:small;background-color:#3498db;color:white;width:90px;position:relative;left:2%;" /><br/><br/>
-        
-
+    <tr>
+    <td>
+        <asp:Button ID="Button2" runat="server" Text="Submit" OnClick="verify" Style="font-size:large;background-color:#3498db;color:white;width:90px;position:relative;left:2%;" />
+                     <asp:Button ID="Button1" runat="server"   OnClick="Navigate" Text="View Submissions" Style="font-size:large;background-color:#3498db;color:white;width:200px;position:relative;left:2%;" />
+    </td>
+    </tr>
 </asp:Content>

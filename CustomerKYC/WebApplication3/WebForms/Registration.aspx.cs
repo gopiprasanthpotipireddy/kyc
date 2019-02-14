@@ -125,6 +125,10 @@ namespace WebApplication3
             System.Web.Security.FormsAuthentication.SignOut();
             Response.Redirect("Home.aspx", false);
         }
+        protected void button_click(object sender, EventArgs e)
+        {
+            bool val = true;
+        }
         protected void verify(object sender, EventArgs e)
 {
             clsRegistration obj1 = new clsRegistration();
@@ -148,6 +152,8 @@ namespace WebApplication3
             //string flat = obj1.FlatNo;
             //string city = obj1.City;
             //string Address = String.Concat( flat, city);
+        
+            
             if ((first_name.Value == "") || (last_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (occ_dd.Value == "") || (sof.Value == "") || (gross_inc.Value == "") || (res_type.Value == "") || (stat.Value == "") || (city_name.Value == "") || (flatno.Value == "") || (mob_num.Value == "") || (email_id.Value == ""))
             {
                 flag = 0;
@@ -198,8 +204,8 @@ namespace WebApplication3
                     cmd.ExecuteNonQuery();
                     //con.Close();
                     //con.Open();
-                    Response.Write("inserted ");
-                    Response.Redirect("DisplayInfo.aspx");
+                    //Response.Write(" <script>alert(" + '"' + " Successfully Inserted" + '"' + "); </script>");
+                    //Response.Redirect("DisplayInfo.aspx");
                     con.Close();
                 }
                 catch(Exception exe2)
@@ -213,8 +219,15 @@ namespace WebApplication3
 
                 
             }
+            
 
         }
+       
+            protected void Navigate(object sender, EventArgs e)
+            {
+                Response.Redirect("DisplayInfo.aspx");
+            }
+        
     }
 }
 //if (last_name.Value == "")
