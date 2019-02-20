@@ -13,6 +13,28 @@
     {
         display:none;
     }
+    .button1 {
+  cursor: pointer;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0.5em 1em;
+  font-size: 1.3rem;
+  border-color: #696E74;
+  color: white;
+  -webkit-transition: background-color 300ms ease-out;
+  -moz-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+  -webkit-appearance: none;
+  border: none;
+  font-weight: normal !important;
+}
      </style>
      <section class="post-wrapper-top">
     <div class="container">
@@ -75,7 +97,7 @@
 
         <div class="widget">
           <h4 class="title">
-                        <span ><h3 style="color:#3498db;">New case</h3></span>
+                        <span ><h3 style="color:#3498db;">New case & View Submissions</h3></span>
                     </h4>
 
          <%-- <form id="subscribe"  name="subscribe" action="iframe.aspx" method="post">--%>
@@ -84,9 +106,22 @@
             <input type="text" name="email" id="email" class="form-control" placeholder="Email">--%>
             <div class="pull-right" align="center">
               <%--<input type="submit" value="NewCase" style="position:center;" id="submit" class="button">--%>
-      <asp:Button ID="submit" runat="server" Text="NewCustomerRegistration" OnClick="NewCase" CssClass="button" style="position:center;color:" target="_blank"/>
+                <table>
+                <tr>
+                    <td>
+      <asp:Button ID="submit" runat="server" Text="NewCustomerRegistration" OnClick="NewCase" CssClass="button" style="position:center;" target="_blank"/></td>
+                    
+                <td>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+<%--                    <asp:Button ID="Button2" runat="server" Text="Button" OnClick="DisplayInfo.aspx" style="color:#3498db;font-size:small" />--%>
+                    <a href="DisplayInfo.aspx" target="iframe"  class="button1" style="color:#3498db;font-size:large;" >
+                                    ViewSubmissions
+                                    </a>
+                    </td>
+                    </tr>
+                    </table>
                       </div>
-            
+           
       
           <%--</form>--%>
         </div>
@@ -107,19 +142,19 @@
                     <a href="AadharLogin.aspx" target="_blank">
                                     <img src="../img/Aadharsymbol.jpg" alt="" />AadharLogin Is Here
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                    
                   </li>
                   <li>
                     <a href="PanLogin.aspx" target="_blank">
                                     <img src="../img/nsdlLogo.jpg" alt="" />PanLogin Is Here
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                   
                   </li>
                     <li>
                     <a href="PassPortLogin.aspx" target="_blank">
                                     <img src="../img/Passportimg.png" style="height:70px" alt="" />PassPortLogin Is Here
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                    
                   </li>
                 </ul>
                 <!-- recent posts -->
@@ -130,13 +165,13 @@
                     <a href="#">
                                     <img src="../img/flickr_01.jpg" alt="" />Blog Post With Image
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                    
                   </li>
                   <li>
                     <a href="#">
                                     <img src="../img/flickr_02.jpg" alt="" />Another Recent Post with Image
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                    
                   </li>
                 </ul>
                 <!-- recent posts -->

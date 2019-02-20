@@ -181,13 +181,13 @@ namespace WebApplication3
                     Response.Write("</span>");
                     flag = 0;
                 }
-                if ((obj1.mobilenumber.Length != 10))
-                {
-                    Response.Write("<span>");
-                    Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
-                    Response.Write("</span>");
-                    flag = 0;
-                }
+                //if ((obj1.mobilenumber.Length != 10))
+                //{
+                //    Response.Write("<span>");
+                //    Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
+                //    Response.Write("</span>");
+                //    flag = 0;
+                //}
             }
             if (flag == 1)
             {

@@ -14,35 +14,33 @@
     <div>
     
              <h1 id="HD1" Style="text-align:center">DETAILS</h1>
-                        <asp:GridView ID="GridView1" runat="server" style="border-color:cornflowerblue;">
-                             </asp:GridView>
+                        <asp:GridView ID="GridView1" runat="server" style="border-color:cornflowerblue;" AutoGenerateColumns="false">
+                             
          
 
-      </div>
-
+     
          
-                
-                <%--<Columns>
+                <Columns>
                      <asp:BoundField runat="server" DataField="PassportNumber" HeaderText="PassportNumber" />
              <asp:BoundField runat="server" DataField="Name" HeaderText="Name" />
                     <asp:BoundField runat="server" DataField="Surname" HeaderText="Surname" />
                     <asp:BoundField runat="server" DataField="Nationality" HeaderText="Nationality" />
                     <asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
                     <asp:BoundField runat="server" DataField="CountryCode" HeaderText="CountryCode" />
-                    <asp:BoundField runat="server" DataField="DOB" HeaderText="DOB" />
+                    <asp:BoundField runat="server" DataField="DOB" HeaderText="DOB" DataFormatString="{0:d}" />
                     <asp:BoundField runat="server" DataField="PlaceOfBirth" HeaderText="PlaceOfBirth" />
                     <asp:BoundField runat="server" DataField="PlaceOfIssue" HeaderText="PlaceOfIssue" />
-                    <asp:BoundField runat="server" DataField="DateOfIssue" HeaderText="DateOfIssue" />
-                    <asp:BoundField runat="server" DataField="DateOfExpiry" HeaderText="DateOfExpiry" />
+                    <asp:BoundField runat="server" DataField="DateOfIssue" HeaderText="DateOfIssue" DataFormatString="{0:d}" />
+                    <asp:BoundField runat="server" DataField="DateOfExpiry" HeaderText="DateOfExpiry" DataFormatString="{0:d}" />
                     <asp:BoundField runat="server" DataField="FatherName" HeaderText="FatherName" />
                     <asp:BoundField runat="server" DataField="MotherName" HeaderText="MotherName" />
                     <asp:BoundField runat="server" DataField="SpouseName" HeaderText="SpouseName" />
                       <asp:BoundField runat="server" DataField="Gender" HeaderText="Gender" />
 
            
-                </Columns>--%>
-           
-        
+                </Columns>
+           </asp:GridView>
+         </div>
     </form>
 </body>
 </html>

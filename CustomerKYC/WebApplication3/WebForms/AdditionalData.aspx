@@ -12,7 +12,19 @@
         <h1 id="HD1" Style="text-align:center;color:#3498db">DETAILS</h1>
     <%-- <asp:GridView ID="GridView2" runat="server" HorizontalAlign="Center">--%>
         
-        <asp:GridView ID="GridView1" runat="server" style=" border-color:#3498db" HorizontalAlign="Center"></asp:GridView> 
+        <asp:GridView ID="GridView1" runat="server" style=" border-color:#3498db" HorizontalAlign="Center" AutoGenerateColumns="false">
+            <Columns>
+             <asp:BoundField runat="server" DataField="Applicant_ID" HeaderText="Applicant_ID" />
+             <asp:BoundField runat="server" DataField="Address" HeaderText="Address" />
+             <asp:BoundField DataField="City" HeaderText="City" />
+             <asp:BoundField DataField="State" HeaderText="State" />
+             <asp:BoundField DataField="PIN" HeaderText="PIN" />
+             <asp:BoundField DataField="EMAIL" HeaderText="EMAIL" />
+             <asp:BoundField DataField="DOB" HeaderText="DOB" DataFormatString="{0:d}" />
+             <asp:BoundField DataField="MOBILENO" HeaderText="MOBILENO" />
+                <asp:BoundField DataField="Gender" HeaderText="Gender" />
+                </Columns>
+        </asp:GridView> 
     </div> 
     </form>
 </body>

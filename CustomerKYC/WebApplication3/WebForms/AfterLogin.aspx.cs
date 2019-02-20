@@ -17,6 +17,11 @@ namespace WebApplication3
         {
             Response.Redirect("iframe.aspx");
         }
+        //protected void Viewsub(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("iframe.aspx");
+        //}
+
         public void Logout(object sender, EventArgs e)
         {
             Session.Abandon();

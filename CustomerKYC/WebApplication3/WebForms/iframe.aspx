@@ -79,9 +79,7 @@ li a:hover:not(.active) {
         </div>
 
         <div class="widget">
-          <h4 class="title">
-                    	<span style="color:#3498db;">WatchList Verification</span>
-                    </h4>
+          
           <div class="tabbable">
             <ul class="nav nav-tabs">
               <li class="active"><a href="left-sidebar.html#recent" data-toggle="tab">Govt.</a></li>
@@ -90,30 +88,36 @@ li a:hover:not(.active) {
             <div class="tab-content">
               <div class="tab-pane active" id="recent">
                 <ul class="recent_posts">
+                    <li>
+                    <a href="DisplayInfo.aspx" target="iframe" style="color:#3498db;font-size:large">
+                                    ViewSubmissions
+                                    </a>
+                         </li>
                   <li>
                     <a href="PanLogin.aspx" target="_blank">
                                     <img src="../img/nsdlLogo.jpg" alt="" />Link to verify PAN-id:
                                     </a>
-                    <a class="readmore" href="#">read more</a>
                   </li>
                   <li>
                     <a href="AadharLogin.aspx" target="_blank">
                                     <img src="../img/Aadharsymbol.jpg" alt="" />Link to verify Aadhar:
                                     </a>
-                    <a class="readmore" href="#">read more</a>
                   </li>
                      <li>
                     <a href="PassPortLogin.aspx" target="_blank">
                                     <img src="../img/Passportimg.png" alt="" style="height:70px" />Link to verify Passport:
                                     </a>
-                    <a class="readmore" href="#">read more</a>
+                    
                   </li>
                     <li>
-                    <a href="DisplayInfo.aspx" target="iframe" style="color:#3498db;font-size:large">
-                                    ViewSubmissions
+                    <a href="Home.aspx" style="color:#3498db;font-size:large">
+                        LOGOUT
                                     </a>
                     
                   </li>
+                    
+                    
+                 
 
                 </ul>
                 <!-- recent posts -->

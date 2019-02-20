@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Configuration;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebApplication3.DalClasses;
 
 namespace WebApplication3.WebForms
 {
@@ -13,6 +16,43 @@ namespace WebApplication3.WebForms
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!this.IsPostBack)
+            {
+                try
+                {
+
+                    SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+                    con.Open();
+                    int value = Add.value;
+                    SqlCommand cmd6 = new SqlCommand("select  Applicant_ID,FirstName,MiddleName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EMAIL,MobileNo,Gender from Applicant_Details where Applicant_ID= @app_id  ", con);
+
+                    //SqlCommand cmd6 = new SqlCommand("select Applicant_ID,FirstName,MiddleName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EMAIL,MobileNo,Gender from Applicant_Details  Applicant_ID='" + @app_id + "'", con);
+                    cmd6.Parameters.AddWithValue("@app_id", value);
+                    SqlDataReader myReader = cmd6.ExecuteReader();
+                    while (myReader.Read())
+                    {
+                        app_id.Value = (myReader["Applicant_ID"].ToString());
+                        first_name.Value = (myReader["FirstName"].ToString());
+                        mid_name.Value = (myReader["MiddleName"].ToString());
+                        pan_num.Value = (myReader["PAN_Number"].ToString());
+                        aadhar_num.Value = (myReader["AADHAR_Number"].ToString());
+                        pass_num.Value = (myReader["PASSPORT_Number"].ToString());
+                        Address.Value = (myReader["Address"].ToString());
+                        City.Value = (myReader["City"].ToString());
+                        State.Value = (myReader["State"].ToString());
+                        Pin.Value = (myReader["PIN"].ToString());
+                        Email.Value = (myReader["EMAIL"].ToString());
+                        MobileNumber.Value = (myReader["MobileNo"].ToString());
+                        Gender.Value = (myReader["Gender"].ToString());
+
+                    }
+
+                }
+                catch (Exception gf)
+                {
+                    Response.Write(gf);
+                }
+            }
 
         }
         protected void update(object sender, EventArgs e)
@@ -38,45 +78,40 @@ namespace WebApplication3.WebForms
                 string email = Email.Value;
                 string mobilenumber = MobileNumber.Value;
                 string gender = Gender.Value;
-                //string status = "success";
-                //string Fstatus = "Failure";
-                if ((first_name.Value == "") || (mid_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (pass_num.Value == "") || (mobilenumber==""))
-                {
+                //if ((first_name.Value == "") || (mid_name.Value == "") || (pan_num.Value == "") || (aadhar_num.Value == "") || (pass_num.Value == "") || (mobilenumber==""))
+                //{
 
-                    flag = 0;
-                    Response.Write(" <script>alert(" + '"' + " Please fill out mandatory details" + '"' + ");</script>");
-                }
-                if (pannum.Length == 10 && aadnum.Length == 12 && mobilenumber.Length == 10)
-                {
-                    //Response.Write("<span>");
-                    //Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
-                    //Response.Write("</span>");
-                    flag = 1;
-                }
-                else
-                {
-                    if (pannum.Length != 10)
-                    {
-                        Response.Write("<span>");
-                        Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
-                        Response.Write("</span>");
-                        flag = 0;
-                    }
-                    if (aadnum.Length != 12)
-                    {
-                        Response.Write("<span>");
-                        Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
-                        Response.Write("</span>");
-                        flag = 0;
-                    }
-                    if ((mobilenumber.Length != 10))
-                    {
-                        Response.Write("<span>");
-                        Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
-                        Response.Write("</span>");
-                        flag = 0;
-                    }
-                }
+                //    flag = 0;
+                //    Response.Write(" <script>alert(" + '"' + " Please fill out mandatory details" + '"' + ");</script>");
+                //}
+                //if (pannum.Length == 10 && aadnum.Length == 12 && mobilenumber.Length == 10)
+                //{
+                //    flag = 1;
+                //}
+                //else
+                //{
+                //    if (pannum.Length != 10)
+                //    {
+                //        Response.Write("<span>");
+                //        Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
+                //        Response.Write("</span>");
+                //        flag = 0;
+                //    }
+                //    if (aadnum.Length != 12)
+                //    {
+                //        Response.Write("<span>");
+                //        Response.Write(" <script>alert(" + '"' + " Please check the Aadhar Number" + '"' + "); </script>");
+                //        Response.Write("</span>");
+                //        flag = 0;
+                //    }
+                //    if ((mobilenumber.Length != 10))
+                //    {
+                //        Response.Write("<span>");
+                //        Response.Write(" <script>alert(" + '"' + " Please check the mobile number" + '"' + "); </script>");
+                //        Response.Write("</span>");
+                //        flag = 0;
+                //    }
+                //}
                 if (flag == 1)
                 {
                     SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
@@ -101,7 +136,7 @@ namespace WebApplication3.WebForms
                     com1.Parameters.AddWithValue("@mobilenumber", mobilenumber);
                     com1.Parameters.AddWithValue("@gender", gender);
                     com1.ExecuteNonQuery();
-                    if (panstat == "Success" && passstat == "Success" && aadharstat == "Success")
+                    if (panstat == "SUCCESS" && passstat == "SUCCESS" && aadharstat == "SUCCESS")
                     {
                         SqlCommand cmd2 = new SqlCommand("Update Applicant_Details set OVERALL_Status = 'SUCCESS' ", con);
                         cmd2.ExecuteNonQuery();
@@ -132,8 +167,6 @@ namespace WebApplication3.WebForms
 
 
                 string path = @"../DataFile" + "\\" + app_id.Value;
-                //string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "DataFile\\";
-                //string path = FilePath + app_id.Value;
                    bool exists = System.IO.Directory.Exists(Server.MapPath(path));
                  if (!exists)
                   {
@@ -171,3 +204,23 @@ namespace WebApplication3.WebForms
 //com.Parameters.AddWithValue("@passnum", pass_num.Value);
 //com.Parameters.AddWithValue("@passstat", pastat.Value);
 //com.ExecuteNonQuery();
+
+//SqlDataReader myReader = null;
+//SqlCommand cmd6 = new SqlCommand("select Applicant_ID,FirstName,MiddleName,PAN_Number,AADHAR_Number,PASSPORT_Number,Address,City,State,PIN,EMAIL,MobileNo,Gender from Applicant_Details where Applicant_ID=@app_id", con);
+
+//Response.Write("<span>");
+//Response.Write(" <script>alert(" + '"' + " Please check the PAN Number" + '"' + "); </script>");
+//Response.Write("</span>");
+
+//string FilePath = (HttpContext.Current.Request.PhysicalApplicationPath) + "DataFile\\";
+//string path = FilePath + app_id.Value;
+
+//string status = "success";
+//string Fstatus = "Failure";
+
+//SqlCommand myCommand = new SqlCommand("select [Applicant_ID],[FirstName],[MiddleName],[LastName],[PAN_Number],[AADHAR_Number],[PASSPORT_Number],[Address],[City],[State],[PIN],[EMAIL],[DOB]
+//      ,[MobileNo] from Applicant_Details where Applicant_ID = value, con);
+
+//myReader = cmd6.ExecuteReader();
+
+

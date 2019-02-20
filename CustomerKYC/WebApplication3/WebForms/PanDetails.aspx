@@ -11,21 +11,22 @@
     <form id="form1" runat="server" >
    <div>
                      <h1 id="HD1" Style="text-align:center">DETAILS</h1>
-        <asp:GridView ID="GridView0" runat="server" style="border-color:orange;position:relative;" HorizontalAlign="Center">
-             </asp:GridView>
-                   </div> 
+        <asp:GridView ID="GridView0" runat="server" style="border-color:orange;position:relative;" AutoGenerateColumns="false" HorizontalAlign="Center">
+            
+                    
      
-      <%--  <columns>
+        <columns>
               <asp:BoundField  runat="server" DataField="Pan_Number" HeaderText="Pan_Number" />
-                 
              <asp:BoundField runat="server" DataField="Name" HeaderText="Name" />
             <asp:BoundField runat="server" DataField="FatherName" HeaderText="FatherName" />
-             <asp:BoundField runat="server" DataField="Age" HeaderText="Age" />
+             <asp:BoundField runat="server" DataField="DOB" HeaderText="DOB" DataFormatString="{0:d}" />
             
             
-            </columns>--%>
+            
+            </columns>
            
-       
+        </asp:GridView>
+       </div>   
     
     </form>
 </body>
