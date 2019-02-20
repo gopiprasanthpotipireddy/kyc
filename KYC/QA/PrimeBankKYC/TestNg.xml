@@ -4,12 +4,12 @@
 
   <test name="Testscriptsexecution">
     <classes>
-      <class name="Scripts.LoginTestScript"/>
+     <!--  <class name="Scripts.LoginTestScript"/>
      <class name ="Scripts.UserTestScript"/> 
       <class name ="Scripts.AadharLoginTestScript"/>
        <class name ="Scripts.AadharVerificationTestScript"/>
         <class name ="Scripts.NSDLLoginTestScript"/>
-         <class name ="Scripts.NSDLVerificationTestScript"/>
+         <class name ="Scripts.NSDLVerificationTestScript"/> -->
           <class name ="Scripts.PassportLoginTestScript"/>
            <class name ="Scripts.PassportVerificationTestScript"/> 
             <class name ="Scripts.UpdateTestScript"/>

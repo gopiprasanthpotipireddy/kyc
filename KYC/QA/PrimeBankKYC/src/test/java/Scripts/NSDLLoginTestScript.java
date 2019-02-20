@@ -88,11 +88,10 @@ public class NSDLLoginTestScript extends DriverBase{
 				 System.out.println("handled"+handle);
 				
 				
-				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[1]/a[1]"));
+				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[2]/a"));
 				verify.click();
 				
-				Thread.sleep(1000);			
-					System.out.println("hai");	
+				
 			}
 	}
 @Test
@@ -367,8 +366,7 @@ String methodName = new Object() {}
 @Test
 
 
-public void NSDL_Login_BlankUserName_BlankPwd
-() throws Exception
+public void NSDL_Login_BlankUserName_BlankPwd() throws Exception
 {
 
 String methodName = new Object() {}

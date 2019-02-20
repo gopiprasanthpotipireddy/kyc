@@ -24,9 +24,9 @@ WebDriver driver;
 	public  void loginToNsdl(String userName,String password) throws InterruptedException {
 		
 		ArrayList tabs = new ArrayList (driver.getWindowHandles());
-		System.out.println("windows size"+tabs.size());
-		System.out.println("windows 1"+tabs.get(0));
-		System.out.println("windows 2"+tabs.get(1));
+		//System.out.println("windows size"+tabs.size());
+		//System.out.println("windows 1"+tabs.get(0));
+		//System.out.println("windows 2"+tabs.get(1));
 		
 		driver.switchTo().window((String) tabs.get(1));
 		Thread.sleep(1000);

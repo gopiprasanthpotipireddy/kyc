@@ -78,7 +78,7 @@ public class  AadharVerificationTestScript  extends DriverBase{
 				WebElement  ele = driver.findElement(By.id("sidebar"));
 				ele.getLocation();
 				
-				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[2]/a[1]"));
+				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[3]/a"));
 				verify.click();
 				
 				 str = "Select * from KYC_Aadhar_Login_Page where TestCaseName ='Aadhar_Login_ValidUserName_ValidPwd'";

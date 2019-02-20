@@ -85,7 +85,7 @@ public class AadharLoginTestScript extends DriverBase{
 				 System.out.println("handled"+handle);
 				
 				
-				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[2]/a[1]"));
+				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[3]/a"));
 				verify.click();
 				
 				Thread.sleep(3000);

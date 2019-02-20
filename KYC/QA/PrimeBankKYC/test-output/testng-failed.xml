@@ -5,33 +5,26 @@
     <classes>
       <class name="Scripts.NSDLLoginTestScript">
         <methods>
-          <include name="NSDL_Login_BlankUserName_ValidPwd"/>
-          <include name="NSDL_Login_ValidUserName_BlankPwd"/>
-          <include name="NSDL_Login_InvalidUserName"/>
-          <include name="NSDL_Login_BlankUserName_BlankPwd"/>
-          <include name="NSDL_Login_ValidUserName_ValidPwd"/>
+          <include name="tearDown"/>
+          <include name="closingAllConnections"/>
+          <include name="setUp"/>
           <include name="init"/>
-          <include name="NSDL_Login_ValidUserName_InvalidPwd"/>
+          <include name="intializingConnections"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- Scripts.NSDLLoginTestScript -->
       <class name="Scripts.AadharLoginTestScript">
         <methods>
-          <include name="Aadhar_Login_ValidUserName_BlankPwd"/>
-          <include name="Aadhar_Login_ValidUserName_InvalidPwd"/>
-          <include name="Aadhar_Login_BlankUserName_ValidPwd"/>
-          <include name="Aadhar_Login_InvalidUserName"/>
-          <include name="Aadhar_Login_ValidUserName_ValidPwd"/>
-          <include name="Aadhar_Login_BlankUserName_BlankPwd"/>
+          <include name="intializingConnections"/>
+          <include name="setUp"/>
+          <include name="closingAllConnections"/>
+          <include name="tearDown"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- Scripts.AadharLoginTestScript -->
       <class name="Scripts.UpdateTestScript">
         <methods>
-          <include name="Update_EmptyApplicantID"/>
-          <include name="Update_EmptyFirstName"/>
-          <include name="Update_EmptyGender"/>
           <include name="Update_FileUpload"/>
-          <include name="Update_EmptyAadharNumber"/>
-          <include name="Update_EmptyPanNumber"/>
         </methods>
       </class> <!-- Scripts.UpdateTestScript -->
       <class name="Scripts.PassportVerificationTestScript">
@@ -43,44 +36,32 @@
       </class> <!-- Scripts.PassportVerificationTestScript -->
       <class name="Scripts.NSDLVerificationTestScript">
         <methods>
+          <include name="setUp"/>
           <include name="invalid_pan_id"/>
           <include name="blank_pan_id"/>
           <include name="valid_pan_id"/>
+          <include name="initializingConnections"/>
         </methods>
       </class> <!-- Scripts.NSDLVerificationTestScript -->
       <class name="Scripts.AadharVerificationTestScript">
         <methods>
-          <include name="valid_aadhar_id"/>
-          <include name="invalid_aadhar_id"/>
-          <include name="blank_aadhar_id"/>
+          <include name="setUp"/>
+          <include name="closingAllConnections"/>
+          <include name="tearDown"/>
+          <include name="initializingConnections"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- Scripts.AadharVerificationTestScript -->
       <class name="Scripts.UserTestScript">
         <methods>
-          <include name="RegistrationFormTest_EmptyMiddleName"/>
-          <include name="RegistrationFormTest_EmptyPanNumber"/>
-          <include name="RegistrationFormTest_EmptyLastName"/>
-          <include name="RegistrationFormTest_EmptySourceOfFunds"/>
-          <include name="RegistrationFormTest_EmptyCity"/>
-          <include name="RegistrationFormTest_EmptyMobileNumber"/>
-          <include name="RegistrationFormTest_EmptyFirstName"/>
-          <include name="RegistrationFormTest_EmptyAadharNumber"/>
-          <include name="RegistrationFormTest_EmptyFlatNoOrBuildingName"/>
-          <include name="RegistrationFormTest_EmptyEmailId"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="closingAllConnections"/>
+          <include name="initializingConnections"/>
+          <include name="closeBrowser"/>
+          <include name="getTestResult"/>
         </methods>
       </class> <!-- Scripts.UserTestScript -->
-      <class name="Scripts.LoginTestScript">
-        <methods>
-          <include name="Home_Login_InvalidUserName"/>
-          <include name="setUp"/>
-          <include name="Home_Login_BlankUserName_ValidPwd"/>
-          <include name="Home_Login_ValidUserName_ValidPwd"/>
-          <include name="Home_Login_ValidUserName_InvalidPwd"/>
-          <include name="initializingConnections"/>
-          <include name="Home_Login_BlankUserName_BlankPwd"/>
-          <include name="Home_Login_ValidUserName_BlankPwd"/>
-        </methods>
-      </class> <!-- Scripts.LoginTestScript -->
       <class name="Scripts.PassportLoginTestScript">
         <methods>
           <include name="Passport_Login_ValidUserName_InvalidPwd"/>
@@ -91,6 +72,15 @@
           <include name="Passport_Login_ValidUserName_ValidPwd"/>
         </methods>
       </class> <!-- Scripts.PassportLoginTestScript -->
+      <class name="Scripts.LoginTestScript">
+        <methods>
+          <include name="setUp"/>
+          <include name="closingAllConnections"/>
+          <include name="tearDown"/>
+          <include name="initializingConnections"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- Scripts.LoginTestScript -->
     </classes>
   </test> <!-- Testscriptsexecution(failed) -->
 </suite> <!-- Failed suite [Maven project] -->

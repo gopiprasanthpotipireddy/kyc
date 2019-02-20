@@ -81,7 +81,7 @@ public class  NSDLVerificationTestScript  extends DriverBase{
 				WebElement  ele = driver.findElement(By.id("sidebar"));
 				ele.getLocation();
 				
-				WebElement verify = driver.findElement(By.xpath("//*[@id=\"recent\"]/ul/li[1]/a[1]"));
+				WebElement verify = driver.findElement(By.xpath("//*[@id=\\\"recent\\\"]/ul/li[2]/a"));
 				verify.click();
 				
 				 str = "Select * from KYC_NSDL_Login_Page where TestCaseName ='NSDL_Login_ValidUserName_ValidPwd'";

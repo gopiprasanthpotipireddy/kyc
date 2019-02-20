@@ -8,6 +8,7 @@
           <include name="setUp"/>
           <include name="intializingConnections"/>
           <include name="tearDown"/>
+          <include name="closingAllConnections"/>
           <include name="Update_FileUpload"/>
           <include name="init"/>
           <include name="endreport"/>
