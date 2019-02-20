@@ -3,18 +3,16 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Scripts.UpdateTestScript">
+      <class name="Scripts.NSDLVerificationTestScript">
         <methods>
           <include name="setUp"/>
-          <include name="intializingConnections"/>
-          <include name="tearDown"/>
-          <include name="closingAllConnections"/>
-          <include name="Update_FileUpload"/>
+          <include name="invalid_pan_id"/>
+          <include name="blank_pan_id"/>
+          <include name="valid_pan_id"/>
           <include name="init"/>
-          <include name="endreport"/>
-          <include name="closeBrowser"/>
+          <include name="initializingConnections"/>
         </methods>
-      </class> <!-- Scripts.UpdateTestScript -->
+      </class> <!-- Scripts.NSDLVerificationTestScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

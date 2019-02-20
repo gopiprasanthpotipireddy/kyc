@@ -1,92 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Maven project]">
-  <test name="Testscriptsexecution(failed)">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="Scripts.UserTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="init"/>
-          <include name="closingAllConnections"/>
-          <include name="initializingConnections"/>
-          <include name="closeBrowser"/>
-          <include name="getTestResult"/>
-        </methods>
-      </class> <!-- Scripts.UserTestScript -->
-      <class name="Scripts.UpdateTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="intializingConnections"/>
-          <include name="closingAllConnections"/>
-          <include name="tearDown"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.UpdateTestScript -->
-      <class name="Scripts.NSDLLoginTestScript">
-        <methods>
-          <include name="NSDL_Login_BlankUserName_ValidPwd"/>
-          <include name="NSDL_Login_ValidUserName_BlankPwd"/>
-          <include name="NSDL_Login_InvalidUserName"/>
-          <include name="NSDL_Login_BlankUserName_BlankPwd"/>
-          <include name="NSDL_Login_ValidUserName_ValidPwd"/>
-          <include name="NSDL_Login_ValidUserName_InvalidPwd"/>
-        </methods>
-      </class> <!-- Scripts.NSDLLoginTestScript -->
       <class name="Scripts.NSDLVerificationTestScript">
         <methods>
           <include name="setUp"/>
           <include name="invalid_pan_id"/>
           <include name="blank_pan_id"/>
           <include name="valid_pan_id"/>
+          <include name="init"/>
           <include name="initializingConnections"/>
         </methods>
       </class> <!-- Scripts.NSDLVerificationTestScript -->
-      <class name="Scripts.AadharLoginTestScript">
-        <methods>
-          <include name="intializingConnections"/>
-          <include name="setUp"/>
-          <include name="closingAllConnections"/>
-          <include name="tearDown"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.AadharLoginTestScript -->
-      <class name="Scripts.LoginTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="closingAllConnections"/>
-          <include name="tearDown"/>
-          <include name="initializingConnections"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.LoginTestScript -->
-      <class name="Scripts.PassportVerificationTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="closingAllConnections"/>
-          <include name="initializingConnections"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.PassportVerificationTestScript -->
-      <class name="Scripts.PassportLoginTestScript">
-        <methods>
-          <include name="closingAllConnections"/>
-          <include name="intializingConnections"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.PassportLoginTestScript -->
-      <class name="Scripts.AadharVerificationTestScript">
-        <methods>
-          <include name="setUp"/>
-          <include name="closingAllConnections"/>
-          <include name="tearDown"/>
-          <include name="initializingConnections"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- Scripts.AadharVerificationTestScript -->
     </classes>
-  </test> <!-- Testscriptsexecution(failed) -->
-</suite> <!-- Failed suite [Maven project] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
