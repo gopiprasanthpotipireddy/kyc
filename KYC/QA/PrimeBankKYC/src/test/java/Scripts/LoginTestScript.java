@@ -59,7 +59,7 @@ public class LoginTestScript  extends DriverBase{
 	@BeforeClass
 	public void initializingConnections() throws FilloException {
 		fillo = new Fillo();
-		//con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
+	
 		con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
 		str="update KYC_Home_Login_Screen set Status =''";
 	    rs2 = con.executeUpdate(str);
@@ -72,8 +72,7 @@ public class LoginTestScript  extends DriverBase{
 		basePage = new DriverBase();
 		basePage.initialization();
 		loginPage = new LoginPage(driver);
-		/*WebElement info1 = driver.findElement(info);
-		info1.click();*/
+		
 		WebElement heading = driver.findElement(By.xpath("//*[@id=\"intro\"]/div/div/div/h1"));
         heading.getLocation();
 		
@@ -90,8 +89,7 @@ public void Home_Login_ValidUserName_ValidPwd( ) throws Exception {
 	      .getClass()
 	      .getEnclosingMethod()
 	      .getName();
-		/* str="update KYC_Home_Login_Screen set Status =''";
-	    int rs2 = con.executeUpdate(str);*/
+	
 		
 		 str = "Select * from KYC_Home_Login_Screen where TestCaseName ='"+methodName+"'";
 		rs = con.executeQuery(str);
@@ -425,7 +423,7 @@ public void tearDown() {
 }
 
  
-	/* public void getTestResult(ITestResult result){
+	public void getTestResult(ITestResult result){
 		 if(result.getStatus()==ITestResult.FAILURE)
 		 {
 		 logger.fail(result.getName());
@@ -433,7 +431,7 @@ public void tearDown() {
 		 }else if(result.getStatus() == ITestResult.SKIP){
 		 logger.skip("Test Case Skipped is "+result.getName());
 		 } 
- }*/
+ }
 		 
 
  

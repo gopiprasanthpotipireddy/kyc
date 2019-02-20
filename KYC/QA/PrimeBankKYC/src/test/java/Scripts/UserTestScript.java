@@ -45,7 +45,7 @@ public class UserTestScript extends DriverBase {
 	@BeforeClass
 	public void initializingConnections() throws FilloException {
 		fillo = new Fillo();
-		//con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
+		
 		con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
 		str="update KYC_RegistrationPage set Status =''";
 	    rs2 = con.executeUpdate(str);
@@ -146,7 +146,8 @@ public class UserTestScript extends DriverBase {
 			{
 				str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 			     rs2 = con.executeUpdate(str);
-				System.out.println("Test is passed as there are  validations for empty first name");
+			 	System.out.println("test is failed");
+			     
 				logger.log(Status.INFO, methodName); 
 				Assert.assertTrue(false);
 			}
@@ -155,7 +156,7 @@ public class UserTestScript extends DriverBase {
 			{
 				str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 			     rs2 = con.executeUpdate(str);
-				System.out.println("test is failed");
+			     System.out.println("Test is passed as there are  validations for empty first name");
 				 Assert.assertTrue(true);
 				 logger.log(Status.INFO, methodName); 
 			}
@@ -230,7 +231,8 @@ public class UserTestScript extends DriverBase {
 			{
 				str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 			     rs2 = con.executeUpdate(str);
-				System.out.println("Test is passed as there are  validations for empty middle name");
+			 	System.out.println("test is failed");
+			    
 				logger.log(Status.INFO, methodName); 
 				Assert.assertTrue(false);
 			}
@@ -238,7 +240,7 @@ public class UserTestScript extends DriverBase {
 			{
 				str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 			     rs2 = con.executeUpdate(str);
-				System.out.println("test is failed");
+			     System.out.println("Test is passed as there are  validations for empty middle name");
 				 Assert.assertTrue(true);
 				 logger.log(Status.INFO, methodName); 
 			}
@@ -312,7 +314,8 @@ public void RegistrationFormTest_EmptyLastName() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		     System.out.println("test is failed");
+		
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -321,7 +324,7 @@ public void RegistrationFormTest_EmptyLastName() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		 	System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 		}
@@ -394,7 +397,7 @@ public void RegistrationFormTest_EmptyPanNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		 	System.out.println("test is failed");
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -403,7 +406,8 @@ public void RegistrationFormTest_EmptyPanNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		 	System.out.println("Test is passed as there are  validations for empty first name");
+		
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -472,7 +476,8 @@ public void RegistrationFormTest_EmptyAadharNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		 	System.out.println("test is failed");
+			
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -481,7 +486,7 @@ public void RegistrationFormTest_EmptyAadharNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		     System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -552,7 +557,8 @@ public void RegistrationFormTest_EmptySourceOfFunds() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		 	System.out.println("test is failed");
+			
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -561,7 +567,7 @@ public void RegistrationFormTest_EmptySourceOfFunds() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		     System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -631,7 +637,8 @@ public void RegistrationFormTest_EmptyCity() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		     System.out.println("test is failed");
+			
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -640,7 +647,7 @@ public void RegistrationFormTest_EmptyCity() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		     System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -712,7 +719,8 @@ public void RegistrationFormTest_EmptyMobileNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		     System.out.println("test is failed");
+		
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -721,7 +729,7 @@ public void RegistrationFormTest_EmptyMobileNumber() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		 	System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -791,7 +799,8 @@ public void RegistrationFormTest_EmptyFlatNoOrBuildingName() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		     System.out.println("test is failed");
+			
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -800,7 +809,7 @@ public void RegistrationFormTest_EmptyFlatNoOrBuildingName() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		     System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}
@@ -826,39 +835,27 @@ public void RegistrationFormTest_EmptyEmailId() throws Exception
 		System.out.println("try here");
 		logger = report.createTest(methodName);
 		 while (rs.next()) {
-				
-		test.add(rs.getField("Prefix"));
-		System.out.println(test.get(0).toString());
-		test.add(rs.getField("FirstName"));
-		System.out.println(test.get(1).toString());
-		test.add(rs.getField("MiddleName"));
-		System.out.println(test.get(2).toString());
-		test.add(rs.getField("LastName"));
-		System.out.println(test.get(3).toString());
-		test.add(rs.getField("PANNumber"));
-		System.out.println(test.get(4).toString());
-		test.add(rs.getField("AadharNumber"));
-		System.out.println(test.get(5).toString());
-		test.add(rs.getField("PassportNumber"));
-		System.out.println(test.get(6).toString());
-		test.add(rs.getField("Occupation"));
-		System.out.println(test.get(7).toString());
-		test.add(rs.getField("SourceOfFunds"));
-		System.out.println(test.get(8).toString());
-		test.add(rs.getField("GrossAnualIncome"));
-		System.out.println(test.get(9).toString());
-		test.add(rs.getField("ResidencyType"));
-		System.out.println(test.get(10).toString());
-		test.add(rs.getField("FlatNoOrBuildingName"));
-		test.add(rs.getField("StreetName"));
-		test.add(rs.getField("LandMark"));
-		test.add(rs.getField("State"));
-		test.add(rs.getField("City"));
-		test.add(rs.getField("Pincode"));
-		test.add(rs.getField("Country"));
-		test.add(rs.getField("MobileNumber"));
-		test.add(rs.getField("EmailId"));
-		list.addAll(test);
+				test.add(rs.getField("Prefix"));
+	            test.add(rs.getField("FirstName"));
+	            test.add(rs.getField("MiddleName"));
+	            test.add(rs.getField("LastName"));
+		        test.add(rs.getField("PANNumber"));
+		        test.add(rs.getField("AadharNumber"));
+		        test.add(rs.getField("PassportNumber"));
+		        test.add(rs.getField("Occupation"));
+	            test.add(rs.getField("SourceOfFunds"));
+		        test.add(rs.getField("GrossAnualIncome"));
+		        test.add(rs.getField("ResidencyType"));
+		        test.add(rs.getField("FlatNoOrBuildingName"));
+		        test.add(rs.getField("StreetName"));
+		        test.add(rs.getField("LandMark"));
+		        test.add(rs.getField("State"));
+		        test.add(rs.getField("City"));
+		        test.add(rs.getField("Pincode"));
+		        test.add(rs.getField("Country"));
+		        test.add(rs.getField("MobileNumber"));
+		        test.add(rs.getField("EmailId"));
+		        list.addAll(test);
 		int size = list.size();
 		System.out.println(size);
 		urp.validatingRegistrationForm(list);
@@ -869,7 +866,8 @@ public void RegistrationFormTest_EmptyEmailId() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='FAIL' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("Test is passed as there are  validations for empty first name");
+		 	System.out.println("test is failed");
+			
 			logger.log(Status.INFO, methodName); 
 			Assert.assertTrue(false);
 		}
@@ -878,7 +876,7 @@ public void RegistrationFormTest_EmptyEmailId() throws Exception
 		{
 			str="update KYC_RegistrationPage set Status ='PASS' where  TestCaseName = '"+methodName+"'";
 		     rs2 = con.executeUpdate(str);
-			System.out.println("test is failed");
+		     System.out.println("Test is passed as there are  validations for empty first name");
 			 Assert.assertTrue(true);
 			 logger.log(Status.INFO, methodName); 
 	     	}

@@ -182,10 +182,7 @@ WebDriver driver;
 			 wait6.until(ExpectedConditions.elementToBeClickable(submit1));
 				
 				submit1.click();
-			/*Alert alert = driver.switchTo().alert();
-			alert.accept();
-			*/
-		
+			
 	}
 	
 	

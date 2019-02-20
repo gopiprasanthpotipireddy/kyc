@@ -22,14 +22,13 @@ WebDriver driver;
 
 	public void NSDLVerify(String PanNumber1) throws InterruptedException {
 		System.out.println("print....");
-	/*	Alert alert = driver.switchTo().alert();
-		  alert.accept();*/
+	
 		WebElement PanTextBox = driver.findElement(panTextBox);
 		Thread.sleep(1000);
-		//System.out.println("finding ADHAR BOX");
+		
 		if(PanTextBox.isDisplayed())
 			PanTextBox.sendKeys(PanNumber1);
-		//System.out.println("ENTERING ADHAR.");
+		
 		Thread.sleep(1000);
 		WebElement verifybtn = driver.findElement(verify);
 		if(verifybtn.isDisplayed())

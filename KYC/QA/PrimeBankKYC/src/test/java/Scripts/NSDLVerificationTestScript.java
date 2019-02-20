@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -53,7 +54,7 @@ public class  NSDLVerificationTestScript  extends DriverBase{
 	@BeforeClass
 	public void initializingConnections() throws FilloException {
 		fillo = new Fillo();
-		//con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
+		
 		con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
 		str="update KYC_NSDL_Login_Page set Status =''";
 	    rs2 = con.executeUpdate(str);
@@ -261,6 +262,12 @@ while (rs.next()) {
 					 logger.skip("Test Case Skipped is "+result.getName());
 					 } 
 				 }
+				 @AfterClass
+					public void closingAllConnections() {
+						rs.close();
+						con.close();
+					}
+
 	}
 
 			

@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -50,7 +51,7 @@ public class  AadharVerificationTestScript  extends DriverBase{
 	@BeforeClass
 	public void initializingConnections() throws FilloException {
 		fillo = new Fillo();
-		//con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
+	
 		con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
 		str="update KYC_NSDL_Login_Page set Status =''";
 	    rs2 = con.executeUpdate(str);
@@ -150,7 +151,7 @@ public class  AadharVerificationTestScript  extends DriverBase{
 		
 			while (rs.next()) {
 				aadhartext = rs.getField("Aadharnumber");
-				//System.out.println("AadharNumber:"+ AadharNumber1);
+		
 				expectedResult = rs.getField("ExpectedResult");
 				System.out.println(rs.getField("Aadharnumber"));
 				 aadharverificationpage.AadharVerify(aadhartext);
@@ -160,25 +161,7 @@ public class  AadharVerificationTestScript  extends DriverBase{
 					   msg = alert.getText();
 				
 			     
-			 /*	if (expectedResult.equals("Pass") && but.contains("AadharNumber")) {
-					System.out.println("Test is passed");
-					 str2="update KYC_Home_Login_Screen set Status ='PASS' where  TestCaseName = '"+methodName+"'";
-				     rs2 = con.executeUpdate(str2);
-				     Assert.assertTrue(true);
-				     logger.log(Status.INFO, methodName); 
-				     
-				     
-				     
-				}
-				   
-				     
-				else {
-					System.out.println("Test is Fail");
-					 Assert.assertTrue(false);
-					 logger.log(Status.INFO, methodName); 
-					
-						}*/
-			     
+		
 			     
 			     
 			      if (expectedResult.equals("Fail") )
@@ -228,7 +211,7 @@ public class  AadharVerificationTestScript  extends DriverBase{
 		
 			while (rs.next()) {
 				aadhartext = rs.getField("Aadharnumber");
-			//System.out.println("AadharNumber:"+ AadharNumber1);
+			
 				expectedResult = rs.getField("ExpectedResult");
 				System.out.println(rs.getField("Aadharnumber"));
 				 aadharverificationpage.AadharVerify(rs.getField("Aadharnumber"));
@@ -282,5 +265,11 @@ public class  AadharVerificationTestScript  extends DriverBase{
 			 logger.skip("Test Case Skipped is "+result.getName());
 			 } 
 		 }
+		 @AfterClass
+			public void closingAllConnections() {
+				rs.close();
+				con.close();
+			}
+
 
 }

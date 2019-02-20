@@ -21,14 +21,13 @@ WebDriver driver;
 
 	public void AadharVerify(String AadharNumber1) throws InterruptedException {
 		System.out.println("print....");
-	/*	Alert alert = driver.switchTo().alert();
-		  alert.accept();*/
+	
 		WebElement AadharTextBox = driver.findElement(aadharTextBox);
 		Thread.sleep(2000);
-		//System.out.println("finding ADHAR BOX");
+		
 		if(AadharTextBox.isDisplayed())
 			AadharTextBox.sendKeys(AadharNumber1);
-		//System.out.println("ENTERING ADHAR.");
+		
 		Thread.sleep(3000);
 		WebElement verifybtn = driver.findElement(verify);
 		if(verifybtn.isDisplayed())

@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -54,7 +55,7 @@ public class NSDLLoginTestScript extends DriverBase{
 	
 	public void intializingConnections() throws FilloException{
 		  fillo = new Fillo();
-		  //con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
+		  
 		  con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
 		  str="update KYC_Home_Login_Screen set Status =''";
 		     rs2 = con.executeUpdate(str);
@@ -101,14 +102,7 @@ public class NSDLLoginTestScript extends DriverBase{
 					
 					String methodName = new Object() {
 
-					/*	@BeforeClass
-						public void initializingConnections() throws FilloException {
-							fillo = new Fillo();
-							//con = fillo.getConnection( "C:\\Users\\sudheerkumarn\\Desktop\\sample\\Banking\\KYC_Poc.xlsx");
-							con = fillo.getConnection(System.getProperty("user.dir")+ "\\data\\KYC_Poc.xlsx");
-							str="update KYC_Aadhar_Login_Page set Status =''";
-						    rs2 = con.executeUpdate(str);
-						}*/}
+					}
 				      .getClass()
 				      .getEnclosingMethod()
 				      .getName();
@@ -428,7 +422,7 @@ String methodName = new Object() {}
 			
 				@AfterMethod
 			public void tearDown() {
-				// base.closeBrowser();
+			base.closeBrowser();
 			}
 
 			 
@@ -441,6 +435,12 @@ String methodName = new Object() {}
 					 logger.skip("Test Case Skipped is "+result.getName());
 					 } 
 				 }
+				 @AfterClass
+					public void closingAllConnections() {
+						rs.close();
+						con.close();
+					}
+
 
 }
 
