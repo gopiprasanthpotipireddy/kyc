@@ -1,1 +1,1 @@
-This is Dev Application.
+This is Developer Application.
