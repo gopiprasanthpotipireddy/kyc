@@ -130,3 +130,38 @@ C:\Users\sudheerkumarn\Desktop\non-linear-office-a\CustomerKYC\WebApplication3\b
 C:\Users\sudheerkumarn\Desktop\non-linear-office-a\CustomerKYC\WebApplication3\obj\Debug\CustomerKyc.csprojResolveAssemblyReference.cache
 C:\Users\sudheerkumarn\Desktop\non-linear-office-a\CustomerKYC\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\sudheerkumarn\Desktop\non-linear-office-a\CustomerKYC\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\ApplicationInsights.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\csc.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\System.Collections.Immutable.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\vbc.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\VBCSCompiler.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\roslyn\VBCSCompiler.exe.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\WebApplication3.dll.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\WebApplication3.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\WebApplication3.pdb
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.Web.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.WindowsServer.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.ApplicationInsights.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.Web.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.AI.WindowsServer.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.ApplicationInsights.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\obj\Debug\CustomerKyc.csprojAssemblyReference.cache
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\obj\Debug\CustomerKyc.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\obj\Debug\CustomerKyc.csproj.CopyComplete
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\obj\Debug\WebApplication3.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\WebApplication3\obj\Debug\WebApplication3.pdb

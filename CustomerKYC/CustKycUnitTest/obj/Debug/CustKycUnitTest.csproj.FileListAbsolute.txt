@@ -40,3 +40,27 @@ C:\Users\keerthik\Desktop\WebApplication3(1) (1)\CustomerKYC\CustKycUnitTest\bin
 C:\Users\keerthik\Desktop\WebApplication3(1) (1)\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.csprojResolveAssemblyReference.cache
 C:\Users\keerthik\Desktop\WebApplication3(1) (1)\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.dll
 C:\Users\keerthik\Desktop\WebApplication3(1) (1)\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.pdb
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\ApplicationInsights.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\csc.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.CodeAnalysis.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.CSharp.Core.targets
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\System.Collections.Immutable.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\System.Reflection.Metadata.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\vbc.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\VBCSCompiler.exe
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\roslyn\VBCSCompiler.exe.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\CustKycUnitTest.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\CustKycUnitTest.pdb
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\WebApplication3.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\WebApplication3.pdb
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\bin\Debug\WebApplication3.dll.config
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.csprojAssemblyReference.cache
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.csproj.CopyComplete
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.dll
+C:\Program Files (x86)\Jenkins\workspace\kyc\CustomerKYC\CustKycUnitTest\obj\Debug\CustKycUnitTest.pdb
